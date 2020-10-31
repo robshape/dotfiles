@@ -1,0 +1,17 @@
+bower_components/
+build/
+coverage/
+cypress/
+dist/
+node_modules/
+target/
+xcuserdata/
+
+.DS_Store
+.env
+.env.prod
+.env.stage
+.eslintcache
+.stylelintcache
+lighthouse.report.html
+timeline.xctimeline

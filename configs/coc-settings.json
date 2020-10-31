@@ -1,0 +1,9 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "eslint.autoFixOnSave": true,
+  "eslint.run": "onSave",
+  "prettier.onlyUseLocalVersion": true,
+  "prettier.requireConfig": true,
+  "suggest.noselect": false,
+  "tsserver.formatOnType": false
+}

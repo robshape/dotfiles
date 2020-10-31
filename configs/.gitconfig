@@ -1,0 +1,13 @@
+[core]
+  excludesfile=~/.gitignore
+[credential]
+  helper=osxkeychain
+[difftool]
+  prompt=false
+[merge]
+  tool=opendiff
+[pull]
+  rebase=false
+[user]
+  email=name@domain
+  name=robshape
