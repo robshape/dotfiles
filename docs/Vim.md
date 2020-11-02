@@ -71,8 +71,6 @@ Inputs that are specific for Vim.
 |            | /\<string\>      | Search in current buffer for \<string\> (`n` for next occurrence)                                          |
 |            | :!\<command\>    | Run \<command\> in shell                                                                                   |
 |            | :bd \[\<path\>\] | Delete current buffer or buffer at \<path\>                                                                |
-|            | :Snippets        | Show available snippets for current filetype                                                               |
-|            | :UltiSnipsEdit   | Open snippets file for current filetype                                                                    |
 | CoC        |                  |                                                                                                            |
 |            | gd               | Jump to definition of code                                                                                 |
 |            | gh               | Show tooltip for code \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                  |
@@ -90,6 +88,7 @@ Inputs that are specific for Vim.
 |            | ALT+f            | Search in workspace \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                    |
 |            | ALT+p            | Search for file \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                        |
 |            | CTRL+j OR k      | Navigate search results, down or up (`ENTER` to open file, `CTRL+v` to open file in vertically split pane) |
+|            | :Snippets        | Show available snippets for current filetype                                                               |
 | NERDTree   |                  |                                                                                                            |
 |            | m                | Open menu                                                                                                  |
 |            | s                | Open file in vertically split pane                                                                         |
@@ -105,6 +104,10 @@ Inputs that are specific for Vim.
 | UltiSnips  |                  |                                                                                                            |
 |            | CTRL+j           | Move forwards one placeholder                                                                              |
 |            | CTRL+k           | Move backwards one placeholder                                                                             |
+|            | :UltiSnipsEdit   | Open snippets file for current filetype                                                                    |
+| vim-plug   |                  |                                                                                                            |
+|            | :PlugUpdate      | Update plugins                                                                                             |
+|            | :PlugUpgrade     | Upgrade vim-plug                                                                                           |
 
 ## tmux
 
