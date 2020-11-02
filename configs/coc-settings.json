@@ -4,6 +4,9 @@
   "eslint.run": "onSave",
   "prettier.onlyUseLocalVersion": true,
   "prettier.requireConfig": true,
+  "stylelintplus.autoFixOnSave": true,
+  "stylelintplus.cssInJs": true,
+  "stylelintplus.validateOnType": false,
   "suggest.noselect": false,
   "tsserver.formatOnType": false
 }

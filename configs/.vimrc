@@ -79,6 +79,7 @@ let g:coc_global_extensions=[
   \'coc-rls',
   \'coc-snippets',
   \'coc-spell-checker',
+  \'coc-stylelintplus',
   \'coc-tsserver',
   \]
 "Plug 'jingmiao/auto-pairs'
