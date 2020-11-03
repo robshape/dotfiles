@@ -57,27 +57,27 @@ fi
 
 echo "[*] LINKING FILES"
 ## Git
-ln -s "$PWD/configs/.gitconfig" "$HOME"
-ln -s "$PWD/configs/.gitignore" "$HOME"
+ln -fs "$PWD/configs/.gitconfig" "$HOME"
+ln -fs "$PWD/configs/.gitignore" "$HOME"
 ## Terminal
-ln -s "$PWD/configs/.bash_profile" "$HOME"
+ln -fs "$PWD/configs/.bash_profile" "$HOME"
 ## Vim
 VIM_DIRECTORY="$HOME/.vim/"
 if [ ! -d "$VIM_DIRECTORY" ]; then
   mkdir "$VIM_DIRECTORY"
 fi
-ln -s "$PWD/configs/.vimrc" "$HOME"
-ln -s "$PWD/configs/coc-settings.json" "$VIM_DIRECTORY"
-ln -s "$PWD/UltiSnips/" "$VIM_DIRECTORY"
+ln -fs "$PWD/configs/.vimrc" "$HOME"
+ln -fs "$PWD/configs/coc-settings.json" "$VIM_DIRECTORY"
+ln -fs "$PWD/UltiSnips/" "$VIM_DIRECTORY"
 ## Visual Studio Code
 VISUAL_STUDIO_CODE_USER_DIRECTORY="$HOME/Library/Application Support/Code/User/"
 if [ -d "$VISUAL_STUDIO_CODE_USER_DIRECTORY" ]; then
-  ln -s "$PWD/configs/settings.json" "$VISUAL_STUDIO_CODE_USER_DIRECTORY"
+  ln -fs "$PWD/configs/settings.json" "$VISUAL_STUDIO_CODE_USER_DIRECTORY"
   VISUAL_STUDIO_CODE_REACT_NATIVE_DIRECTORY="$HOME/.vscode-react-native/"
   if [ ! -d "$VISUAL_STUDIO_CODE_REACT_NATIVE_DIRECTORY" ]; then
     mkdir "$VISUAL_STUDIO_CODE_REACT_NATIVE_DIRECTORY"
   fi
-  ln -s "$PWD/configs/VSCodeTelemetrySettings.json" "$VISUAL_STUDIO_CODE_REACT_NATIVE_DIRECTORY"
+  ln -fs "$PWD/configs/VSCodeTelemetrySettings.json" "$VISUAL_STUDIO_CODE_REACT_NATIVE_DIRECTORY"
 fi
 echo
 

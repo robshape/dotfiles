@@ -60,7 +60,7 @@ gclean() {
 ginspect() {
   find ~/Developer/ -name .git -type d | while read d
   do
-    echo "[*] Inspecting \"$d\""
+    echo "[*] INSPECTING \"$d\""
     git --git-dir="$d" --work-tree="$d/.." status -s
     echo
   done
@@ -92,10 +92,10 @@ tclean() {
 
 vclean() {
   if [ -z "$TMUX" ]; then
-    echo "[*] Not using tmux!"
+    echo "[*] NOT USING TMUX!"
     exit 1
   fi
-  echo "[*] rm -fr ~/.bash_sessions/ ~/.bash_history after tmux exits!"
+  echo "[*] rm -fr ~/.bash_sessions/ ~/.bash_history AFTER TMUX EXITS"
   tclean
   tmux kill-session -a
   tmux kill-session
