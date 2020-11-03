@@ -31,7 +31,7 @@ Inputs that are specific for Vim.
 |            | CTRL+^           | Navigate buffers                                                                                           |
 |            | CTRL+b           | Move backwards one page                                                                                    |
 |            | CTRL+f           | Move forwards one page                                                                                     |
-|            | CTRL+h           | Navigate panes \[NORMAL MODE\] \[CUSTOM SHORTCUT\                                                          |
+|            | CTRL+h           | Navigate panes \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                         |
 |            | CTRL+i           | Move forward to next position                                                                              |
 |            | CTRL+o           | Move backward to previous position                                                                         |
 |            | ENTER            | Clear highlighted search results                                                                           |
@@ -59,7 +59,7 @@ Inputs that are specific for Vim.
 |            | yiw              | Copy current word                                                                                          |
 |            | yy               | Copy current line                                                                                          |
 |            | ALT+j OR k       | Move current line, down or up \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                          |
-|            | ALT+s            | Save current buffer \[NORMAL MODE\] \[CUSTOM SHORTCUT\                                                     |
+|            | ALT+s            | Save current buffer \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                    |
 |            | CTRL+d OR t      | Indent current line, left or right \[INSERT MODE\]                                                         |
 |            | CTRL+n OR p      | Navigate auto-complete, down or up                                                                         |
 |            | CTRL+r           | Redo                                                                                                       |
@@ -126,9 +126,8 @@ Inputs that are specific for tmux. Shortcuts and commands are prefixed with `CTR
 |           | {                  | Move current pane to left                               |
 |           | LEFT or RIGHT      | Navigate panes, next or previous                        |
 | Command   |                    |                                                         |
-|           | :resize-pane -R 60 | Resize current pane towards right by 60 columns         |
+|           | :resize-pane -R 50 | Resize current pane towards right by 50 columns         |
 |           | exit               | Exit current pane/window                                |
 | Parameter |                    |                                                         |
 |           | kill-session       | Kill current session                                    |
 |           | kill-session -a    | Kill all sessions except current                        |
-|           | list-sessions      | List sessions                                           |
