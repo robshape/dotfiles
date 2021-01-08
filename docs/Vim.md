@@ -91,6 +91,7 @@ Inputs that are specific for Vim.
 |            | :Snippets        | Show available snippets for current filetype                                                               |
 | NERDTree   |                  |                                                                                                            |
 |            | m                | Open menu                                                                                                  |
+|            | R                | Refresh tree                                                                                               |
 |            | s                | Open file in vertically split pane                                                                         |
 |            | ALT+d            | Reveal file in tree \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                    |
 |            | ALT+t            | Toggle tree \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                            |
