@@ -13,6 +13,8 @@ brew install postgresql
 brew install act
 brew install gh
 brew install git
+## Kubernetes
+brew install helm
 ## Node
 brew install node
 ## Python

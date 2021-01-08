@@ -13,8 +13,12 @@ alias c="clear"
 alias dps="docker ps"
 alias dpurge="docker system prune -af --volumes"
 alias fspace="find ~/ -path */Library/* -prune -false -o -iname \" *.*\" -o -iname \"*.* \" -o -iname \" *\" -o -iname \"* \""
+alias gb="git branch"
+alias gc="git checkout"
 alias gs="git status"
 alias gundo="git reset --soft HEAD~1"
+alias ghpr="gh pr create -df"
+alias kpods="kubectl get pods"
 alias ndated="npm outdated"
 alias nkill="pkill node"
 alias tpython="source ~/.venv/bin/activate"
@@ -66,9 +70,18 @@ ginspect() {
   done
 }
 
+gpick() {
+  git checkout $1 -- $2
+}
+
 gpull() {
   git pull
   git fetch -p
+}
+
+ghuser() {
+  git config user.email robshape@users.noreply.github.com
+  git config user.name robshape
 }
 
 ninstall() {
@@ -80,9 +93,13 @@ ninstall() {
 tclean() {
   #sudo find / -d -name ".DS_Store" -exec rm {} \;
   sudo periodic daily monthly weekly
+  rm -fr ~/.cache/
   rm -fr ~/.cargo/registry/
   rm -fr ~/.config/configstore/
+  rm -fr ~/.docker/application-template/cache/
   rm -fr ~/.docker/application-template/logs/
+  rm -fr ~/.kube/cache/
+  rm -fr ~/.node-gyp/
   rm -fr ~/.npm/
   rm -fr ~/.NERDTreeBookmarks
   rm -fr ~/.viminfo
