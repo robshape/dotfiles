@@ -79,6 +79,7 @@ Inputs that are specific for Vim.
 |            | ALT+r            | Open Refactorings/Code Actions\[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                          |
 |            | CTRL+SPACE       | Toggle auto-complete                                                                                       |
 |            | F2               | Rename symbol \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                          |
+|            | :CocUpdate       | Update extensions                                                                                          |
 | Commentary |                  |                                                                                                            |
 |            | gc2j             | Toggle line comment downwards 2 lines                                                                      |
 |            | gcc              | Toggle line comment for current line                                                                       |
