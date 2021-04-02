@@ -17,6 +17,8 @@ Keyboard shortcuts for Vim inside Visual Studio Code.
 |            | H                    | Move to top of page                                                       |
 |            | L                    | Move to bottom of page                                                    |
 |            | M                    | Move to center of page                                                    |
+|            | [{                   | Move to start of block                                                    |
+|            | ]}                   | Move to end of block                                                      |
 |            | {                    | Move to previous paragraph                                                |
 |            | }                    | Move to next paragraph                                                    |
 |            | CTRL+[               | Escape                                                                    |

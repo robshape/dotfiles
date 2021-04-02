@@ -22,6 +22,8 @@ Inputs that are specific for Vim.
 |            | L                | Move to bottom of page                                                                                     |
 |            | M                | Move to center of page                                                                                     |
 |            | ZZ               | Save and quit current buffer                                                                               |
+|            | [{               | Move to start of block                                                                                     |
+|            | ]}               | Move to end of block                                                                                       |
 |            | {                | Move to previous paragraph                                                                                 |
 |            | }                | Move to next paragraph                                                                                     |
 |            | ALT+c            | Delete all buffers except current buffer \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                               |
