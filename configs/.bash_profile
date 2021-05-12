@@ -3,7 +3,9 @@
 ## #####################
 export CYPRESS_CACHE_FOLDER="~/.cache/cypress"
 export CYPRESS_CRASH_REPORTS=0
-export PATH="$HOME/.cargo/bin:$PATH"
+export GOPATH="$HOME/.go"
+export GOROOT="$(brew --prefix go)/libexec"
+export PATH="$GOPATH/bin:$GOROOT/bin:$HOME/.cargo/bin:$PATH"
 export TERM="screen-256color"
 
 ## #######
@@ -26,6 +28,14 @@ alias tpython="source ~/.venv/bin/activate"
 ## #########
 ## Functions
 ## #########
+drun() {
+  docker run -p $2:$2 --rm $1
+}
+
+dshell() {
+  docker exec -it $1 sh
+}
+
 deplist() {
   brew leaves
   #brew list
@@ -40,14 +50,6 @@ depupdate() {
   rustup update
   brew cleanup -s
   rm -fr "$(brew --cache)"
-}
-
-drun() {
-  docker run -p $2:$2 --rm $1
-}
-
-dshell() {
-  docker exec -it $1 sh
 }
 
 fdiff() {
@@ -65,7 +67,7 @@ ginspect() {
   find ~/Developer/ -name .git -type d | while read d
   do
     echo "[*] INSPECTING \"$d\""
-    git --git-dir="$d" --work-tree="$d/.." status -s
+    git --git-dir="$d" --work-tree="$d/.." status -b -s
     echo
   done
 }

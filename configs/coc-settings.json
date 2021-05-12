@@ -6,6 +6,7 @@
   "prettier.requireConfig": true,
   "stylelintplus.autoFixOnSave": true,
   "stylelintplus.cssInJs": true,
+  "stylelintplus.validateOnSave": true,
   "stylelintplus.validateOnType": false,
   "suggest.noselect": false,
   "tsserver.formatOnType": false

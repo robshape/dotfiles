@@ -13,6 +13,8 @@ brew install postgresql
 brew install act
 brew install gh
 brew install git
+## Go
+brew install go
 ## Kubernetes
 brew install helm
 ## Node
@@ -44,6 +46,7 @@ if [ $(which code) ]; then
   code --install-extension dbaeumer.vscode-eslint
   code --install-extension eg2.vscode-npm-script
   code --install-extension esbenp.prettier-vscode
+  code --install-extension golang.go
   code --install-extension juanblanco.solidity
   code --install-extension mikestead.dotenv
   code --install-extension ms-azuretools.vscode-docker

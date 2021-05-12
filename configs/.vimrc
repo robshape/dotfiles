@@ -73,6 +73,7 @@ endif
 call plug#begin('~/.vim/plugged/')
 let g:coc_global_extensions=[
   \'coc-eslint',
+  \'coc-go',
   \'coc-json',
   \'coc-pairs',
   \'coc-prettier',
@@ -82,7 +83,6 @@ let g:coc_global_extensions=[
   \'coc-stylelintplus',
   \'coc-tsserver',
   \]
-"Plug 'jingmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -95,7 +95,6 @@ Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-commentary'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
-"Plug 'takac/vim-hardtime'
 Plug 'rakr/vim-one'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
@@ -147,13 +146,6 @@ command! -bang -nargs=* Rg call fzf#vim#grep('rg --color=always --column -g "!.g
 nnoremap ƒ :Rg<cr>
 "" ALT+p to search for file
 nnoremap π :Files<cr>
-
-"" Hardtime
-"" Enable plugin
-let g:hardtime_default_on=1
-let g:hardtime_showmsg=1
-"" Disable arrow keys
-let g:list_of_disabled_keys=['<down>', '<left>', '<right>', '<up>']
 
 "" NERDTree
 "" Show hidden files
