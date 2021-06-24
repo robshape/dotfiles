@@ -42,7 +42,7 @@
   "liveshare.openSharedServers": false,
   "liveshare.presence": false,
   "liveshare.shareExternalFiles": false,
-  "liveshare.showInStatusBar": "never",
+  "liveshare.showInStatusBar": "whileCollaborating",
   "markdownlint.run": "onSave",
   "npm-intellisense.importLinebreak": ";\n",
   "npm-intellisense.showBuildInLibs": true,
