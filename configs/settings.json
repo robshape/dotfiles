@@ -32,6 +32,7 @@
   "files.trimTrailingWhitespace": true,
   "git.confirmSync": false,
   "git.promptToSaveFilesBeforeCommit": "staged",
+  "go.toolsManagement.autoUpdate": true,
   "javascript.preferences.quoteStyle": "single",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "liveshare.allowInvites": "none",

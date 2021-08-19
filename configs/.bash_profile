@@ -63,6 +63,10 @@ gclean() {
   git gc
 }
 
+gfpush() {
+  git push -u origin $(git symbolic-ref -q --short HEAD)
+}
+
 ginspect() {
   find ~/Developer/ -name .git -type d | while read d
   do
@@ -100,11 +104,14 @@ tclean() {
   rm -fr ~/.config/configstore/
   rm -fr ~/.docker/application-template/cache/
   rm -fr ~/.docker/application-template/logs/
+  rm -fr ~/.go/pkg/mod/cache/
   rm -fr ~/.kube/cache/
+  rm -fr ~/.local/
   rm -fr ~/.node-gyp/
   rm -fr ~/.npm/
   rm -fr ~/.NERDTreeBookmarks
   rm -fr ~/.viminfo
+  rm -fr ~/.yarnrc
   rm -fr ~/.bash_sessions/
   rm -fr ~/.bash_history
 }
