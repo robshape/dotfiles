@@ -38,6 +38,7 @@
   "liveshare.allowInvites": "none",
   "liveshare.anonymousGuestApproval": "reject",
   "liveshare.autoShareServers": false,
+  "liveshare.autoShareTerminals": false,
   "liveshare.guestApprovalRequired": true,
   "liveshare.increasedGuestLimit": false,
   "liveshare.openSharedServers": false,

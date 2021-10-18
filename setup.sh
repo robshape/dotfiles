@@ -52,7 +52,6 @@ if [ $(which code) ]; then
   code --install-extension ms-azuretools.vscode-docker
   code --install-extension ms-python.python
   code --install-extension ms-vsliveshare.vsliveshare
-  code --install-extension msjsdiag.debugger-for-chrome
   code --install-extension msjsdiag.vscode-react-native
   code --install-extension rust-lang.rust
   code --install-extension streetsidesoftware.code-spell-checker
