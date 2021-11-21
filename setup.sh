@@ -7,7 +7,7 @@ if [ ! $(which brew) ]; then
   /bin/bash -c "$(curl -fLSs https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 ## Databases
-brew install mongodb
+brew install mongodb-community
 brew install postgresql
 ## Git
 brew install act
@@ -48,14 +48,18 @@ if [ $(which code) ]; then
   code --install-extension esbenp.prettier-vscode
   code --install-extension golang.go
   code --install-extension juanblanco.solidity
+  code --install-extension kleber-swf.unity-code-snippets
   code --install-extension mikestead.dotenv
   code --install-extension ms-azuretools.vscode-docker
+  code --install-extension ms-dotnettools.csharp
   code --install-extension ms-python.python
   code --install-extension ms-vsliveshare.vsliveshare
   code --install-extension msjsdiag.vscode-react-native
   code --install-extension rust-lang.rust
   code --install-extension streetsidesoftware.code-spell-checker
   code --install-extension stylelint.vscode-stylelint
+  code --install-extension tobiah.unity-tools
+  code --install-extension unity.unity-debug
   code --install-extension vscodevim.vim
   echo
 fi

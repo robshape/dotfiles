@@ -2,6 +2,7 @@
   "breadcrumbs.enabled": false,
   "cSpell.flagWords": [],
   "cSpell.showStatus": false,
+  "csharp.semanticHighlighting.enabled": true,
   "debug.internalConsoleOptions": "openOnSessionStart",
   "debug.openDebug": "openOnSessionStart",
   "debug.showInStatusBar": "always",

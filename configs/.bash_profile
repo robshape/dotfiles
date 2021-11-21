@@ -5,7 +5,7 @@ export CYPRESS_CACHE_FOLDER="~/.cache/cypress"
 export CYPRESS_CRASH_REPORTS=0
 export GOPATH="$HOME/.go"
 export GOROOT="$(brew --prefix go)/libexec"
-export PATH="$GOPATH/bin:$GOROOT/bin:$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/share/dotnet/sdk:$GOPATH/bin:$GOROOT/bin:$HOME/.cargo/bin:$PATH"
 export TERM="screen-256color"
 
 ## #######
@@ -97,8 +97,7 @@ ninstall() {
 }
 
 tclean() {
-  #sudo find / -d -name ".DS_Store" -exec rm {} \;
-  sudo periodic daily monthly weekly
+  yarn cache clean --all
   rm -fr ~/.cache/
   rm -fr ~/.cargo/registry/
   rm -fr ~/.config/configstore/
@@ -114,6 +113,8 @@ tclean() {
   rm -fr ~/.yarnrc
   rm -fr ~/.bash_sessions/
   rm -fr ~/.bash_history
+  #sudo find / -d -name ".DS_Store" -exec rm {} \;
+  sudo periodic daily monthly weekly
 }
 
 vclean() {
