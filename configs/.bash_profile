@@ -114,7 +114,7 @@ tclean() {
   rm -fr ~/.bash_sessions/
   rm -fr ~/.bash_history
   #sudo find / -d -name ".DS_Store" -exec rm {} \;
-  sudo periodic daily monthly weekly
+  sudo periodic daily weekly monthly
 }
 
 vclean() {
