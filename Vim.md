@@ -30,13 +30,14 @@ Inputs that are specific for Vim.
 |            | ALT+q            | Quit without prompt \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                    |
 |            | ALT+w            | Close current pane \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                     |
 |            | CTRL+[           | Escape                                                                                                     |
-|            | CTRL+^           | Navigate buffers                                                                                           |
 |            | CTRL+b           | Move backwards one page                                                                                    |
 |            | CTRL+f           | Move forwards one page                                                                                     |
 |            | CTRL+h           | Navigate panes \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                         |
 |            | CTRL+i           | Move forward to next position                                                                              |
 |            | CTRL+o           | Move backward to previous position                                                                         |
 |            | ENTER            | Clear highlighted search results                                                                           |
+|            | SHIFT+TAB        | Navigate buffers backward \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                              |
+|            | TAB              | Navigate buffers forward \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                               |
 | Edit       |                  |                                                                                                            |
 |            | .                | Repeat last shortcut that edited text                                                                      |
 |            | =G               | Format indentation downwards to last line of document                                                      |
