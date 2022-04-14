@@ -1,13 +1,11 @@
 [core]
-  excludesfile=~/.gitignore
-[credential]
-  helper=osxkeychain
+  excludesfile = ~/.gitignore
+
 [difftool]
-  prompt=false
-[merge]
-  tool=opendiff
-[pull]
-  rebase=false
-[user]
-  email=name@domain
-  name=robshape
+  prompt = false
+
+[includeIf "gitdir:~/Developer/shapeless/"]
+  path = ~/Developer/shapeless/.gitconfig
+
+[includeIf "gitdir:~/Developer/shapeless-oss/"]
+  path = ~/Developer/shapeless-oss/.gitconfig

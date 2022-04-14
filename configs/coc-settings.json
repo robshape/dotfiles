@@ -1,7 +1,11 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "*"
+  ],
   "eslint.autoFixOnSave": true,
   "eslint.run": "onSave",
+  "markdownlint.onChange": false,
+  "markdownlint.onOpen": false,
   "prettier.onlyUseLocalVersion": true,
   "prettier.requireConfig": true,
   "stylelintplus.autoFixOnSave": true,

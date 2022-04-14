@@ -1,46 +1,11 @@
-snippet af "Arrow Function"
-const $1 = ($2) => {
-  return $3;
-};
-endsnippet
-
-
-
-
 snippet cl "Console Log"
 console.log('$1');
 endsnippet
 
-
-
-
-snippet idximp "Index Import"
-import $1 from './$1';
-
-export default $1;
-endsnippet
-
-
-
-
-snippet mus "Material-UI Styling"
-const useStyles = makeStyles((theme) => ({
-  root: {
-  },
-}));
-endsnippet
-
-
-
-
-snippet rch "React Custom Hook"
-import { useState } from 'react';
-
-export const $1 = () => {
-  const [$2, set$2] = useState($3);
-
-  return {
-    $2
-  };
-};
+snippet dcl "Deep Console Log"
+console.log(util.inspect($1), {
+	colors: true,
+	depth: null,
+	getters: true,
+});
 endsnippet

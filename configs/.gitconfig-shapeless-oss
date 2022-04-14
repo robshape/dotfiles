@@ -1,0 +1,6 @@
+[core]
+  sshCommand = ssh -F /dev/null -i ~/.ssh/shapeless-key
+
+[user]
+  email = robshape@users.noreply.github.com
+  name = robshape

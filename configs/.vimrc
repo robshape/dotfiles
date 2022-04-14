@@ -60,24 +60,27 @@ nnoremap ∑ <c-w>q
 nnoremap <c-h> <c-w>w
 "" ENTER to clear highlighted search results
 nnoremap <cr> :noh<cr><cr>
+"" TAB to navigate buffers forward
+nnoremap <tab> :bnext<cr>
+"" SHIFT+TAB to navigate buffers backward
+nnoremap <s-tab> :bprev<cr>
 
 "" #############
 "" Setup plugins
 "" #############
 "" Install vim-plug (if missing)
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  silent! curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 "" Plugins
 call plug#begin('~/.vim/plugged/')
 let g:coc_global_extensions=[
   \'coc-eslint',
-  \'coc-go',
   \'coc-json',
+  \'coc-markdownlint',
   \'coc-pairs',
   \'coc-prettier',
-  \'coc-rls',
   \'coc-snippets',
   \'coc-spell-checker',
   \'coc-stylelintplus',
@@ -183,6 +186,13 @@ augroup autocommands
   autocmd VimEnter * wincmd w
 
 "" Vim
+"" Trim final newlines on save
+  function TrimFinalNewlines()
+    let cursor_position = getpos('.')
+    silent! %s#\($\n\s*\)\+\%$##
+    call setpos('.', cursor_position)
+  endfunction
+  autocmd BufWritePre * call TrimFinalNewlines()
 "" Trim trailing whitespace on save
   autocmd BufWritePre * %s/\s\+$//e
 "" Prompt when current buffer has been edited outside of Vim (by Git, for example)

@@ -9,5 +9,5 @@ My system configuration.
 
 ## License
 
-This project is [not licensed](https://choosealicense.com/no-permission/). Copyright (C) 2020 Robin
-Dahlstedt.
+This project is [not licensed](https://choosealicense.com/no-permission/).
+Copyright (C) 2020 Robin Dahlstedt.
