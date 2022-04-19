@@ -60,10 +60,10 @@ nnoremap ∑ <c-w>q
 nnoremap <c-h> <c-w>w
 "" ENTER to clear highlighted search results
 nnoremap <cr> :noh<cr><cr>
-"" TAB to navigate buffers forward
-nnoremap <tab> :bnext<cr>
 "" SHIFT+TAB to navigate buffers backward
 nnoremap <s-tab> :bprev<cr>
+"" TAB to navigate buffers forward
+nnoremap <tab> :bnext<cr>
 
 "" #############
 "" Setup plugins
