@@ -1,1 +1,17 @@
-extends javascript
+extends typescript
+
+snippet rfc "React Function Component"
+import React from "react";
+
+type Props = {
+  children: React.ReactNode;
+};
+
+export const $1 = ({ children }: Props): JSX.Element => {
+  return (
+    <div>
+      {children}
+    </div>
+  )
+};
+endsnippet

@@ -9,8 +9,10 @@ set shiftwidth=2
 set tabstop=2
 "" Use system clipboard
 set clipboard=unnamed
+"" Width to wrap text on
+set colorcolumn=100
+set textwidth=100
 "" Highlight cursor
-set cursorcolumn
 set cursorline
 "" Hide unsaved buffers to avoid save prompt
 set hidden
@@ -23,15 +25,16 @@ set smartcase
 set nobackup
 set noswapfile
 set nowritebackup
-"" Recognize <esc> immediately
-set noesckeys
 "" Show relative line numbers together with signs
+set number
 set relativenumber
 set signcolumn=number
+"" Number of lines to always show above and below the cursor
+set scrolloff=10
 "" Show shortcut/command while typing
 set showcmd
-"" Width to wrap text on
-set textwidth=100
+"" Recognize <esc> immediately
+set timeout timeoutlen=1000 ttimeoutlen=100
 "" Decrease delay for plugin updates
 set updatetime=400
 "" Show auto-complete for commands
@@ -89,7 +92,7 @@ let g:coc_global_extensions=[
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdtree'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips'
@@ -163,6 +166,7 @@ nnoremap † :NERDTreeToggle<cr>
 "" Enable theme
 colorscheme one
 highlight CocInfoSign ctermfg=magenta
+highlight ColorColumn ctermbg=red
 highlight link EasyMotionTarget2First Search
 highlight link EasyMotionTarget2Second Search
 
@@ -203,10 +207,6 @@ augroup END
 "" Optimize performance
 "" ####################
 set lazyredraw
-set nocursorcolumn
-set nocursorline
-set noshowcmd
-set nowildmenu
 set synmaxcol=300
 set ttyfast
 let g:loaded_matchparen=1

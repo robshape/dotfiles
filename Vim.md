@@ -31,10 +31,12 @@ Inputs that are specific for Vim.
 |            | ALT+w            | Close current pane \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                     |
 |            | CTRL+[           | Escape                                                                                                     |
 |            | CTRL+b           | Move backwards one page                                                                                    |
+|            | CTRL+d           | Scroll downwards                                                                                           |
 |            | CTRL+f           | Move forwards one page                                                                                     |
 |            | CTRL+h           | Navigate panes \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                         |
 |            | CTRL+i           | Move forward to next position                                                                              |
 |            | CTRL+o           | Move backward to previous position                                                                         |
+|            | CTRL+u           | Scroll upwards                                                                                             |
 |            | ENTER            | Clear highlighted search results                                                                           |
 |            | SHIFT+TAB        | Navigate buffers backward \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                              |
 |            | TAB              | Navigate buffers forward \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                               |
