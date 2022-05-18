@@ -15,7 +15,7 @@ Inputs that are specific for Vim.
 |            | 0                | Move to start of current line                                                                              |
 |            | b                | Move backwards to start of word                                                                            |
 |            | e                | Move forwards to end of word                                                                               |
-|            | f'               | Move to first occurrence of `'` on current line (`;` for next occurrence)                                  |
+|            | f"               | Move to first occurrence of `"` on current line (`;` for next occurrence)                                  |
 |            | G                | Move to last line of document                                                                              |
 |            | gg               | Move to first line of document                                                                             |
 |            | H                | Move to top of page                                                                                        |
@@ -45,13 +45,13 @@ Inputs that are specific for Vim.
 |            | =G               | Format indentation downwards to last line of document                                                      |
 |            | a                | Insert after cursor                                                                                        |
 |            | ce               | Replace until end of word                                                                                  |
-|            | ci'              | Replace in between `'`                                                                                     |
+|            | ci"              | Replace in between `"`                                                                                     |
 |            | ciw              | Replace word                                                                                               |
 |            | D                | Cut to end of current line                                                                                 |
 |            | daB              | Cut `{}` block                                                                                             |
 |            | dab              | Cut `()` block                                                                                             |
 |            | dd               | Cut current line                                                                                           |
-|            | dt'              | Cut to first occurrence of `'` on current line                                                             |
+|            | dt"              | Cut to first occurrence of `"` on current line                                                             |
 |            | i                | Insert before cursor                                                                                       |
 |            | ii               | Escape \[INSERT MODE\] \[CUSTOM SHORTCUT\]                                                                 |
 |            | O                | Append new line above current line                                                                         |
@@ -107,7 +107,7 @@ Inputs that are specific for Vim.
 |            | gS               | Split line under cursor into block                                                                         |
 | Surround   |                  |                                                                                                            |
 |            | cs})             | Replace `}` with `)` in between cursor                                                                     |
-|            | ysiw'            | Surround current word with `'`                                                                             |
+|            | ysiw"            | Surround current word with `"`                                                                             |
 | UltiSnips  |                  |                                                                                                            |
 |            | CTRL+j           | Move forwards one placeholder                                                                              |
 |            | CTRL+k           | Move backwards one placeholder                                                                             |

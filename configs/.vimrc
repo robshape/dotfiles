@@ -153,6 +153,10 @@ nnoremap ƒ :Rg<cr>
 "" ALT+p to search for file
 nnoremap π :Files<cr>
 
+"" indentLine
+"" Disable conceal for JSON and Markdown
+let g:indentLine_fileTypeExclude=['json', 'jsonc', 'markdown']
+
 "" NERDTree
 "" Show hidden files
 let NERDTreeIgnore=['\.git$']
@@ -192,7 +196,7 @@ augroup autocommands
 "" Vim
 "" Trim final newlines on save
   function TrimFinalNewlines()
-    let cursor_position = getpos('.')
+    let cursor_position=getpos('.')
     silent! %s#\($\n\s*\)\+\%$##
     call setpos('.', cursor_position)
   endfunction

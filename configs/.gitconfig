@@ -1,11 +1,11 @@
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile=~/.gitignore
 
 [difftool]
-  prompt = false
+  prompt=false
 
 [includeIf "gitdir:~/Developer/shapeless/"]
-  path = ~/Developer/shapeless/.gitconfig
+  path=~/Developer/shapeless/.gitconfig
 
 [includeIf "gitdir:~/Developer/shapeless-oss/"]
-  path = ~/Developer/shapeless-oss/.gitconfig
+  path=~/Developer/shapeless-oss/.gitconfig
