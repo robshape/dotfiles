@@ -28,6 +28,7 @@ VIM_DIRECTORY="$HOME/.vim/"
 if [ ! -d "$VIM_DIRECTORY" ]; then
   mkdir "$VIM_DIRECTORY"
 fi
+ln -fs "$PWD/configs/.tmux.conf" "$HOME"
 ln -fs "$PWD/configs/.vimrc" "$HOME"
 ln -fs "$PWD/configs/coc-settings.json" "$VIM_DIRECTORY"
 ln -fs "$PWD/UltiSnips/" "$VIM_DIRECTORY"

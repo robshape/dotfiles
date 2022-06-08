@@ -55,6 +55,10 @@ vdiff() {
   git difftool -t vimdiff
 }
 
+vkeys() {
+  ssh-add ~/.ssh/shapeless-key
+}
+
 vstart() {
   if [ -z "$TMUX" ]; then
     tmux new-session -As main

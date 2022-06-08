@@ -43,11 +43,6 @@ set wildmenu
 "" ############
 "" Map keyboard
 "" ############
-"" Move cursor by display lines when text is wrapped
-nnoremap j gj
-nnoremap k gk
-"" ii to escape
-inoremap ii <esc>
 "" ALT+c to delete all buffers except current buffer
 nnoremap ç :w\|%bd\|e#\|bd#<cr>
 "" ALT+j OR k to move current line, down or up
