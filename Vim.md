@@ -121,11 +121,10 @@ Inputs that are specific for tmux. Shortcuts and commands are prefixed with `CTR
 |           | "                  | Split pane horizontally                                              |
 |           | %                  | Split pane vertically                                                |
 |           | ,                  | Rename current window                                                |
-|           | 0..9               | Focus `x` window                                                     |
+|           | 0..9               | Focus window at position 0..9                                        |
 |           | >                  | Resize current pane towards right by 100 columns \[CUSTOM SHORTCUT\] |
 |           | [                  | Activate scroll (`DOWN` or `UP` to scroll, `q` to exit)              |
 |           | c                  | Create new window                                                    |
 |           | {                  | Move current pane to left                                            |
 | Command   |                    |                                                                      |
 |           | :swap-window -t 0  | Swap current window with window at position 0                        |
-|           | exit               | Exit current pane/window                                             |

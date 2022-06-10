@@ -50,13 +50,13 @@ tclean() {
   rm -fr ~/.zsh_history
 }
 
+vauth() {
+  ssh-add ~/.ssh/shapeless-key
+}
+
 vdiff() {
   git add -N .
   git difftool -t vimdiff
-}
-
-vkeys() {
-  ssh-add ~/.ssh/shapeless-key
 }
 
 vstart() {
