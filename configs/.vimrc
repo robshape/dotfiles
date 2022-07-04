@@ -75,6 +75,7 @@ endif
 call plug#begin('~/.vim/plugged/')
 let g:coc_global_extensions=[
   \'coc-eslint',
+  \'coc-highlight',
   \'coc-json',
   \'coc-markdownlint',
   \'coc-pairs',
@@ -83,6 +84,7 @@ let g:coc_global_extensions=[
   \'coc-spell-checker',
   \'coc-stylelintplus',
   \'coc-tsserver',
+  \'coc-yank',
   \]
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -125,6 +127,8 @@ nmap gd <Plug>(coc-definition)
 nnoremap gh :call CocAction('doHover')<cr>
 "" gr to show references for code
 nmap gr <Plug>(coc-references)
+"" yh to show yank history
+nnoremap yh :<C-u>CocList -A --normal yank<cr>
 "" ALT+m to show problems
 nnoremap µ :CocList diagnostics<cr>
 "" ALT+r to open Refactorings/Code Actions
