@@ -43,8 +43,8 @@ set wildmenu
 "" ############
 "" Map keyboard
 "" ############
-"" ALT+c to delete all buffers except current buffer
-nnoremap ç :w\|%bd\|e#\|bd#<cr>
+"" ALT+c to delete all buffers except current buffer and restart CoC
+nnoremap ç :w\|%bd\|e#\|bd#<cr>:CocRestart<cr>
 "" ALT+j OR k to move current line, down or up
 nnoremap ∆ :m .+1<cr>==
 nnoremap ˚ :m .-2<cr>==

@@ -15,7 +15,7 @@ Inputs that are specific for Vim.
 |            | 0                      | Move to start of current line                                                                              |
 |            | b                      | Move backward to start of word                                                                             |
 |            | e                      | Move forward to end of word                                                                                |
-|            | f"                     | Move to first occurrence of `"` on current line (`;` for next occurrence)                                  |
+|            | f\<character\>         | Move to first occurrence of \<character\> on current line (`;` for next occurrence)                        |
 |            | G                      | Move to last line of document                                                                              |
 |            | gg                     | Move to first line of document                                                                             |
 |            | H                      | Move to top of page                                                                                        |
@@ -26,7 +26,7 @@ Inputs that are specific for Vim.
 |            | ]}                     | Move to end of block                                                                                       |
 |            | {                      | Move to previous paragraph                                                                                 |
 |            | }                      | Move to next paragraph                                                                                     |
-|            | ALT+c                  | Delete all buffers except current buffer \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                               |
+|            | ALT+c                  | Delete all buffers except current buffer and restart CoC \[NORMAL MODE\] \[CUSTOM SHORTCUT\]               |
 |            | ALT+q                  | Quit without prompt \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                    |
 |            | ALT+w                  | Close current pane \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                     |
 |            | CTRL+b OR f            | Move one page, backward or forward                                                                         |
@@ -41,13 +41,13 @@ Inputs that are specific for Vim.
 |            | =G                     | Format indentation downward to last line of document                                                       |
 |            | a                      | Insert after cursor                                                                                        |
 |            | ce                     | Replace until end of word                                                                                  |
-|            | ci"                    | Replace in between `"`                                                                                     |
+|            | ci\<character\>        | Replace in between \<character\>                                                                           |
 |            | ciw                    | Replace word                                                                                               |
 |            | D                      | Cut to end of current line                                                                                 |
 |            | daB                    | Cut `{}` block                                                                                             |
 |            | dab                    | Cut `()` block                                                                                             |
 |            | dd                     | Cut current line                                                                                           |
-|            | dt"                    | Cut to first occurrence of `"` on current line                                                             |
+|            | dt\<character\>        | Cut to first occurrence of \<character\> on current line                                                   |
 |            | i                      | Insert before cursor                                                                                       |
 |            | O                      | Append new line above current line                                                                         |
 |            | o                      | Append new line below current line                                                                         |
@@ -69,7 +69,9 @@ Inputs that are specific for Vim.
 |            | v                      | Start VISUAL MODE per character                                                                            |
 | Command    |                        |                                                                                                            |
 |            | /\<string\>            | Search in current buffer for \<string\> (`n` for next occurrence)                                          |
+|            | :%s/abc/123/gc         | Replace `abc` with `123` in all lines after confirmation                                                   |
 |            | :bd \[\<path\>\]       | Delete current buffer or buffer at \<path\>                                                                |
+|            | :tabn                  | Move to next tab                                                                                           |
 | CoC        |                        |                                                                                                            |
 |            | gd                     | Jump to definition of code                                                                                 |
 |            | gh                     | Show tooltip for code \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                  |

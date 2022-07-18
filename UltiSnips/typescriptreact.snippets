@@ -3,11 +3,11 @@ extends typescript
 snippet rfc "React Function Component"
 import React from "react";
 
-type Props = {
+type $1Props = {
   children: React.ReactNode;
 };
 
-export const $1 = ({ children }: Props): JSX.Element => {
+export function $1({ children }: $1Props) {
   return (
     <div>
       {children}

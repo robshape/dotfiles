@@ -17,6 +17,7 @@ alias gpop="git stash pop"
 alias gs="git status"
 alias gstash="git stash -ku"
 alias gundo="git reset --soft HEAD~1"
+alias v="vim"
 
 ## #########
 ## Functions
