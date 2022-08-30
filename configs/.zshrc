@@ -5,13 +5,14 @@ export BROWSER="none"
 export CYPRESS_CACHE_FOLDER="~/.cache/cypress"
 export CYPRESS_CRASH_REPORTS=0
 export PATH="/opt/homebrew/bin:$PATH"
-export TERM="screen-256color"
 
 ## #######
 ## Aliases
 ## #######
+alias awake="caffeinate -dimsu"
 alias c="clear"
 alias gb="git branch"
+alias gbr="git branch -r"
 alias gc="git checkout"
 alias gpop="git stash pop"
 alias gs="git status"
@@ -39,6 +40,10 @@ gfpush() {
   git push -u origin $(git symbolic-ref -q --short HEAD)
 }
 
+gpick() {
+  git checkout $1 -- $2
+}
+
 gpull() {
   git pull
   git fetch -p
@@ -52,6 +57,7 @@ tclean() {
 }
 
 vauth() {
+  ssh-add ~/.ssh/ipex-key
   ssh-add ~/.ssh/shapeless-key
 }
 

@@ -1,7 +1,6 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "*"
-  ],
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "colors.filetypes": ["*"],
   "eslint.autoFixOnSave": true,
   "eslint.run": "onSave",
   "markdownlint.onChange": false,

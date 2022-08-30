@@ -31,10 +31,12 @@ set relativenumber
 set signcolumn=number
 "" Number of lines to always show above and below the cursor
 set scrolloff=10
+"" Hide intro message
+set shortmess+=I
 "" Show shortcut/command while typing
 set showcmd
 "" Recognize <esc> immediately
-set timeout timeoutlen=1000 ttimeoutlen=100
+set timeout timeoutlen=1000 ttimeout ttimeoutlen=100
 "" Decrease delay for plugin updates
 set updatetime=400
 "" Show auto-complete for commands
@@ -124,17 +126,19 @@ let g:coc_config_home='~/.vim/'
 "" gd to jump to definition of code
 nmap gd <Plug>(coc-definition)
 "" gh to show tooltip for code
-nnoremap gh :call CocAction('doHover')<cr>
+nnoremap gh :call CocActionAsync('doHover')<cr>
 "" gr to show references for code
 nmap gr <Plug>(coc-references)
 "" yh to show yank history
-nnoremap yh :<C-u>CocList -A --normal yank<cr>
+nnoremap yh :<c-u>CocList -A --normal yank<cr>
 "" ALT+m to show problems
 nnoremap µ :CocList diagnostics<cr>
 "" ALT+r to open Refactorings/Code Actions
 nmap ® <Plug>(coc-codeaction)
 "" CTRL+SPACE to toggle auto-complete
 inoremap <expr> <c-@> coc#refresh()
+"" ENTER to select auto-complete
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<c-g>u\<cr>"
 "" F2 to rename symbol
 nmap <f2> <Plug>(coc-rename)
 
@@ -158,8 +162,10 @@ let g:indentLine_fileTypeExclude=['json', 'jsonc', 'markdown']
 
 "" NERDTree
 "" Show hidden files
-let NERDTreeIgnore=['\.git$']
-let NERDTreeShowHidden=1
+let g:NERDTreeIgnore=['\.git$']
+let g:NERDTreeShowHidden=1
+"" Resize workaround: https://github.com/preservim/nerdtree/issues/1321
+let g:NERDTreeMinimalMenu=1
 "" ALT+d to reveal file in tree
 nnoremap ∂ :NERDTreeFind<cr>
 "" ALT+t to toggle tree
@@ -167,9 +173,12 @@ nnoremap † :NERDTreeToggle<cr>
 
 "" One
 "" Enable theme
+set termguicolors
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 colorscheme one
-highlight CocInfoSign ctermfg=magenta
-highlight ColorColumn ctermbg=red
+highlight CocInfoSign ctermfg=blue
+highlight CocMenuSel ctermbg=black ctermfg=white
 highlight link EasyMotionTarget2First Search
 highlight link EasyMotionTarget2Second Search
 
