@@ -57,7 +57,6 @@ tclean() {
 }
 
 vauth() {
-  ssh-add ~/.ssh/ipex-key
   ssh-add ~/.ssh/shapeless-key
 }
 
