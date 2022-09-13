@@ -1,4 +1,4 @@
-# Vim for tmux
+# Vim (with tmux)
 
 Keyboard shortcuts and commands for Vim inside tmux.
 
@@ -48,9 +48,11 @@ Inputs that are specific for Vim.
 |            | dab                    | Cut `()` block                                                                                             |
 |            | dd                     | Cut current line                                                                                           |
 |            | dt\<character\>        | Cut to first occurrence of \<character\> on current line                                                   |
+|            | g&                     | Repeat replace in all lines                                                                                |
 |            | i                      | Insert before cursor                                                                                       |
 |            | O                      | Append new line above current line                                                                         |
 |            | o                      | Append new line below current line                                                                         |
+|            | p                      | Paste                                                                                                      |
 |            | r\<character\>         | Replace character under cursor with \<character\>                                                          |
 |            | S                      | Delete current line and insert                                                                             |
 |            | s                      | Delete character under cursor and insert                                                                   |
@@ -60,6 +62,7 @@ Inputs that are specific for Vim.
 |            | yy                     | Copy current line                                                                                          |
 |            | ALT+j OR k             | Move current line, down or up \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                          |
 |            | ALT+s                  | Save current buffer \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                    |
+|            | CTRL+[                 | Escape                                                                                                     |
 |            | CTRL+d OR t            | Indent current line, left or right \[INSERT MODE\]                                                         |
 |            | CTRL+n OR p            | Navigate auto-complete, next or previous (`CTRL+y` to confirm)                                             |
 |            | CTRL+r                 | Redo                                                                                                       |

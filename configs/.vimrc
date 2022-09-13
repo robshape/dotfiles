@@ -85,6 +85,7 @@ let g:coc_global_extensions=[
   \'coc-snippets',
   \'coc-spell-checker',
   \'coc-stylelintplus',
+  \'coc-svelte',
   \'coc-tsserver',
   \'coc-yank',
   \]

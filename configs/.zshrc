@@ -11,10 +11,19 @@ export PATH="/opt/homebrew/bin:$PATH"
 ## #######
 alias awake="caffeinate -dimsu"
 alias c="clear"
+alias ga="git add ."
 alias gb="git branch"
+alias gbd="git branch -D"
 alias gbr="git branch -r"
 alias gc="git checkout"
+alias gcb="git checkout -b"
+alias gcommit="git commit"
+alias gl="git log"
+alias gp="git push"
 alias gpop="git stash pop"
+alias gr="git reset"
+alias grebase="git fetch && git merge origin/main"
+alias grh="git reset --hard"
 alias gs="git status"
 alias gstash="git stash -ku"
 alias gundo="git reset --soft HEAD~1"
@@ -36,17 +45,17 @@ gclean() {
   git gc
 }
 
-gfpush() {
-  git push -u origin $(git symbolic-ref -q --short HEAD)
-}
-
 gpick() {
   git checkout $1 -- $2
 }
 
-gpull() {
+gupdate() {
   git pull
   git fetch -p
+}
+
+gupload() {
+  git push -u origin $(git symbolic-ref -q --short HEAD)
 }
 
 tclean() {
