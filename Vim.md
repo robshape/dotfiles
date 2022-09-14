@@ -57,6 +57,7 @@ Inputs that are specific for Vim.
 |            | S                      | Delete current line and insert                                                                             |
 |            | s                      | Delete character under cursor and insert                                                                   |
 |            | u                      | Undo                                                                                                       |
+|            | vep                    | Paste and replace current word                                                                             |
 |            | x                      | Delete character under cursor                                                                              |
 |            | yiw                    | Copy current word                                                                                          |
 |            | yy                     | Copy current line                                                                                          |
