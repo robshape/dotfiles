@@ -11,7 +11,7 @@ Inputs that are specific for Vim.
 | Move       |                        |                                                                                                            |
 |            | \$                     | Move to end of current line                                                                                |
 |            | %                      | Move to matching character (`()`, `[]`, `{}`)                                                              |
-|            | \*                     | Move to next occurrence of word under cursor                                                               |
+|            | \*                     | Move to next occurrence of current word                                                                    |
 |            | 0                      | Move to start of current line                                                                              |
 |            | b                      | Move backward to start of word                                                                             |
 |            | e                      | Move forward to end of word                                                                                |
@@ -40,9 +40,9 @@ Inputs that are specific for Vim.
 |            | .                      | Repeat last shortcut that edited text                                                                      |
 |            | =G                     | Format indentation downward to last line of document                                                       |
 |            | a                      | Insert after cursor                                                                                        |
-|            | ce                     | Replace until end of word                                                                                  |
+|            | ce                     | Replace until end of current word                                                                          |
 |            | ci\<character\>        | Replace in between \<character\>                                                                           |
-|            | ciw                    | Replace word                                                                                               |
+|            | ciw                    | Replace current word                                                                                       |
 |            | D                      | Cut to end of current line                                                                                 |
 |            | daB                    | Cut `{}` block                                                                                             |
 |            | dab                    | Cut `()` block                                                                                             |
@@ -106,8 +106,8 @@ Inputs that are specific for Vim.
 |            | ALT+t                  | Toggle tree \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                            |
 |            | ENTER                  | Open file                                                                                                  |
 | Splitjoin  |                        |                                                                                                            |
-|            | gJ                     | Join block under cursor into line                                                                          |
-|            | gS                     | Split line under cursor into block                                                                         |
+|            | gJ                     | Join current block into line                                                                               |
+|            | gS                     | Split current line into block                                                                              |
 | Surround   |                        |                                                                                                            |
 |            | cs})                   | Replace `}` with `)` in between cursor                                                                     |
 |            | ysiw"                  | Surround current word with `"`                                                                             |
