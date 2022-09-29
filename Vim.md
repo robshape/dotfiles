@@ -80,7 +80,7 @@ Inputs that are specific for Vim.
 | FZF        |                        |                                                                                                                   |
 |            | ALT+f                  | Search in workspace \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                           |
 |            | ALT+p                  | Search for file \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                               |
-|            | CTRL+j OR k            | Navigate search results, down or up (`ENTER` to open file, `CTRL+v` to open file in vertically split pane)        |
+|            | CTRL+n OR p            | Navigate search results, next or previous (`ENTER` to open file, `CTRL+v` to open file in vertically split pane)  |
 |            | :Snippets              | Show available snippets for current filetype                                                                      |
 | NERDTree   |                        |                                                                                                                   |
 |            | m                      | Open menu                                                                                                         |
