@@ -117,5 +117,6 @@ Inputs that are specific for tmux. Shortcuts and commands are prefixed with `CTR
 |           | >                  | Resize current pane towards right by 100 columns \[CUSTOM SHORTCUT\] |
 |           | [                  | Activate scroll (`DOWN` or `UP` to scroll, `q` to exit)              |
 |           | c                  | Create new window                                                    |
+|           | z                  | Zoom current pane                                                    |
 | Command   |                    |                                                                      |
 |           | :swap-window -t 0  | Swap current window with window at position 0                        |

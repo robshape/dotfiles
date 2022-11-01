@@ -14,6 +14,8 @@ set colorcolumn=100
 set textwidth=100
 "" Highlight cursor
 set cursorline
+"" Wrap text in diff mode
+set diffopt+=followwrap
 "" Hide unsaved buffers to avoid save prompt
 set hidden
 "" Improve search experience

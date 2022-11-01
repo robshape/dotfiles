@@ -6,8 +6,9 @@ echo "[*] INSTALLING TOOLS"
 if [ ! $(which brew) ]; then
   /bin/bash -c "$(curl -fLSs https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
-## Git
+## CLI
 brew install git
+brew install jq
 ## Node
 brew install node
 brew install yarn
