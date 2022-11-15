@@ -61,7 +61,7 @@ Inputs that are specific for Vim.
 |            | v                       | Start VISUAL MODE per character                                                                                   |
 | Command    |                         |                                                                                                                   |
 |            | /\<string\>             | Search in current buffer for \<string\> (`n` for next occurrence)                                                 |
-|            | :%!<cli>                | Pipe current buffer to <cli>                                                                                      |
+|            | :%!\<cli\>              | Pipe current buffer to \<cli\>                                                                                    |
 |            | :%s/abc/123/gc          | Replace `abc` with `123` in all lines after confirmation                                                          |
 |            | :ccl                    | Close quickfix                                                                                                    |
 |            | :cfdo %s/abc/123/g | up | Replace `abc` with `123` in all quickfix files                                                                    |
