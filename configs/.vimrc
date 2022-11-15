@@ -62,21 +62,13 @@ nnoremap ∑ <c-w>q
 nnoremap <c-h> <c-w>w
 "" ENTER to clear highlighted search results
 nnoremap <cr> :noh<cr><cr>
-"" SHIFT+TAB to navigate buffers backward
-nnoremap <s-tab> :bprev<cr>
-"" TAB to navigate buffers forward
+"" TAB to navigate buffers
 nnoremap <tab> :bnext<cr>
 
 "" #############
 "" Setup plugins
 "" #############
-"" Install vim-plug (if missing)
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent! curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-"" Plugins
-call plug#begin('~/.vim/plugged/')
+"" CoC
 let g:coc_global_extensions=[
   \'coc-eslint',
   \'coc-highlight',
@@ -91,6 +83,8 @@ let g:coc_global_extensions=[
   \'coc-tsserver',
   \'coc-yank',
   \]
+"" vim-plug
+call plug#begin('~/.vim/plugged/')
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

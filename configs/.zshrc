@@ -52,6 +52,12 @@ gpick() {
 gupdate() {
   git pull
   git fetch -p
+
+  if [ "$1" = "n" ]; then
+    npm ci
+  elif [ "$1" = "y" ]; then
+    yarn install --frozen-lockfile
+  fi
 }
 
 gupload() {

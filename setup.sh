@@ -16,6 +16,7 @@ brew install yarn
 brew install ripgrep
 brew install tmux
 brew install vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo
 
 echo "[*] LINKING FILES"
