@@ -47,8 +47,8 @@ set wildmenu
 "" ############
 "" Map keyboard
 "" ############
-"" ALT+c to delete all buffers except current buffer, clear yank history, and restart CoC
-nnoremap ç :w\|%bd\|e#\|bd#<cr>:CocCommand yank.clean<cr>:CocRestart<cr>
+"" ALT+c to delete all buffers, except current buffer, and clear yank history
+nnoremap ç :w\|%bd\|e#\|bd#<cr>:CocCommand yank.clean<cr>
 "" ALT+j OR k to move current line, down or up
 nnoremap ∆ :m .+1<cr>==
 nnoremap ˚ :m .-2<cr>==
@@ -63,7 +63,7 @@ nnoremap <c-h> <c-w>w
 "" ENTER to clear highlighted search results
 nnoremap <cr> :noh<cr><cr>
 "" TAB to navigate buffers
-nnoremap <tab> :bnext<cr>
+nnoremap <tab> :bn<cr>
 
 "" #############
 "" Setup plugins
