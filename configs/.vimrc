@@ -58,6 +58,8 @@ nnoremap œ :qa!<cr>
 nnoremap ß :w<cr>
 "" ALT+w to close current pane
 nnoremap ∑ <c-w>q
+"" CTRL+c to escape
+inoremap <c-c> <esc>
 "" CTRL+h to navigate panes
 nnoremap <c-h> <c-w>w
 "" ENTER to clear highlighted search results

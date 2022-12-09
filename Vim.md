@@ -16,6 +16,8 @@ Inputs that are specific for Vim.
 |            | f\<character\>           | Move to first occurrence of \<character\> on current line (`;` for next occurrence, `,` for previous occurrence) |
 |            | G                        | Move to last line of document                                                                                    |
 |            | gg                       | Move to first line of document                                                                                   |
+|            | gi                       | Move to last insert                                                                                              |
+|            | gt                       | Move to next tab                                                                                                 |
 |            | {                        | Move to previous paragraph                                                                                       |
 |            | }                        | Move to next paragraph                                                                                           |
 |            | ALT+c                    | Delete all buffers, except current buffer, and clear yank history \[NORMAL MODE\] \[CUSTOM SHORTCUT\]            |
@@ -31,6 +33,7 @@ Inputs that are specific for Vim.
 |            | =G                       | Format indentation downward to last line of document                                                             |
 |            | a                        | Insert after cursor                                                                                              |
 |            | ce                       | Replace until end of current word                                                                                |
+|            | cgn                      | Replace next search occurrence (use with `*`, or `/`, and `.`)                                                   |
 |            | ci\<character\>          | Replace in between \<character\>                                                                                 |
 |            | ciw                      | Replace current word                                                                                             |
 |            | D                        | Cut to end of current line                                                                                       |
@@ -39,7 +42,6 @@ Inputs that are specific for Vim.
 |            | dd                       | Cut current line                                                                                                 |
 |            | dt\<character\>          | Cut to first occurrence of \<character\> on current line                                                         |
 |            | g&                       | Repeat replace in all lines                                                                                      |
-|            | gt                       | Move to next tab                                                                                                 |
 |            | i                        | Insert before cursor                                                                                             |
 |            | O                        | Append new line above current line                                                                               |
 |            | o                        | Append new line below current line                                                                               |
@@ -53,7 +55,7 @@ Inputs that are specific for Vim.
 |            | yy                       | Copy current line                                                                                                |
 |            | ALT+j OR k               | Move current line, down or up \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                |
 |            | ALT+s                    | Save current buffer \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                          |
-|            | CTRL+[                   | Escape                                                                                                           |
+|            | CTRL+c                   | Escape                                                                                                           |
 |            | CTRL+n OR p              | Navigate auto-complete, next or previous (`CTRL+y` to confirm)                                                   |
 | Select     |                          |                                                                                                                  |
 |            | V                        | Start VISUAL MODE per line                                                                                       |
@@ -62,6 +64,7 @@ Inputs that are specific for Vim.
 |            | /\<string\>              | Search in current buffer for \<string\> (`n` for next occurrence)                                                |
 |            | :%!\<cli\>               | Pipe current buffer to \<cli\>                                                                                   |
 |            | :%s/abc/123/gc           | Replace `abc` with `123` in all lines after confirmation                                                         |
+|            | :&&                      | Repeat replace                                                                                                   |
 |            | :bd                      | Delete current buffer                                                                                            |
 |            | :ccl                     | Close quickfix                                                                                                   |
 |            | :cfdo %s/abc/123/g \| up | Replace `abc` with `123` in all quickfix files                                                                   |
@@ -125,3 +128,13 @@ Inputs that are specific for tmux. Shortcuts and commands are prefixed with `CTR
 |           | z                  | Zoom current pane                                                    |
 | Command   |                    |                                                                      |
 |           | :swap-window -t 0  | Swap current window with window at position 0                        |
+
+## GNU Readline
+
+Inputs that are specific for GNU Readline.
+
+| Input  | Description                |
+| ------ | -------------------------- |
+| CTRL+a | Move to start of line      |
+| CTRL+e | Move to end of line        |
+| CTRL+r | Search backward in history |
