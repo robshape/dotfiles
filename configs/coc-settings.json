@@ -1,6 +1,6 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "colors.filetypes": ["*"],
+  "coc.preferences.formatOnSave": true,
+  "colors.enable": true,
   "eslint.autoFixOnSave": true,
   "eslint.run": "onSave",
   "markdownlint.onChange": false,
@@ -10,7 +10,5 @@
   "stylelintplus.autoFixOnSave": true,
   "stylelintplus.cssInJs": true,
   "stylelintplus.validateOnSave": true,
-  "stylelintplus.validateOnType": false,
-  "suggest.noselect": false,
-  "tsserver.formatOnType": false
+  "stylelintplus.validateOnType": false
 }

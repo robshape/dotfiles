@@ -173,8 +173,8 @@ nnoremap † :NERDTreeToggle<cr>
 "" One
 "" Enable theme
 set termguicolors
-let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<esc>[48;2;%lu;%lu;%lum"
+let &t_8f="\<esc>[38;2;%lu;%lu;%lum"
 colorscheme one
 highlight CocInfoSign ctermfg=blue
 highlight CocMenuSel ctermbg=black ctermfg=white
