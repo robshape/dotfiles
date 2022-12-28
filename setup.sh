@@ -2,8 +2,11 @@
 set -euo pipefail
 
 echo "[*] INSTALLING TOOLS"
+## Xcode Command Line Developer Tools
+xcode-select --install
+
 ## Homebrew
-if [ ! $(which brew) ]; then
+if ! (($+commands[brew])) then
   /bin/bash -c "$(curl -fLSs https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 ## CLI
@@ -27,9 +30,6 @@ ln -fs "$PWD/configs/.gitignore" "$HOME"
 ln -fs "$PWD/configs/.zshrc" "$HOME"
 ## Vim
 VIM_DIRECTORY="$HOME/.vim/"
-if [ ! -d "$VIM_DIRECTORY" ]; then
-  mkdir "$VIM_DIRECTORY"
-fi
 ln -fs "$PWD/configs/.tmux.conf" "$HOME"
 ln -fs "$PWD/configs/.vimrc" "$HOME"
 ln -fs "$PWD/configs/coc-settings.json" "$VIM_DIRECTORY"
