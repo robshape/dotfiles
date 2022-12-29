@@ -4,7 +4,7 @@ My system configuration.
 
 ## Setup
 
-Run `./setup.sh` inside the root directory.
+Run `./setup.zsh` inside the root directory.
 
 ## License
 
