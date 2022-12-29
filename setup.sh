@@ -3,19 +3,26 @@ set -euo pipefail
 
 echo "[*] INSTALLING TOOLS"
 ## Xcode Command Line Developer Tools
-xcode-select --install
+if [[ ! $(xcode-select --install 2>&1 | grep installed) ]] then
+  xcode-select --install
+  echo "Rerun this script after Xcode Command Line Developer Tools has finished installing"
+  exit
+fi
 
 ## Homebrew
 if ! (($+commands[brew])) then
   /bin/bash -c "$(curl -fLSs https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
-## CLI
+
+### CLI
 brew install git
 brew install jq
-## Node
+
+### Node
 brew install node
 brew install yarn
-## Vim
+
+### Vim
 brew install ripgrep
 brew install tmux
 brew install vim
@@ -26,8 +33,10 @@ echo "[*] LINKING FILES"
 ## Git
 ln -fs "$PWD/configs/.gitconfig" "$HOME"
 ln -fs "$PWD/configs/.gitignore" "$HOME"
+
 ## Terminal
 ln -fs "$PWD/configs/.zshrc" "$HOME"
+
 ## Vim
 VIM_DIRECTORY="$HOME/.vim/"
 ln -fs "$PWD/configs/.tmux.conf" "$HOME"
