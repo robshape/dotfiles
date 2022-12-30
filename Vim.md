@@ -1,6 +1,6 @@
-# Vim (with tmux)
+# Vim
 
-Keyboard shortcuts and commands for Vim inside tmux.
+Keyboard shortcuts and commands for Vim, tmux, and GNU Readline.
 
 ## Vim
 

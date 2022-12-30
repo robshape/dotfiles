@@ -32,13 +32,6 @@ alias v="vim"
 ## #########
 ## Functions
 ## #########
-depupdate() {
-  brew update
-  brew upgrade
-  brew cleanup -s
-  rm -fr "$(brew --cache)"
-}
-
 gclean() {
   git reset --hard
   git clean -dfx
@@ -69,6 +62,13 @@ tclean() {
   rm -fr ~/.NERDTreeBookmarks
   rm -fr ~/.viminfo
   rm -fr ~/.zsh_history
+}
+
+tupdate() {
+  brew update
+  brew upgrade
+  brew cleanup -s
+  rm -fr "$(brew --cache)"
 }
 
 vauth() {
