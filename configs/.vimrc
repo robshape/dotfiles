@@ -163,8 +163,10 @@ let g:indentLine_fileTypeExclude=['json', 'jsonc', 'markdown']
 "" Show hidden files
 let g:NERDTreeIgnore=['\.git$']
 let g:NERDTreeShowHidden=1
-"" Resize workaround: https://github.com/preservim/nerdtree/issues/1321
+"" Fix menu: https://github.com/preservim/nerdtree/issues/1321
 let g:NERDTreeMinimalMenu=1
+"" Resize window
+let g:NERDTreeWinSize=45
 "" ALT+d to reveal file in tree
 nnoremap ∂ :NERDTreeFind<cr>
 "" ALT+t to toggle tree
