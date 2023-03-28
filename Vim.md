@@ -77,7 +77,6 @@ Inputs that are specific for Vim.
 |            | ALT+m                    | Show problems \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                                |
 |            | ALT+r                    | Open Refactorings/Code Actions\[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                |
 |            | F2                       | Rename symbol \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                                |
-|            | :CocUpdate               | Update extensions                                                                                                |
 | Commentary |                          |                                                                                                                  |
 |            | gcc                      | Toggle line comment for current line                                                                             |
 | EasyMotion |                          |                                                                                                                  |
@@ -105,9 +104,6 @@ Inputs that are specific for Vim.
 |            | ysiw\<character\>        | Surround current word with \<character\>                                                                         |
 | UltiSnips  |                          |                                                                                                                  |
 |            | CTRL+j OR k              | Navigate placeholders, next or previous                                                                          |
-| vim-plug   |                          |                                                                                                                  |
-|            | :PlugUpdate              | Update plugins                                                                                                   |
-|            | :PlugUpgrade             | Upgrade vim-plug                                                                                                 |
 
 ## tmux
 

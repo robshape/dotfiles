@@ -9,8 +9,15 @@ export PATH="/opt/homebrew/bin:$PATH"
 ## #######
 ## Aliases
 ## #######
-alias awake="caffeinate -dimsu"
 alias c="clear"
+alias e="exit"
+alias l="ls -a"
+alias s="say"
+alias v="vim"
+
+alias awake="caffeinate -dimsu"
+alias download="curl -LO -C -"
+
 alias ga="git add ."
 alias gb="git branch"
 alias gbd="git branch -D"
@@ -27,7 +34,6 @@ alias grh="git reset --hard"
 alias gs="git status"
 alias gstash="git stash -ku"
 alias gundo="git reset --soft HEAD~1"
-alias v="vim"
 
 ## #########
 ## Functions
@@ -36,6 +42,11 @@ gclean() {
   git reset --hard
   git clean -dfx
   git gc
+}
+
+gdiff() {
+  git add -N .
+  git difftool -t vimdiff
 }
 
 gpick() {
@@ -57,6 +68,10 @@ gupload() {
   git push -u origin $(git symbolic-ref -q --short HEAD)
 }
 
+tauth() {
+  ssh-add ~/.ssh/shapeless-key
+}
+
 tclean() {
   rm -fr ~/.zsh_sessions/
   rm -fr ~/.NERDTreeBookmarks
@@ -64,31 +79,23 @@ tclean() {
   rm -fr ~/.zsh_history
 }
 
-tupdate() {
-  brew update
-  brew upgrade
-  brew cleanup -s
-  rm -fr "$(brew --cache)"
-}
-
-vauth() {
-  ssh-add ~/.ssh/shapeless-key
-}
-
-vdiff() {
-  git add -N .
-  git difftool -t vimdiff
-}
-
-vstart() {
+tstart() {
   if [ -z "$TMUX" ]; then
     tmux new-session -As main
   fi
 }
 
-vstop() {
+tstop() {
   if [ -n "$TMUX" ]; then
     tmux kill-session -a
     tmux kill-session
   fi
+}
+
+tupdate() {
+  brew update
+  brew upgrade
+  brew cleanup -s
+  rm -fr "$(brew --cache)"
+  vim -c 'PlugUpgrade | PlugUpdate | CocUpdate'
 }
