@@ -10,6 +10,7 @@ Inputs that are specific for Vim.
 | ---------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
 | Move       |                          |                                                                                                                  |
 |            | \$                       | Move to end of current line                                                                                      |
+|            | *                        | Search in current buffer for current word                                                                        |
 |            | 0                        | Move to start of current line                                                                                    |
 |            | b                        | Move backward to start of word                                                                                   |
 |            | e                        | Move forward to end of word                                                                                      |
@@ -33,7 +34,7 @@ Inputs that are specific for Vim.
 |            | =G                       | Format indentation downward to last line of document                                                             |
 |            | a                        | Insert after cursor                                                                                              |
 |            | ce                       | Replace until end of current word                                                                                |
-|            | cgn                      | Replace next search occurrence (use with `*`, or `/`, and `.`)                                                   |
+|            | cgn                      | Replace next search occurrence (use with `*` and `.`)                                                            |
 |            | ci\<character\>          | Replace in between \<character\>                                                                                 |
 |            | ciw                      | Replace current word                                                                                             |
 |            | D                        | Cut to end of current line                                                                                       |
@@ -41,16 +42,15 @@ Inputs that are specific for Vim.
 |            | dab                      | Cut `()` block                                                                                                   |
 |            | dd                       | Cut current line                                                                                                 |
 |            | dt\<character\>          | Cut to first occurrence of \<character\> on current line                                                         |
-|            | g&                       | Repeat replace in all lines                                                                                      |
 |            | i                        | Insert before cursor                                                                                             |
 |            | O                        | Append new line above current line                                                                               |
 |            | o                        | Append new line below current line                                                                               |
 |            | p                        | Paste                                                                                                            |
-|            | r\<character\>           | Replace character under cursor with \<character\>                                                                |
+|            | r\<character\>           | Replace current character with \<character\>                                                                     |
 |            | S                        | Delete current line and insert                                                                                   |
 |            | u OR CTRL+r              | Undo, redo                                                                                                       |
 |            | vep                      | Paste and replace current word                                                                                   |
-|            | x                        | Delete character under cursor                                                                                    |
+|            | x                        | Delete current character                                                                                         |
 |            | yiw                      | Copy current word                                                                                                |
 |            | yy                       | Copy current line                                                                                                |
 |            | ALT+j OR k               | Move current line, down or up \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                |
@@ -69,6 +69,8 @@ Inputs that are specific for Vim.
 |            | :ccl                     | Close quickfix                                                                                                   |
 |            | :cfdo %s/abc/123/g \| up | Replace `abc` with `123` in all quickfix files                                                                   |
 |            | :cn                      | Move to next quickfix position                                                                                   |
+|            | :Replace abc/123         | Replace `abc` with `123` in all lines \[CUSTOM COMMAND\]                                                         |
+|            | :ReplaceCF abc/123       | Replace `abc` with `123` in all quickfix files \[CUSTOM COMMAND\]                                                |
 | CoC        |                          |                                                                                                                  |
 |            | gd                       | Jump to definition of code                                                                                       |
 |            | gh                       | Show tooltip for code \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                        |

@@ -45,6 +45,12 @@ set updatetime=400
 set wildmenu
 
 "" ############
+"" Map commands
+"" ############
+:command -nargs=1 Replace :%s/<args>/g
+:command -nargs=1 ReplaceCF :cfdo %s/<args>/g | up
+
+"" ############
 "" Map keyboard
 "" ############
 "" ALT+c to delete all buffers, except current buffer, and clear yank history
