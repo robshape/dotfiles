@@ -56,7 +56,7 @@ Inputs that are specific for Vim.
 |            | ALT+j OR k               | Move current line, down or up \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                |
 |            | ALT+s                    | Save current buffer \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                          |
 |            | CTRL+c                   | Escape                                                                                                           |
-|            | CTRL+n OR p              | Navigate auto-complete, next or previous (`CTRL+y` to confirm)                                                   |
+|            | CTRL+n OR p              | Navigate auto-complete, next or previous (`CTRL+y` to accept)                                                    |
 | Select     |                          |                                                                                                                  |
 |            | V                        | Start VISUAL MODE per line                                                                                       |
 |            | v                        | Start VISUAL MODE per character                                                                                  |
@@ -81,6 +81,10 @@ Inputs that are specific for Vim.
 |            | F2                       | Rename symbol \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                                |
 | Commentary |                          |                                                                                                                  |
 |            | gcc                      | Toggle line comment for current line                                                                             |
+| Copilot    |                          |                                                                                                                  |
+|            | ALT+]                    | Cycle suggestion                                                                                                 |
+|            | CTRL+]                   | Dismiss suggestion                                                                                               |
+|            | TAB                      | Accept suggestion                                                                                                |
 | EasyMotion |                          |                                                                                                                  |
 |            | SPACE                    | Toggle EasyMotion \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                            |
 | Fugitive   |                          |                                                                                                                  |

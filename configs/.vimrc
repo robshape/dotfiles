@@ -47,7 +47,9 @@ set wildmenu
 "" ############
 "" Map commands
 "" ############
+"" :Replace to find and replace in all lines
 :command -nargs=1 Replace :%s/<args>/g
+"" :ReplaceCF to find and replace in all quickfix files
 :command -nargs=1 ReplaceCF :cfdo %s/<args>/g | up
 
 "" ############
@@ -94,6 +96,7 @@ let g:coc_global_extensions=[
 "" vim-plug
 call plug#begin('~/.vim/plugged/')
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'github/copilot.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/indentLine'

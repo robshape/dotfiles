@@ -17,6 +17,7 @@ alias v="vim"
 
 alias awake="caffeinate -dimsu"
 alias download="curl -LO -C -"
+alias size="du -hs"
 
 alias ga="git add ."
 alias gb="git branch"
