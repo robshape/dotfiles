@@ -45,6 +45,10 @@ gclean() {
   git gc
 }
 
+gclone() {
+  git clone git@github.com:$1.git
+}
+
 gdiff() {
   git add -N .
   git difftool -t vimdiff

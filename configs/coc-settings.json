@@ -1,8 +1,11 @@
 {
+  "bashIde.backgroundAnalysisMaxFiles": 0,
+  "bashIde.shellcheckPath": "",
   "coc.preferences.formatOnSave": true,
   "colors.enable": true,
   "eslint.autoFixOnSave": true,
   "eslint.run": "onSave",
+  "git.realtimeGutters": false,
   "markdownlint.onChange": false,
   "markdownlint.onOpen": false,
   "prettier.onlyUseLocalVersion": true,

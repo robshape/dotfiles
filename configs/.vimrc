@@ -16,6 +16,8 @@ set textwidth=100
 set cursorline
 "" Wrap text in diff mode
 set diffopt+=followwrap
+"" Use UTF-8
+set encoding=utf-8
 "" Hide unsaved buffers to avoid save prompt
 set hidden
 "" Improve search experience
@@ -45,18 +47,10 @@ set updatetime=400
 set wildmenu
 
 "" ############
-"" Map commands
-"" ############
-"" :Replace to find and replace in all lines
-:command -nargs=1 Replace :%s/<args>/g
-"" :ReplaceCF to find and replace in all quickfix files
-:command -nargs=1 ReplaceCF :cfdo %s/<args>/g | up
-
-"" ############
 "" Map keyboard
 "" ############
-"" ALT+c to delete all buffers, except current buffer, and clear yank history
-nnoremap ç :w\|%bd\|e#\|bd#<cr>:CocCommand yank.clean<cr>
+"" ALT+c to delete all buffers, except current buffer, clear yank history, and restart CoC
+nnoremap ç :w\|%bd\|e#\|bd#<cr>:CocCommand yank.clean<cr>:CocRestart<cr>
 "" ALT+j OR k to move current line, down or up
 nnoremap ∆ :m .+1<cr>==
 nnoremap ˚ :m .-2<cr>==
@@ -75,24 +69,47 @@ nnoremap <cr> :noh<cr><cr>
 "" TAB to navigate buffers
 nnoremap <tab> :bn<cr>
 
+"" ############
+"" Map commands
+"" ############
+"" :Replace to find and replace in all lines
+:command -nargs=1 Replace :%s/<args>/g
+"" :ReplaceCF to find and replace in all quickfix files
+:command -nargs=1 ReplaceCF :cfdo %s/<args>/g | up
+
 "" #############
 "" Setup plugins
 "" #############
 "" CoC
 let g:coc_global_extensions=[
+  \'coc-emoji',
   \'coc-eslint',
+  \'coc-git',
   \'coc-highlight',
   \'coc-json',
   \'coc-markdownlint',
   \'coc-pairs',
   \'coc-prettier',
+  \'coc-sh',
   \'coc-snippets',
   \'coc-spell-checker',
   \'coc-stylelintplus',
   \'coc-svelte',
   \'coc-tsserver',
+  \'coc-yaml',
   \'coc-yank',
-  \]
+\]
+""
+"\'coc-css',
+"\'coc-docker',
+"\'coc-go',
+"\'coc-html',
+"\'coc-java',
+"\'coc-jest',
+"\'coc-pyright',
+"\'coc-rls',
+"\'coc-styled-components',
+""
 "" vim-plug
 call plug#begin('~/.vim/plugged/')
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -103,6 +120,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdtree'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips'
+Plug 'mbbill/undotree'
 Plug 'vim-airline/vim-airline'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-commentary'
@@ -121,7 +139,9 @@ endif
 "" Configure plugins
 "" #################
 "" Airline
-"" Show buffers in tab line
+"" Show diff in statusline
+let g:airline#extensions#hunks#coc_git=1
+"" Show buffers in tabline
 let g:airline#extensions#tabline#enabled=1
 
 "" Close Tag
@@ -143,12 +163,25 @@ nnoremap yh :<c-u>CocList -A --normal yank<cr>
 nnoremap µ :CocList diagnostics<cr>
 "" ALT+r to open Refactorings/Code Actions
 nmap ® <Plug>(coc-codeaction)
-"" CTRL+SPACE to toggle auto-complete
-inoremap <expr> <c-@> coc#refresh()
+"" CTRL+b OR f to scroll floating window, backward or forward
+nnoremap <expr> <c-b> coc#float#has_scroll() ? coc#float#scroll(0) : '<c-b>'
+nnoremap <expr> <c-f> coc#float#has_scroll() ? coc#float#scroll(1) : '<c-f>'
 "" ENTER to select auto-complete
-inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<c-g>u\<cr>"
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : '<c-g>u<cr><c-r>=coc#on_enter()<cr>'
 "" F2 to rename symbol
 nmap <f2> <Plug>(coc-rename)
+"" :GitHubCopyURL to copy GitHub URL of current line
+:command GitHubCopyURL :CocCommand git.copyUrl
+
+"" Copilot
+"" Enable plugin
+let g:copilot_filetypes={
+  \'*': v:false,
+  \'javascript': v:true,
+  \'javascriptreact': v:true,
+  \'typescript': v:true,
+  \'typescriptreact': v:true,
+\}
 
 "" EasyMotion
 "" SPACE to toggle EasyMotion
@@ -200,6 +233,16 @@ let g:vim_svelte_plugin_use_typescript=1
 "" Set snippets directory
 let g:UltiSnipsSnippetDirectories=['~/.vim/UltiSnips/']
 
+"" Undotree
+"" Hide diff window
+let g:undotree_DiffAutoOpen=0
+"" Focus tree on start
+let g:undotree_SetFocusWhenToggle=1
+"" Shorten indicators
+let g:undotree_ShortIndicators=1
+"" F5 to toggle tree
+nnoremap <f5> :UndotreeToggle<cr>
+
 "" ##################
 "" Setup autocommands
 "" ##################
@@ -208,6 +251,19 @@ augroup autocommands
 "" CoC
 "" Highlight symbol, and its references, when under cursor
   autocmd CursorHold * call CocActionAsync('highlight')
+
+"" Copilot
+"" Disable plugin for specific directories and files
+  function DisableCopilot()
+    let cwd=expand('%:p')
+    let items=['/rodah/','/shapeless/','Notes.md']
+    for item in items
+      if cwd =~ item
+        let b:copilot_enabled=v:false
+      endif
+    endfor
+  endfunction
+  autocmd BufEnter * call DisableCopilot()
 
 "" NERDTree
 "" Open tree on start

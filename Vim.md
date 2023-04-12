@@ -21,14 +21,14 @@ Inputs that are specific for Vim.
 |            | gt                       | Move to next tab                                                                                                 |
 |            | {                        | Move to previous paragraph                                                                                       |
 |            | }                        | Move to next paragraph                                                                                           |
-|            | ALT+c                    | Delete all buffers, except current buffer, and clear yank history \[NORMAL MODE\] \[CUSTOM SHORTCUT\]            |
-|            | ALT+q                    | Quit without prompt \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                          |
-|            | ALT+w                    | Close current pane \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                           |
+|            | ALT+c                    | Delete all buffers, except current buffer, and clear yank history \[CUSTOM SHORTCUT\]                            |
+|            | ALT+q                    | Quit without prompt \[CUSTOM SHORTCUT\]                                                                          |
+|            | ALT+w                    | Close current pane \[CUSTOM SHORTCUT\]                                                                           |
 |            | CTRL+d OR u              | Scroll, downward or upward                                                                                       |
-|            | CTRL+h                   | Navigate panes \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                               |
+|            | CTRL+h                   | Navigate panes \[CUSTOM SHORTCUT\]                                                                               |
 |            | CTRL+i OR o              | Move position, next or previous                                                                                  |
 |            | ENTER                    | Clear highlighted search results                                                                                 |
-|            | TAB                      | Navigate buffers \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                             |
+|            | TAB                      | Navigate buffers \[CUSTOM SHORTCUT\]                                                                             |
 | Edit       |                          |                                                                                                                  |
 |            | .                        | Repeat last shortcut that edited text                                                                            |
 |            | =G                       | Format indentation downward to last line of document                                                             |
@@ -53,8 +53,8 @@ Inputs that are specific for Vim.
 |            | x                        | Delete current character                                                                                         |
 |            | yiw                      | Copy current word                                                                                                |
 |            | yy                       | Copy current line                                                                                                |
-|            | ALT+j OR k               | Move current line, down or up \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                |
-|            | ALT+s                    | Save current buffer \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                          |
+|            | ALT+j OR k               | Move current line, down or up \[CUSTOM SHORTCUT\]                                                                |
+|            | ALT+s                    | Save current buffer \[CUSTOM SHORTCUT\]                                                                          |
 |            | CTRL+c                   | Escape                                                                                                           |
 |            | CTRL+n OR p              | Navigate auto-complete, next or previous (`CTRL+y` to accept)                                                    |
 | Select     |                          |                                                                                                                  |
@@ -72,35 +72,39 @@ Inputs that are specific for Vim.
 |            | :Replace abc/123         | Replace `abc` with `123` in all lines \[CUSTOM COMMAND\]                                                         |
 |            | :ReplaceCF abc/123       | Replace `abc` with `123` in all quickfix files \[CUSTOM COMMAND\]                                                |
 | CoC        |                          |                                                                                                                  |
+|            | :\<emoji\>               | Insert emoji (in Markdown file) \[INSERT MODE\]                                                                  |
 |            | gd                       | Jump to definition of code                                                                                       |
-|            | gh                       | Show tooltip for code \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                        |
+|            | gh                       | Show tooltip for code \[CUSTOM SHORTCUT\]                                                                        |
 |            | gr                       | Show references for code                                                                                         |
-|            | yh                       | Show yank history \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                            |
-|            | ALT+m                    | Show problems \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                                |
-|            | ALT+r                    | Open Refactorings/Code Actions\[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                |
-|            | F2                       | Rename symbol \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                                |
+|            | yh                       | Show yank history \[CUSTOM SHORTCUT\]                                                                            |
+|            | ALT+m                    | Show problems \[CUSTOM SHORTCUT\]                                                                                |
+|            | ALT+r                    | Open Refactorings/Code Actions \[CUSTOM SHORTCUT\]                                                               |
+|            | CTRL+b OR f              | Scroll floating window, backward or forward                                                                      |
+|            | F2                       | Rename symbol \[CUSTOM SHORTCUT\]                                                                                |
+|            | :GitHubCopyURL           | Copy GitHub URL of current line \[CUSTOM COMMAND\]                                                               |
 | Commentary |                          |                                                                                                                  |
 |            | gcc                      | Toggle line comment for current line                                                                             |
 | Copilot    |                          |                                                                                                                  |
-|            | ALT+]                    | Cycle suggestion                                                                                                 |
-|            | CTRL+]                   | Dismiss suggestion                                                                                               |
-|            | TAB                      | Accept suggestion                                                                                                |
+|            | TAB                      | Accept suggestion \[INSERT MODE\]                                                                                |
 | EasyMotion |                          |                                                                                                                  |
-|            | SPACE                    | Toggle EasyMotion \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                            |
+|            | SPACE                    | Toggle EasyMotion \[CUSTOM SHORTCUT\]                                                                            |
 | Fugitive   |                          |                                                                                                                  |
 |            | :G blame                 | Show author of current line                                                                                      |
+|            | :G mergetool             | Open merge conflicts in quickfix                                                                                 |
+|            | :Gdiffsplit              | Show diff of current file                                                                                        |
 | FZF        |                          |                                                                                                                  |
-|            | ALT+f                    | Search in workspace \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                          |
-|            | ALT+p                    | Search for file \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                              |
+|            | ALT+f                    | Search in workspace \[CUSTOM SHORTCUT\]                                                                          |
+|            | ALT+p                    | Search for file \[CUSTOM SHORTCUT\]                                                                              |
 |            | CTRL+n OR p              | Navigate search results, next or previous (`ENTER` to open file, `CTRL+v` to open file in vertically split pane) |
-|            | SHIFT+TAB                | Select search result (`ENTER` to open quickfix)                                                                  |
-|            | :Snippets                | Show available snippets for current filetype                                                                     |
+|            | SHIFT+TAB                | Select search result (`ENTER` to open in quickfix)                                                               |
+|            | :Commits                 | Search commits                                                                                                   |
+|            | :Snippets                | Search snippets for current filetype                                                                             |
 | NERDTree   |                          |                                                                                                                  |
 |            | m                        | Open menu                                                                                                        |
 |            | R                        | Refresh tree                                                                                                     |
 |            | s                        | Open file in vertically split pane                                                                               |
-|            | ALT+d                    | Reveal file in tree \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                          |
-|            | ALT+t                    | Toggle tree \[NORMAL MODE\] \[CUSTOM SHORTCUT\]                                                                  |
+|            | ALT+d                    | Reveal file in tree \[CUSTOM SHORTCUT\]                                                                          |
+|            | ALT+t                    | Toggle tree \[CUSTOM SHORTCUT\]                                                                                  |
 |            | ENTER                    | Open file                                                                                                        |
 | Splitjoin  |                          |                                                                                                                  |
 |            | gJ                       | Join current block into line                                                                                     |
@@ -110,6 +114,8 @@ Inputs that are specific for Vim.
 |            | ysiw\<character\>        | Surround current word with \<character\>                                                                         |
 | UltiSnips  |                          |                                                                                                                  |
 |            | CTRL+j OR k              | Navigate placeholders, next or previous                                                                          |
+| Undotree   |                          |                                                                                                                  |
+|            | F5                       | Toggle tree \[CUSTOM SHORTCUT\]                                                                                  |
 
 ## tmux
 

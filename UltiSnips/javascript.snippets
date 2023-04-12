@@ -1,0 +1,25 @@
+snippet af "Arrow Function"
+const $1 = ($2) => {
+  $3
+};
+endsnippet
+
+snippet cl "Console Log"
+console.log($1);
+endsnippet
+
+snippet cls "Class"
+export class $1 {
+  constructor() {
+    $2
+  }
+}
+endsnippet
+
+snippet dcl "Deep Console Log"
+console.log(util.inspect($1), {
+  colors: true,
+  depth: null,
+  getters: true,
+});
+endsnippet
