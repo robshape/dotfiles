@@ -163,9 +163,11 @@ nnoremap yh :<c-u>CocList -A --normal yank<cr>
 nnoremap µ :CocList diagnostics<cr>
 "" ALT+r to open Refactorings/Code Actions
 nmap ® <Plug>(coc-codeaction)
-"" CTRL+b OR f to scroll floating window, backward or forward
-nnoremap <expr> <c-b> coc#float#has_scroll() ? coc#float#scroll(0) : '<c-b>'
-nnoremap <expr> <c-f> coc#float#has_scroll() ? coc#float#scroll(1) : '<c-f>'
+"" CTRL+d OR u to scroll floating window, downward or upward
+nnoremap <expr> <c-d> coc#float#has_scroll() ? coc#float#scroll(1) : '<c-d>'
+nnoremap <expr> <c-u> coc#float#has_scroll() ? coc#float#scroll(0) : '<c-u>'
+inoremap <expr> <c-d> coc#float#has_scroll() ? '<c-r>=coc#float#scroll(1)<cr>' : '<right>'
+inoremap <expr> <c-u> coc#float#has_scroll() ? '<c-r>=coc#float#scroll(0)<cr>' : '<left>'
 "" ENTER to select auto-complete
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : '<c-g>u<cr><c-r>=coc#on_enter()<cr>'
 "" F2 to rename symbol

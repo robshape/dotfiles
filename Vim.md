@@ -24,7 +24,7 @@ Inputs that are specific for Vim.
 |            | ALT+c                    | Delete all buffers, except current buffer, and clear yank history \[CUSTOM SHORTCUT\]                            |
 |            | ALT+q                    | Quit without prompt \[CUSTOM SHORTCUT\]                                                                          |
 |            | ALT+w                    | Close current pane \[CUSTOM SHORTCUT\]                                                                           |
-|            | CTRL+d OR u              | Scroll, downward or upward                                                                                       |
+|            | CTRL+d OR u              | Scroll half a page, downward or upward                                                                           |
 |            | CTRL+h                   | Navigate panes \[CUSTOM SHORTCUT\]                                                                               |
 |            | CTRL+i OR o              | Move position, next or previous                                                                                  |
 |            | ENTER                    | Clear highlighted search results                                                                                 |
@@ -79,7 +79,7 @@ Inputs that are specific for Vim.
 |            | yh                       | Show yank history \[CUSTOM SHORTCUT\]                                                                            |
 |            | ALT+m                    | Show problems \[CUSTOM SHORTCUT\]                                                                                |
 |            | ALT+r                    | Open Refactorings/Code Actions \[CUSTOM SHORTCUT\]                                                               |
-|            | CTRL+b OR f              | Scroll floating window, backward or forward                                                                      |
+|            | CTRL+d OR u              | Scroll floating window, downward or upward \[CUSTOM SHORTCUT\]                                                   |
 |            | F2                       | Rename symbol \[CUSTOM SHORTCUT\]                                                                                |
 |            | :GitHubCopyURL           | Copy GitHub URL of current line \[CUSTOM COMMAND\]                                                               |
 | Commentary |                          |                                                                                                                  |
@@ -97,8 +97,8 @@ Inputs that are specific for Vim.
 |            | ALT+p                    | Search for file \[CUSTOM SHORTCUT\]                                                                              |
 |            | CTRL+n OR p              | Navigate search results, next or previous (`ENTER` to open file, `CTRL+v` to open file in vertically split pane) |
 |            | SHIFT+TAB                | Select search result (`ENTER` to open in quickfix)                                                               |
-|            | :Commits                 | Search commits                                                                                                   |
-|            | :Snippets                | Search snippets for current filetype                                                                             |
+|            | :Commits                 | Search for commit                                                                                                |
+|            | :Snippets                | Search for snippet for current filetype                                                                          |
 | NERDTree   |                          |                                                                                                                  |
 |            | m                        | Open menu                                                                                                        |
 |            | R                        | Refresh tree                                                                                                     |
@@ -115,7 +115,7 @@ Inputs that are specific for Vim.
 | UltiSnips  |                          |                                                                                                                  |
 |            | CTRL+j OR k              | Navigate placeholders, next or previous                                                                          |
 | Undotree   |                          |                                                                                                                  |
-|            | F5                       | Toggle tree \[CUSTOM SHORTCUT\]                                                                                  |
+|            | F5                       | Toggle tree                                                                                                      |
 
 ## tmux
 
