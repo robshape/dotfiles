@@ -14,11 +14,10 @@ if ! (($+commands[brew])) then
   /bin/bash -c "$(curl -fLSs https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-### CLI
+### Development
 brew install git
 brew install jq
-
-### Node
+#brew install llvm
 brew install node
 brew install yarn
 

@@ -17,7 +17,10 @@ alias v="vim"
 
 alias awake="caffeinate -dimsu"
 alias download="curl -LO -C -"
+alias permission="stat -f %A"
 alias size="du -hs"
+
+alias dprune="docker system prune -af -volumes"
 
 alias ga="git add ."
 alias gb="git branch"
@@ -47,6 +50,10 @@ gclean() {
 
 gclone() {
   git clone git@github.com:$1.git
+}
+
+gcompare() {
+  git diff main..$(git branch --show-current)
 }
 
 gdiff() {

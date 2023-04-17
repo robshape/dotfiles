@@ -50,24 +50,24 @@ set wildmenu
 "" Map keyboard
 "" ############
 "" ALT+c to delete all buffers, except current buffer, clear yank history, and restart CoC
-nnoremap ç :w\|%bd\|e#\|bd#<cr>:CocCommand yank.clean<cr>:CocRestart<cr>
+nnoremap <silent> ç :w\|%bd\|e#\|bd#<cr>:CocCommand yank.clean<cr>:CocRestart<cr>
 "" ALT+j OR k to move current line, down or up
-nnoremap ∆ :m .+1<cr>==
-nnoremap ˚ :m .-2<cr>==
+nnoremap <silent> ∆ :m .+1<cr>==
+nnoremap <silent> ˚ :m .-2<cr>==
 "" ALT+q to quit without prompt
-nnoremap œ :qa!<cr>
+nnoremap <silent> œ :qa!<cr>
 "" ALT+s to save current buffer
-nnoremap ß :w<cr>
+nnoremap <silent> ß :w<cr>
 "" ALT+w to close current pane
-nnoremap ∑ <c-w>q
+nnoremap <silent> ∑ <c-w>q
 "" CTRL+c to escape
-inoremap <c-c> <esc>
+inoremap <silent> <c-c> <esc>
 "" CTRL+h to navigate panes
-nnoremap <c-h> <c-w>w
+nnoremap <silent> <c-h> <c-w>w
 "" ENTER to clear highlighted search results
-nnoremap <cr> :noh<cr><cr>
+nnoremap <silent> <cr> :noh<cr><cr>
 "" TAB to navigate buffers
-nnoremap <tab> :bn<cr>
+nnoremap <silent> <tab> :bn<cr>
 
 "" ############
 "" Map commands
@@ -76,6 +76,8 @@ nnoremap <tab> :bn<cr>
 :command -nargs=1 Replace :%s/<args>/g
 "" :ReplaceCF to find and replace in all quickfix files
 :command -nargs=1 ReplaceCF :cfdo %s/<args>/g | up
+"" :SaveNOA to save current buffer without autocommands
+:command SaveNOA :noa w
 
 "" #############
 "" Setup plugins
@@ -100,6 +102,7 @@ let g:coc_global_extensions=[
   \'coc-yank',
 \]
 ""
+"\'coc-clangd',
 "\'coc-css',
 "\'coc-docker',
 "\'coc-go',
@@ -116,7 +119,9 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'github/copilot.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
 Plug 'Yggdroot/indentLine'
+Plug 'junegunn/limelight.vim'
 Plug 'preservim/nerdtree'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips'
@@ -139,6 +144,8 @@ endif
 "" Configure plugins
 "" #################
 "" Airline
+"" Hide mode
+set noshowmode
 "" Show diff in statusline
 let g:airline#extensions#hunks#coc_git=1
 "" Show buffers in tabline
@@ -152,26 +159,26 @@ let g:closetag_filenames='*.jsx,*.tsx'
 "" Set coc-settings.json directory
 let g:coc_config_home='~/.vim/'
 "" gd to jump to definition of code
-nmap gd <Plug>(coc-definition)
+nmap <silent> gd <Plug>(coc-definition)
 "" gh to show tooltip for code
-nnoremap gh :call CocActionAsync('doHover')<cr>
+nnoremap <silent> gh :call CocActionAsync('doHover')<cr>
 "" gr to show references for code
-nmap gr <Plug>(coc-references)
+nmap <silent> gr <Plug>(coc-references)
 "" yh to show yank history
-nnoremap yh :<c-u>CocList -A --normal yank<cr>
+nnoremap <silent> yh :<c-u>CocList -A --normal yank<cr>
 "" ALT+m to show problems
-nnoremap µ :CocList diagnostics<cr>
+nnoremap <silent> µ :CocList diagnostics<cr>
 "" ALT+r to open Refactorings/Code Actions
-nmap ® <Plug>(coc-codeaction)
+nmap <silent> ® <Plug>(coc-codeaction)
 "" CTRL+d OR u to scroll floating window, downward or upward
-nnoremap <expr> <c-d> coc#float#has_scroll() ? coc#float#scroll(1) : '<c-d>'
-nnoremap <expr> <c-u> coc#float#has_scroll() ? coc#float#scroll(0) : '<c-u>'
-inoremap <expr> <c-d> coc#float#has_scroll() ? '<c-r>=coc#float#scroll(1)<cr>' : '<right>'
-inoremap <expr> <c-u> coc#float#has_scroll() ? '<c-r>=coc#float#scroll(0)<cr>' : '<left>'
+nnoremap <silent><expr> <c-d> coc#float#has_scroll() ? coc#float#scroll(1) : '<c-d>'
+nnoremap <silent><expr> <c-u> coc#float#has_scroll() ? coc#float#scroll(0) : '<c-u>'
+inoremap <silent><expr> <c-d> coc#float#has_scroll() ? '<c-r>=coc#float#scroll(1)<cr>' : '<right>'
+inoremap <silent><expr> <c-u> coc#float#has_scroll() ? '<c-r>=coc#float#scroll(0)<cr>' : '<left>'
 "" ENTER to select auto-complete
-inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : '<c-g>u<cr><c-r>=coc#on_enter()<cr>'
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#pum#confirm() : '<c-g>u<cr><c-r>=coc#on_enter()<cr>'
 "" F2 to rename symbol
-nmap <f2> <Plug>(coc-rename)
+nmap <silent> <f2> <Plug>(coc-rename)
 "" :GitHubCopyURL to copy GitHub URL of current line
 :command GitHubCopyURL :CocCommand git.copyUrl
 
@@ -195,9 +202,15 @@ let $FZF_DEFAULT_COMMAND='rg --files -g "!.git/" --hidden'
 "" Include hidden files and search only file content when searching in workspace
 command! -bang -nargs=* Rg call fzf#vim#grep('rg --color=always --column -g "!.git/" --hidden -n --no-heading -S -- '.shellescape(<q-args>), 1, fzf#vim#with_preview({ 'options': '-d : -n 4..' }), <bang>0)
 "" ALT+f to search in workspace
-nnoremap ƒ :Rg<cr>
+nnoremap <silent> ƒ :Rg<cr>
 "" ALT+p to search for file
-nnoremap π :Files<cr>
+nnoremap <silent> π :Files<cr>
+
+"" Goyo
+"" Width to wrap text on
+let g:goyo_width=100
+"" ALT+z to toggle Zen Mode
+nnoremap <silent> Ω :Goyo<cr>
 
 "" indentLine
 "" Disable conceal for JSON and Markdown
@@ -212,9 +225,9 @@ let g:NERDTreeMinimalMenu=1
 "" Resize window
 let g:NERDTreeWinSize=45
 "" ALT+d to reveal file in tree
-nnoremap ∂ :NERDTreeFind<cr>
+nnoremap <silent> ∂ :NERDTreeFind<cr>
 "" ALT+t to toggle tree
-nnoremap † :NERDTreeToggle<cr>
+nnoremap <silent> † :NERDTreeToggle<cr>
 
 "" One
 "" Enable theme
@@ -222,10 +235,13 @@ set termguicolors
 let &t_8b="\<esc>[48;2;%lu;%lu;%lum"
 let &t_8f="\<esc>[38;2;%lu;%lu;%lum"
 colorscheme one
-highlight CocInfoSign ctermfg=blue
-highlight CocMenuSel ctermbg=black ctermfg=white
-highlight link EasyMotionTarget2First Search
-highlight link EasyMotionTarget2Second Search
+function CustomizeTheme()
+  highlight CocInfoSign ctermfg=blue
+  highlight CocMenuSel ctermbg=black ctermfg=white
+  highlight link EasyMotionTarget2First Search
+  highlight link EasyMotionTarget2Second Search
+endfunction
+call CustomizeTheme()
 
 "" Polyglot
 "" Enable TypeScript syntax for Svelte
@@ -243,7 +259,7 @@ let g:undotree_SetFocusWhenToggle=1
 "" Shorten indicators
 let g:undotree_ShortIndicators=1
 "" F5 to toggle tree
-nnoremap <f5> :UndotreeToggle<cr>
+nnoremap <silent> <f5> :UndotreeToggle<cr>
 
 "" ##################
 "" Setup autocommands
@@ -266,6 +282,27 @@ augroup autocommands
     endfor
   endfunction
   autocmd BufEnter * call DisableCopilot()
+
+"" Goyo
+"" Restore theme on toggle
+  autocmd ColorScheme * call CustomizeTheme()
+"" Customize Zen Mode
+function GoyoEnter()
+  set noshowcmd
+  set scrolloff=999
+  silent !tmux set status off
+  silent !tmux resize-pane -Z
+  Limelight
+endfunction
+autocmd User GoyoEnter call GoyoEnter()
+function GoyoLeave()
+  Limelight!
+  silent !tmux resize-pane -Z
+  silent !tmux set status on
+  set scrolloff=10
+  set showcmd
+endfunction
+autocmd User GoyoLeave call GoyoLeave()
 
 "" NERDTree
 "" Open tree on start

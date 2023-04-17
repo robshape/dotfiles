@@ -71,6 +71,7 @@ Inputs that are specific for Vim.
 |            | :cn                      | Move to next quickfix position                                                                                   |
 |            | :Replace abc/123         | Replace `abc` with `123` in all lines \[CUSTOM COMMAND\]                                                         |
 |            | :ReplaceCF abc/123       | Replace `abc` with `123` in all quickfix files \[CUSTOM COMMAND\]                                                |
+|            | :SaveNOA                 | Save current buffer without autocommands \[CUSTOM COMMAND\]                                                      |
 | CoC        |                          |                                                                                                                  |
 |            | :\<emoji\>               | Insert emoji (in Markdown file) \[INSERT MODE\]                                                                  |
 |            | gd                       | Jump to definition of code                                                                                       |
@@ -99,6 +100,8 @@ Inputs that are specific for Vim.
 |            | SHIFT+TAB                | Select search result (`ENTER` to open in quickfix)                                                               |
 |            | :Commits                 | Search for commit                                                                                                |
 |            | :Snippets                | Search for snippet for current filetype                                                                          |
+| Goyo       |                          |                                                                                                                  |
+|            | ALT+z                    | Toggle Zen Mode \[CUSTOM SHORTCUT\]                                                                              |
 | NERDTree   |                          |                                                                                                                  |
 |            | m                        | Open menu                                                                                                        |
 |            | R                        | Refresh tree                                                                                                     |
