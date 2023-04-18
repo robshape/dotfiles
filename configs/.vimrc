@@ -194,7 +194,7 @@ let g:copilot_filetypes={
 
 "" EasyMotion
 "" SPACE to toggle EasyMotion
-nmap <space> <Plug>(easymotion-bd-w)
+nmap <silent> <space> <Plug>(easymotion-bd-w)
 
 "" FZF
 "" Include hidden files and respect .gitignore when searching for file

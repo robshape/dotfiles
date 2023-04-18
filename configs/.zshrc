@@ -12,7 +12,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 alias c="clear"
 alias e="exit"
 alias l="ls -a"
-alias s="say"
 alias v="vim"
 
 alias awake="caffeinate -dimsu"
@@ -42,6 +41,11 @@ alias gundo="git reset --soft HEAD~1"
 ## #########
 ## Functions
 ## #########
+gcfpr() {
+  git fetch origin pull/$1/head:pr/$1
+  git checkout pr/$1
+}
+
 gclean() {
   git reset --hard
   git clean -dfx
