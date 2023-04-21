@@ -14,27 +14,26 @@ Inputs that are specific for Vim.
 |            | 0                        | Move to start of current line                                                                                    |
 |            | b                        | Move backward to start of word                                                                                   |
 |            | e                        | Move forward to end of word                                                                                      |
-|            | f\<character\>           | Move to first occurrence of \<character\> on current line (`;` for next occurrence, `,` for previous occurrence) |
+|            | f\<character\>           | Move to first occurrence of \<character\> on current line (`;` for next occurrence)                              |
 |            | G                        | Move to last line of document                                                                                    |
 |            | gg                       | Move to first line of document                                                                                   |
-|            | gi                       | Move to last insert                                                                                              |
 |            | gt                       | Move to next tab                                                                                                 |
+|            | za                       | Toggle fold                                                                                                      |
 |            | {                        | Move to previous paragraph                                                                                       |
 |            | }                        | Move to next paragraph                                                                                           |
-|            | ALT+c                    | Delete all buffers, except current buffer, and clear yank history \[CUSTOM SHORTCUT\]                            |
+|            | ALT+c                    | Delete all buffers, except current buffer, clear yank history, and restart CoC \[CUSTOM SHORTCUT\]               |
 |            | ALT+q                    | Quit without prompt \[CUSTOM SHORTCUT\]                                                                          |
 |            | ALT+w                    | Close current pane \[CUSTOM SHORTCUT\]                                                                           |
 |            | CTRL+d OR u              | Scroll half a page, downward or upward                                                                           |
-|            | CTRL+h                   | Navigate panes \[CUSTOM SHORTCUT\]                                                                               |
+|            | CTRL+h                   | Cycle panes horizontally \[CUSTOM SHORTCUT\]                                                                     |
 |            | CTRL+i OR o              | Move position, next or previous                                                                                  |
-|            | ENTER                    | Clear highlighted search results                                                                                 |
-|            | TAB                      | Navigate buffers \[CUSTOM SHORTCUT\]                                                                             |
+|            | ENTER                    | Clear highlight                                                                                                  |
+|            | TAB                      | Cycle buffers \[CUSTOM SHORTCUT\]                                                                                |
 | Edit       |                          |                                                                                                                  |
 |            | .                        | Repeat last shortcut that edited text                                                                            |
-|            | =G                       | Format indentation downward to last line of document                                                             |
+|            | >>                       | Indent current line                                                                                              |
 |            | a                        | Insert after cursor                                                                                              |
-|            | ce                       | Replace until end of current word                                                                                |
-|            | cgn                      | Replace next search occurrence (use with `*` and `.`)                                                            |
+|            | cgn                      | Replace search occurrence (use `*` before and `.` after)                                                         |
 |            | ci\<character\>          | Replace in between \<character\>                                                                                 |
 |            | ciw                      | Replace current word                                                                                             |
 |            | D                        | Cut to end of current line                                                                                       |
@@ -47,7 +46,6 @@ Inputs that are specific for Vim.
 |            | o                        | Append new line below current line                                                                               |
 |            | p                        | Paste                                                                                                            |
 |            | r\<character\>           | Replace current character with \<character\>                                                                     |
-|            | S                        | Delete current line and insert                                                                                   |
 |            | u OR CTRL+r              | Undo, redo                                                                                                       |
 |            | vep                      | Paste and replace current word                                                                                   |
 |            | x                        | Delete current character                                                                                         |
@@ -58,19 +56,14 @@ Inputs that are specific for Vim.
 |            | CTRL+c                   | Escape                                                                                                           |
 |            | CTRL+n OR p              | Navigate auto-complete, next or previous (`CTRL+y` to accept)                                                    |
 | Select     |                          |                                                                                                                  |
-|            | V                        | Start VISUAL MODE per line                                                                                       |
-|            | v                        | Start VISUAL MODE per character                                                                                  |
+|            | V                        | Select lines                                                                                                     |
+|            | v                        | Select characters                                                                                                |
 | Command    |                          |                                                                                                                  |
 |            | /\<string\>              | Search in current buffer for \<string\> (`n` for next occurrence)                                                |
-|            | :%!\<cli\>               | Pipe current buffer to \<cli\>                                                                                   |
-|            | :%s/abc/123/gc           | Replace `abc` with `123` in all lines after confirmation                                                         |
-|            | :&&                      | Repeat replace                                                                                                   |
-|            | :bd                      | Delete current buffer                                                                                            |
 |            | :ccl                     | Close quickfix                                                                                                   |
-|            | :cfdo %s/abc/123/g \| up | Replace `abc` with `123` in all quickfix files                                                                   |
 |            | :cn                      | Move to next quickfix position                                                                                   |
-|            | :Replace abc/123         | Replace `abc` with `123` in all lines \[CUSTOM COMMAND\]                                                         |
-|            | :ReplaceCF abc/123       | Replace `abc` with `123` in all quickfix files \[CUSTOM COMMAND\]                                                |
+|            | :Replace abc%123         | Replace `abc` with `123` in all lines \[CUSTOM COMMAND\]                                                         |
+|            | :ReplaceCF abc%123       | Replace `abc` with `123` in all quickfix files \[CUSTOM COMMAND\]                                                |
 |            | :SaveNOA                 | Save current buffer without autocommands \[CUSTOM COMMAND\]                                                      |
 | CoC        |                          |                                                                                                                  |
 |            | :\<emoji\>               | Insert emoji (in Markdown file) \[INSERT MODE\]                                                                  |
@@ -84,6 +77,7 @@ Inputs that are specific for Vim.
 |            | F2                       | Rename symbol \[CUSTOM SHORTCUT\]                                                                                |
 |            | :GitHubCopyURL           | Copy GitHub URL of current line \[CUSTOM COMMAND\]                                                               |
 | Commentary |                          |                                                                                                                  |
+|            | gc                       | Toggle line comments for selected lines                                                                          |
 |            | gcc                      | Toggle line comment for current line                                                                             |
 | Copilot    |                          |                                                                                                                  |
 |            | TAB                      | Accept suggestion \[INSERT MODE\]                                                                                |
@@ -124,21 +118,21 @@ Inputs that are specific for Vim.
 
 Inputs that are specific for tmux. Shortcuts and commands are prefixed with `CTRL+b`.
 
-| Category  | Input              | Description                                                          |
-| --------- | ------------------ | -------------------------------------------------------------------- |
-| Move      |                    |                                                                      |
-|           | CTRL+l             | Navigate panes horizontally \[CUSTOM SHORTCUT\]                      |
-| Shortcut  |                    |                                                                      |
-|           | "                  | Split pane horizontally                                              |
-|           | %                  | Split pane vertically                                                |
-|           | ,                  | Rename current window                                                |
-|           | 0..9               | Focus window at position 0..9                                        |
-|           | >                  | Resize current pane towards right by 100 columns \[CUSTOM SHORTCUT\] |
-|           | [                  | Activate scroll (`DOWN` or `UP` to scroll, `q` to exit)              |
-|           | c                  | Create new window                                                    |
-|           | z                  | Zoom current pane                                                    |
-| Command   |                    |                                                                      |
-|           | :swap-window -t 0  | Swap current window with window at position 0                        |
+| Category  | Input              | Description                                                         |
+| --------- | ------------------ | ------------------------------------------------------------------- |
+| Move      |                    |                                                                     |
+|           | CTRL+l             | Cycle panes horizontally \[CUSTOM SHORTCUT\]                        |
+| Shortcut  |                    |                                                                     |
+|           | "                  | Split pane horizontally                                             |
+|           | %                  | Split pane vertically                                               |
+|           | ,                  | Rename current window                                               |
+|           | 1..9               | Focus window at position 1..9                                       |
+|           | <                  | Resize current pane towards left by 100 columns \[CUSTOM SHORTCUT\] |
+|           | [                  | Activate scroll (`DOWN` or `UP` to scroll, `q` to exit)             |
+|           | c                  | Create new window                                                   |
+|           | z                  | Zoom current pane                                                   |
+| Command   |                    |                                                                     |
+|           | :swap-window -t 0  | Swap current window with window at position 0                       |
 
 ## GNU Readline
 

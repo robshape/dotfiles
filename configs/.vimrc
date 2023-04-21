@@ -73,9 +73,9 @@ nnoremap <silent> <tab> :bn<cr>
 "" Map commands
 "" ############
 "" :Replace to find and replace in all lines
-:command -nargs=1 Replace :%s/<args>/g
+:command -nargs=1 Replace :%s%<args>%g
 "" :ReplaceCF to find and replace in all quickfix files
-:command -nargs=1 ReplaceCF :cfdo %s/<args>/g | up
+:command -nargs=1 ReplaceCF :cfdo %s%<args>%g | up
 "" :SaveNOA to save current buffer without autocommands
 :command SaveNOA :noa w
 
@@ -133,6 +133,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
 Plug 'rakr/vim-one'
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 call plug#end()
 "" Install plugins (if missing)

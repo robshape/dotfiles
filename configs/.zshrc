@@ -12,8 +12,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 alias c="clear"
 alias e="exit"
 alias l="ls -a"
-alias v="vim"
-
 alias awake="caffeinate -dimsu"
 alias download="curl -LO -C -"
 alias permission="stat -f %A"
@@ -37,6 +35,9 @@ alias grh="git reset --hard"
 alias gs="git status"
 alias gstash="git stash -ku"
 alias gundo="git reset --soft HEAD~1"
+
+alias v="vim"
+alias vr="vim -R"
 
 ## #########
 ## Functions
