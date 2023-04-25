@@ -9,15 +9,16 @@ export PATH="/opt/homebrew/bin:$PATH"
 ## #######
 ## Aliases
 ## #######
+alias awake="caffeinate -dimsu"
 alias c="clear"
+alias checksum="shasum -a 256"
+alias download="curl -LOC -"
 alias e="exit"
 alias l="ls -a"
-alias awake="caffeinate -dimsu"
-alias download="curl -LO -C -"
 alias permission="stat -f %A"
 alias size="du -hs"
 
-alias dprune="docker system prune -af -volumes"
+alias dprune="docker system prune -af --volumes"
 
 alias ga="git add ."
 alias gb="git branch"
@@ -68,6 +69,11 @@ gdiff() {
 
 gpick() {
   git checkout $1 -- $2
+}
+
+gpickall() {
+  git merge --no-commit --no-ff --squash $1
+  git reset
 }
 
 gupdate() {

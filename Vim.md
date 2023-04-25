@@ -60,6 +60,7 @@ Inputs that are specific for Vim.
 |            | v                        | Select characters                                                                                                |
 | Command    |                          |                                                                                                                  |
 |            | /\<string\>              | Search in current buffer for \<string\> (`n` for next occurrence)                                                |
+|            | :bd                      | Delete current buffer                                                                                            |
 |            | :ccl                     | Close quickfix                                                                                                   |
 |            | :cn                      | Move to next quickfix position                                                                                   |
 |            | :Replace abc%123         | Replace `abc` with `123` in all lines \[CUSTOM COMMAND\]                                                         |

@@ -199,9 +199,9 @@ nmap <silent> <space> <Plug>(easymotion-bd-w)
 
 "" FZF
 "" Include hidden files and respect .gitignore when searching for file
-let $FZF_DEFAULT_COMMAND='rg --files -g "!.git/" --hidden'
+let $FZF_DEFAULT_COMMAND='rg -g "!.git/" --files --hidden'
 "" Include hidden files and search only file content when searching in workspace
-command! -bang -nargs=* Rg call fzf#vim#grep('rg --color=always --column -g "!.git/" --hidden -n --no-heading -S -- '.shellescape(<q-args>), 1, fzf#vim#with_preview({ 'options': '-d : -n 4..' }), <bang>0)
+command! -bang -nargs=* Rg call fzf#vim#grep('rg -nSg "!.git/" --color=always --column --hidden --no-heading -- '.shellescape(<q-args>), 1, fzf#vim#with_preview({ 'options': '-d : -n 4..' }), <bang>0)
 "" ALT+f to search in workspace
 nnoremap <silent> ƒ :Rg<cr>
 "" ALT+p to search for file
@@ -209,7 +209,7 @@ nnoremap <silent> π :Files<cr>
 
 "" Goyo
 "" Width to wrap text on
-let g:goyo_width=100
+let g:goyo_width=102 "" colorcolumn/textwidth plus 2
 "" ALT+z to toggle Zen Mode
 nnoremap <silent> Ω :Goyo<cr>
 
