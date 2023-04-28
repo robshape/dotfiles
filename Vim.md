@@ -21,14 +21,13 @@ Inputs that are specific for Vim.
 |            | za                       | Toggle fold                                                                                                      |
 |            | {                        | Move to previous paragraph                                                                                       |
 |            | }                        | Move to next paragraph                                                                                           |
-|            | ALT+c                    | Delete all buffers, except current buffer, clear yank history, and restart CoC \[CUSTOM SHORTCUT\]               |
+|            | ALT+c                    | Delete all buffers, except current buffer, and clear yank history \[CUSTOM SHORTCUT\]                            |
 |            | ALT+q                    | Quit without prompt \[CUSTOM SHORTCUT\]                                                                          |
 |            | ALT+w                    | Close current pane \[CUSTOM SHORTCUT\]                                                                           |
 |            | CTRL+d OR u              | Scroll half a page, downward or upward                                                                           |
 |            | CTRL+h                   | Cycle panes horizontally \[CUSTOM SHORTCUT\]                                                                     |
 |            | CTRL+i OR o              | Move position, next or previous                                                                                  |
 |            | ENTER                    | Clear highlight                                                                                                  |
-|            | TAB                      | Cycle buffers \[CUSTOM SHORTCUT\]                                                                                |
 | Edit       |                          |                                                                                                                  |
 |            | .                        | Repeat last shortcut that edited text                                                                            |
 |            | >>                       | Indent current line                                                                                              |
@@ -60,14 +59,13 @@ Inputs that are specific for Vim.
 |            | v                        | Select characters                                                                                                |
 | Command    |                          |                                                                                                                  |
 |            | /\<string\>              | Search in current buffer for \<string\> (`n` for next occurrence)                                                |
-|            | :bd                      | Delete current buffer                                                                                            |
 |            | :ccl                     | Close quickfix                                                                                                   |
 |            | :cn                      | Move to next quickfix position                                                                                   |
 |            | :Replace abc%123         | Replace `abc` with `123` in all lines \[CUSTOM COMMAND\]                                                         |
-|            | :ReplaceCF abc%123       | Replace `abc` with `123` in all quickfix files \[CUSTOM COMMAND\]                                                |
+|            | :ReplaceCF abc%123       | Replace `abc` with `123` in all quickfix locations \[CUSTOM COMMAND\]                                            |
 |            | :SaveNOA                 | Save current buffer without autocommands \[CUSTOM COMMAND\]                                                      |
 | CoC        |                          |                                                                                                                  |
-|            | :\<emoji\>               | Insert emoji (in Markdown file) \[INSERT MODE\]                                                                  |
+|            | :\<emoji\>               | Insert emoji (in Markdown) \[INSERT MODE\]                                                                       |
 |            | gd                       | Jump to definition of code                                                                                       |
 |            | gh                       | Show tooltip for code \[CUSTOM SHORTCUT\]                                                                        |
 |            | gr                       | Show references for code                                                                                         |

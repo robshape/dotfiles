@@ -4,6 +4,9 @@
 [difftool]
   prompt=false
 
+[includeIf "gitdir:~/Developer/ipex/"] #IPEX
+  path=~/Developer/ipex/.gitconfig
+
 [includeIf "gitdir:~/Developer/shapeless/"]
   path=~/Developer/shapeless/.gitconfig
 

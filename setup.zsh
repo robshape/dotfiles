@@ -17,7 +17,6 @@ fi
 ### Development
 brew install git
 brew install jq
-#brew install llvm
 brew install node
 brew install yarn
 

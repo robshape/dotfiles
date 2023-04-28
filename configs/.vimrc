@@ -49,8 +49,8 @@ set wildmenu
 "" ############
 "" Map keyboard
 "" ############
-"" ALT+c to delete all buffers, except current buffer, clear yank history, and restart CoC
-nnoremap <silent> ç :w\|%bd\|e#\|bd#<cr>:CocCommand yank.clean<cr>:CocRestart<cr>
+"" ALT+c to delete all buffers, except current buffer, and clear yank history
+nnoremap <silent> ç :w\|%bd\|e#\|bd#<cr>:CocCommand yank.clean<cr>
 "" ALT+j OR k to move current line, down or up
 nnoremap <silent> ∆ :m .+1<cr>==
 nnoremap <silent> ˚ :m .-2<cr>==
@@ -66,8 +66,6 @@ inoremap <silent> <c-c> <esc>
 nnoremap <silent> <c-h> <c-w>w
 "" ENTER to clear highlighted search results
 nnoremap <silent> <cr> :noh<cr><cr>
-"" TAB to navigate buffers
-nnoremap <silent> <tab> :bn<cr>
 
 "" ############
 "" Map commands
@@ -149,8 +147,6 @@ endif
 set noshowmode
 "" Show diff in statusline
 let g:airline#extensions#hunks#coc_git=1
-"" Show buffers in tabline
-let g:airline#extensions#tabline#enabled=1
 
 "" Close Tag
 "" Enable plugin

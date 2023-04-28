@@ -9,16 +9,16 @@ export PATH="/opt/homebrew/bin:$PATH"
 ## #######
 ## Aliases
 ## #######
-alias awake="caffeinate -dimsu"
 alias c="clear"
-alias checksum="shasum -a 256"
-alias download="curl -LOC -"
 alias e="exit"
 alias l="ls -a"
+alias v="vim"
+alias vr="vim -R"
+alias awake="caffeinate -dimsu"
+alias checksum="shasum -a 256"
+alias download="curl -LOC -"
 alias permission="stat -f %A"
 alias size="du -hs"
-
-alias dprune="docker system prune -af --volumes"
 
 alias ga="git add ."
 alias gb="git branch"
@@ -26,45 +26,28 @@ alias gbd="git branch -D"
 alias gbr="git branch -r"
 alias gc="git checkout"
 alias gcb="git checkout -b"
-alias gcommit="git commit"
 alias gl="git log"
+alias gm="git commit"
 alias gp="git push"
-alias gpop="git stash pop"
 alias gr="git reset"
-alias grebase="git fetch && git merge origin/main"
 alias grh="git reset --hard"
-alias gs="git status"
-alias gstash="git stash -ku"
+alias gs="git stash -ku"
+alias gsp="git stash pop"
+alias gt="git status"
+alias gclean="git reset --hard && git clean -dfx && git gc"
+alias gdiff="git add -N . && git difftool -t vimdiff"
+alias grebase="git fetch && git merge origin/main"
 alias gundo="git reset --soft HEAD~1"
-
-alias v="vim"
-alias vr="vim -R"
 
 ## #########
 ## Functions
 ## #########
-gcfpr() {
-  git fetch origin pull/$1/head:pr/$1
-  git checkout pr/$1
-}
-
-gclean() {
-  git reset --hard
-  git clean -dfx
-  git gc
-}
-
 gclone() {
   git clone git@github.com:$1.git
 }
 
 gcompare() {
   git diff main..$(git branch --show-current)
-}
-
-gdiff() {
-  git add -N .
-  git difftool -t vimdiff
 }
 
 gpick() {
@@ -74,6 +57,11 @@ gpick() {
 gpickall() {
   git merge --no-commit --no-ff --squash $1
   git reset
+}
+
+gpr() {
+  git fetch origin pull/$1/head:pr/$1
+  git checkout pr/$1
 }
 
 gupdate() {
