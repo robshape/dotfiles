@@ -108,7 +108,7 @@ let g:coc_global_extensions=[
 "\'coc-java',
 "\'coc-jest',
 "\'coc-pyright',
-"\'coc-rls',
+"\'coc-rust-analyzer',
 "\'coc-styled-components',
 ""
 "" vim-plug
