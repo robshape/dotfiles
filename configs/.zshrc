@@ -2,7 +2,7 @@
 ## Environment variables
 ## #####################
 export BROWSER="none"
-export CYPRESS_CACHE_FOLDER="~/.cache/cypress"
+export CYPRESS_CACHE_FOLDER="$HOME/.cache/cypress"
 export CYPRESS_CRASH_REPORTS=0
 export PATH="/opt/homebrew/bin:$PATH"
 
@@ -20,7 +20,8 @@ alias download="curl -LOC -"
 alias permission="stat -f %A"
 alias size="du -hs"
 
-alias ga="git add ."
+alias ga="git add"
+alias gaa="git add ."
 alias gb="git branch"
 alias gbd="git branch -D"
 alias gbr="git branch -r"
@@ -28,11 +29,14 @@ alias gc="git checkout"
 alias gcb="git checkout -b"
 alias gl="git log"
 alias gm="git commit"
+alias gmm="git commit -m"
 alias gp="git push"
 alias gr="git reset"
 alias grh="git reset --hard"
 alias gs="git status"
 alias gt="git stash -ku"
+alias gtc="git stash clear"
+alias gtl="git stash list"
 alias gtp="git stash pop"
 alias gclean="git reset --hard && git clean -dfx && git gc"
 alias gdiff="git add -N . && git difftool -t vimdiff"
@@ -43,25 +47,25 @@ alias gundo="git reset --soft HEAD~1"
 ## Functions
 ## #########
 gclone() {
-  git clone git@github.com:$1.git
+  git clone git@github.com:"$1".git
 }
 
 gcompare() {
-  git diff main..$(git branch --show-current)
+  git diff main.."$(git branch --show-current)"
 }
 
-gpick() {
-  git checkout $1 -- $2
-}
-
-gpickall() {
-  git merge --no-commit --no-ff --squash $1
+gpickcommits() {
+  git merge --no-commit --no-ff --squash "$1"
   git reset
 }
 
+gpickfile() {
+  git checkout "$1" -- "$2"
+}
+
 gpr() {
-  git fetch origin pull/$1/head:pr/$1
-  git checkout pr/$1
+  git fetch origin pull/"$1"/head:pr/"$1"
+  git checkout pr/"$1"
 }
 
 gupdate() {
@@ -76,7 +80,7 @@ gupdate() {
 }
 
 gupload() {
-  git push -u origin $(git symbolic-ref -q --short HEAD)
+  git push -u origin "$(git symbolic-ref -q --short HEAD)"
 }
 
 tauth() {
@@ -108,5 +112,5 @@ tupdate() {
   brew upgrade
   brew cleanup -s
   rm -fr "$(brew --cache)"
-  vim -c 'PlugUpgrade | PlugUpdate | CocUpdate'
+  vim -c "PlugUpgrade | PlugUpdate | CocUpdate"
 }

@@ -3,7 +3,7 @@ set -euo pipefail
 
 echo "[*] INSTALLING TOOLS"
 ## Xcode Command Line Developer Tools
-if [[ ! $(xcode-select --install 2>&1 | grep installed) ]] then
+if [[ ! $(xcode-select --install 2>&1 | grep installed) ]]; then
   xcode-select --install
   echo "Rerun this script after Xcode Command Line Developer Tools has finished installing"
   exit

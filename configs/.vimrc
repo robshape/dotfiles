@@ -182,11 +182,11 @@ nmap <silent> <f2> <Plug>(coc-rename)
 "" Copilot
 "" Enable plugin
 let g:copilot_filetypes={
-  \'*': v:false,
-  \'javascript': v:true,
-  \'javascriptreact': v:true,
-  \'typescript': v:true,
-  \'typescriptreact': v:true,
+  \'*':v:false,
+  \'javascript':v:true,
+  \'javascriptreact':v:true,
+  \'typescript':v:true,
+  \'typescriptreact':v:true,
 \}
 
 "" EasyMotion
@@ -271,7 +271,7 @@ augroup autocommands
 "" Disable plugin for specific directories and files
   function DisableCopilot()
     let cwd=expand('%:p')
-    let items=['/rodah/','/shapeless/','Notes.md']
+    let items=['/rodah/', '/shapeless/', 'Notes.md']
     for item in items
       if cwd =~ item
         let b:copilot_enabled=v:false

@@ -1,10 +1,8 @@
-# Vim
+# Cheatsheet
 
-Keyboard shortcuts and commands for Vim, tmux, and GNU Readline.
+My favorite keyboard shortcuts and commands when using Vim.
 
 ## Vim
-
-Inputs that are specific for Vim.
 
 | Category   | Input                    | Description                                                                                                      |
 | ---------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
@@ -115,7 +113,7 @@ Inputs that are specific for Vim.
 
 ## tmux
 
-Inputs that are specific for tmux. Shortcuts and commands are prefixed with `CTRL+b`.
+Shortcuts and commands are prefixed with `CTRL+b`.
 
 | Category  | Input              | Description                                                         |
 | --------- | ------------------ | ------------------------------------------------------------------- |
@@ -134,8 +132,6 @@ Inputs that are specific for tmux. Shortcuts and commands are prefixed with `CTR
 |           | :swap-window -t 0  | Swap current window with window at position 0                       |
 
 ## GNU Readline
-
-Inputs that are specific for GNU Readline.
 
 | Input  | Description                |
 | ------ | -------------------------- |
