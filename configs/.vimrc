@@ -266,6 +266,8 @@ augroup autocommands
 "" CoC
 "" Highlight symbol, and its references, when under cursor
   autocmd CursorHold * call CocActionAsync('highlight')
+"" Redraw statusline on status change (BUT FLASHES/HIDES CURSOR!)
+  autocmd User CocStatusChange redrawstatus
 
 "" Copilot
 "" Disable plugin for specific directories and files
