@@ -25,6 +25,8 @@ set hlsearch
 set ignorecase
 set incsearch
 set smartcase
+"" Change leader
+let mapleader=','
 "" Disable backups
 set nobackup
 set noswapfile
@@ -66,6 +68,8 @@ inoremap <silent> <c-c> <esc>
 nnoremap <silent> <c-h> <c-w>w
 "" ENTER to clear highlighted search results
 nnoremap <silent> <cr> :noh<cr><cr>
+"" <leader>sa to save current buffer without autocommands
+nnoremap <silent> <leader>sa :noa w<cr>
 
 "" ############
 "" Map commands
@@ -74,8 +78,6 @@ nnoremap <silent> <cr> :noh<cr><cr>
 :command -nargs=1 Replace :%s%<args>%g
 "" :ReplaceCF to find and replace in all quickfix files
 :command -nargs=1 ReplaceCF :cfdo %s%<args>%g | up
-"" :SaveNOA to save current buffer without autocommands
-:command SaveNOA :noa w
 
 "" #############
 "" Setup plugins
@@ -176,8 +178,8 @@ inoremap <silent><expr> <c-u> coc#float#has_scroll() ? '<c-r>=coc#float#scroll(0
 inoremap <silent><expr> <cr> coc#pum#visible() ? coc#pum#confirm() : '<c-g>u<cr><c-r>=coc#on_enter()<cr>'
 "" F2 to rename symbol
 nmap <silent> <f2> <Plug>(coc-rename)
-"" :GitHubCopyURL to copy GitHub URL of current line
-:command GitHubCopyURL :CocCommand git.copyUrl
+"" <leader>gu to copy GitHub URL of current line
+nnoremap <silent> <leader>gu :CocCommand git.copyUrl<cr>
 
 "" Copilot
 "" Enable plugin
@@ -217,7 +219,7 @@ let g:indentLine_fileTypeExclude=['json', 'jsonc', 'markdown']
 "" Show hidden files
 let g:NERDTreeIgnore=['\.git$']
 let g:NERDTreeShowHidden=1
-"" Fix menu: https://github.com/preservim/nerdtree/issues/1321
+"" Fix menu: https://github.com/preservim/nerdtree/issues/1321/
 let g:NERDTreeMinimalMenu=1
 "" Resize window
 let g:NERDTreeWinSize=45

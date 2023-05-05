@@ -52,6 +52,7 @@ My favorite keyboard shortcuts and commands when using Vim.
 |            | ALT+s                    | Save current buffer \[CUSTOM SHORTCUT\]                                                                          |
 |            | CTRL+c                   | Escape                                                                                                           |
 |            | CTRL+n OR p              | Navigate auto-complete, next or previous (`CTRL+y` to accept)                                                    |
+|            | \<leader\>sa             | Save current buffer without autocommands \[CUSTOM SHORTCUT\]                                                     |
 | Select     |                          |                                                                                                                  |
 |            | V                        | Select lines                                                                                                     |
 |            | v                        | Select characters                                                                                                |
@@ -61,7 +62,6 @@ My favorite keyboard shortcuts and commands when using Vim.
 |            | :cn                      | Move to next quickfix position                                                                                   |
 |            | :Replace abc%123         | Replace `abc` with `123` in all lines \[CUSTOM COMMAND\]                                                         |
 |            | :ReplaceCF abc%123       | Replace `abc` with `123` in all quickfix locations \[CUSTOM COMMAND\]                                            |
-|            | :SaveNOA                 | Save current buffer without autocommands \[CUSTOM COMMAND\]                                                      |
 | CoC        |                          |                                                                                                                  |
 |            | :\<emoji\>               | Insert emoji (in Markdown) \[INSERT MODE\]                                                                       |
 |            | gd                       | Jump to definition of code                                                                                       |
@@ -72,7 +72,7 @@ My favorite keyboard shortcuts and commands when using Vim.
 |            | ALT+r                    | Open Refactorings/Code Actions \[CUSTOM SHORTCUT\]                                                               |
 |            | CTRL+d OR u              | Scroll floating window, downward or upward \[CUSTOM SHORTCUT\]                                                   |
 |            | F2                       | Rename symbol \[CUSTOM SHORTCUT\]                                                                                |
-|            | :GitHubCopyURL           | Copy GitHub URL of current line \[CUSTOM COMMAND\]                                                               |
+|            | \<leader\>gu             | Copy GitHub URL of current line \[CUSTOM SHORTCUT\]                                                              |
 | Commentary |                          |                                                                                                                  |
 |            | gc                       | Toggle line comments for selected lines                                                                          |
 |            | gcc                      | Toggle line comment for current line                                                                             |
