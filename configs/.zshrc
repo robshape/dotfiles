@@ -1,3 +1,8 @@
+## ########
+## Settings
+## ########
+autoload -Uz compinit && compinit
+
 ## #####################
 ## Environment variables
 ## #####################
@@ -5,6 +10,7 @@ export BROWSER="none"
 export CYPRESS_CACHE_FOLDER="$HOME/.cache/cypress"
 export CYPRESS_CRASH_REPORTS=0
 export PATH="/opt/homebrew/bin:$PATH"
+export PROMPT="%2~ ⚡️ "
 
 ## #######
 ## Aliases
@@ -112,5 +118,6 @@ tupdate() {
   brew upgrade
   brew cleanup -s
   rm -fr "$(brew --cache)"
+
   vim -c "PlugUpgrade | PlugUpdate | CocUpdate"
 }

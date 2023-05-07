@@ -19,7 +19,6 @@ My favorite keyboard shortcuts and commands when using Vim.
 |            | za                       | Toggle fold                                                                                                      |
 |            | {                        | Move to previous paragraph                                                                                       |
 |            | }                        | Move to next paragraph                                                                                           |
-|            | ALT+c                    | Delete all buffers, except current buffer, and clear yank history \[CUSTOM SHORTCUT\]                            |
 |            | ALT+q                    | Quit without prompt \[CUSTOM SHORTCUT\]                                                                          |
 |            | ALT+w                    | Close current pane \[CUSTOM SHORTCUT\]                                                                           |
 |            | CTRL+d OR u              | Scroll half a page, downward or upward                                                                           |
@@ -73,6 +72,7 @@ My favorite keyboard shortcuts and commands when using Vim.
 |            | CTRL+d OR u              | Scroll floating window, downward or upward \[CUSTOM SHORTCUT\]                                                   |
 |            | F2                       | Rename symbol \[CUSTOM SHORTCUT\]                                                                                |
 |            | \<leader\>gu             | Copy GitHub URL of current line \[CUSTOM SHORTCUT\]                                                              |
+|            | :CocCommand yank.clean   | Clean yank history                                                                                               |
 | Commentary |                          |                                                                                                                  |
 |            | gc                       | Toggle line comments for selected lines                                                                          |
 |            | gcc                      | Toggle line comment for current line                                                                             |

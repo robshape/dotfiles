@@ -51,8 +51,6 @@ set wildmenu
 "" ############
 "" Map keyboard
 "" ############
-"" ALT+c to delete all buffers, except current buffer, and clear yank history
-nnoremap <silent> ç :w\|%bd\|e#\|bd#<cr>:CocCommand yank.clean<cr>
 "" ALT+j OR k to move current line, down or up
 nnoremap <silent> ∆ :m .+1<cr>==
 nnoremap <silent> ˚ :m .-2<cr>==
