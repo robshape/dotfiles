@@ -2,6 +2,8 @@
 
 My system configuration.
 
+![dotfiles](./dotfiles.png)
+
 ## Setup
 
 Run `./setup.zsh` inside the root directory.
