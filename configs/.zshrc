@@ -2,6 +2,7 @@
 ## Settings
 ## ########
 autoload -Uz compinit && compinit
+preexec() { clear }
 
 ## #####################
 ## Environment variables
@@ -119,5 +120,5 @@ tupdate() {
   brew cleanup -s
   rm -fr "$(brew --cache)"
 
-  vim -c "PlugUpgrade | PlugUpdate | CocUpdate"
+  vim -c "PlugUpgrade | PlugUpdate | CocUpdate | VimspectorUpdate"
 }

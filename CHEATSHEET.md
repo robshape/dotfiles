@@ -109,7 +109,10 @@ My favorite keyboard shortcuts and commands when using Vim.
 | UltiSnips  |                          |                                                                                                                  |
 |            | CTRL+j OR k              | Navigate placeholders, next or previous                                                                          |
 | Undotree   |                          |                                                                                                                  |
-|            | F5                       | Toggle tree                                                                                                      |
+|            | F1                       | Toggle tree                                                                                                      |
+| Vimspector |                          |                                                                                                                  |
+|            | F5                       | Start debugging                                                                                                  |
+|            | F9                       | Toggle breakpoint                                                                                                |
 
 ## tmux
 

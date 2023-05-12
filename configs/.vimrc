@@ -12,8 +12,6 @@ set clipboard=unnamed
 "" Width to wrap text on
 set colorcolumn=100
 set textwidth=100
-"" Highlight cursor
-set cursorline
 "" Wrap text in diff mode
 set diffopt+=followwrap
 "" Use UTF-8
@@ -111,6 +109,8 @@ let g:coc_global_extensions=[
 "\'coc-rust-analyzer',
 "\'coc-styled-components',
 ""
+"" Vimspector
+let g:vimspector_install_gadgets=[]
 "" vim-plug
 call plug#begin('~/.vim/plugged/')
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -133,10 +133,11 @@ Plug 'rakr/vim-one'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
+Plug 'puremourning/vimspector'
 call plug#end()
 "" Install plugins (if missing)
 if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  autocmd VimEnter * PlugInstall --sync | q
+  au VimEnter * PlugInstall --sync | q
 endif
 
 "" #################
@@ -235,6 +236,7 @@ colorscheme one
 function CustomizeTheme()
   highlight CocInfoSign ctermfg=blue
   highlight CocMenuSel ctermbg=black ctermfg=white
+  highlight ColorColumn guibg=gold
   highlight link EasyMotionTarget2First Search
   highlight link EasyMotionTarget2Second Search
 endfunction
@@ -255,19 +257,25 @@ let g:undotree_DiffAutoOpen=0
 let g:undotree_SetFocusWhenToggle=1
 "" Shorten indicators
 let g:undotree_ShortIndicators=1
-"" F5 to toggle tree
-nnoremap <silent> <f5> :UndotreeToggle<cr>
+"" F1 to toggle tree
+nnoremap <silent> <f1> :UndotreeToggle<cr>
+
+"" Vimspector
+"" Enable mouse debugging
+set mouse=a
+"" Map keyboard
+let g:vimspector_enable_mappings='HUMAN'
 
 "" ##################
 "" Setup autocommands
 "" ##################
 augroup autocommands
-  autocmd!
+  au!
 "" CoC
 "" Highlight symbol, and its references, when under cursor
-  autocmd CursorHold * call CocActionAsync('highlight')
+  au CursorHold * call CocActionAsync('highlight')
 "" Redraw statusline on status change (BUT FLASHES/HIDES CURSOR!)
-  autocmd User CocStatusChange redrawstatus
+  au User CocStatusChange redrawstatus
 
 "" Copilot
 "" Disable plugin for specific directories and files
@@ -280,11 +288,11 @@ augroup autocommands
       endif
     endfor
   endfunction
-  autocmd BufEnter * call DisableCopilot()
+  au BufEnter * call DisableCopilot()
 
 "" Goyo
 "" Restore theme on toggle
-  autocmd ColorScheme * call CustomizeTheme()
+  au ColorScheme * call CustomizeTheme()
 "" Customize Zen Mode
 function GoyoEnter()
   set noshowcmd
@@ -293,7 +301,7 @@ function GoyoEnter()
   silent !tmux resize-pane -Z
   Limelight
 endfunction
-autocmd User GoyoEnter call GoyoEnter()
+au User GoyoEnter call GoyoEnter()
 function GoyoLeave()
   Limelight!
   silent !tmux resize-pane -Z
@@ -301,13 +309,13 @@ function GoyoLeave()
   set scrolloff=10
   set showcmd
 endfunction
-autocmd User GoyoLeave call GoyoLeave()
+au User GoyoLeave call GoyoLeave()
 
 "" NERDTree
 "" Open tree on start
-  autocmd VimEnter * NERDTree
+  au VimEnter * NERDTree
 "" Defocus tree on start
-  autocmd VimEnter * wincmd w
+  au VimEnter * wincmd w
 
 "" Vim
 "" Trim final newlines on save
@@ -316,11 +324,14 @@ autocmd User GoyoLeave call GoyoLeave()
     silent! %s#\($\n\s*\)\+\%$##
     call setpos('.', cursor_position)
   endfunction
-  autocmd BufWritePre * call TrimFinalNewlines()
+  au BufWritePre * call TrimFinalNewlines()
 "" Trim trailing whitespace on save
-  autocmd BufWritePre * %s/\s\+$//e
+  au BufWritePre * %s/\s\+$//e
 "" Prompt when current buffer has been edited outside of Vim (by Git, for example)
-  autocmd CursorHold,CursorHoldI * checktime
+  au CursorHold,CursorHoldI * checktime
+"" Highlight cursor in current buffer
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorcolumn cursorline
+  au WinLeave * setlocal nocursorcolumn nocursorline
 augroup END
 
 "" ####################
