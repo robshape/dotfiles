@@ -120,5 +120,5 @@ tupdate() {
   brew cleanup -s
   rm -fr "$(brew --cache)"
 
-  vim -c "PlugUpgrade | PlugUpdate | CocUpdate | VimspectorUpdate"
+  vim -c "PlugUpgrade | PlugUpdate | VimspectorUpdate | CocUpdate"
 }
