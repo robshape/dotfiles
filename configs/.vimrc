@@ -157,17 +157,17 @@ let g:closetag_filenames='*.jsx,*.tsx'
 "" Set coc-settings.json directory
 let g:coc_config_home='~/.vim/'
 "" gd to jump to definition of code
-nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gd <plug>(coc-definition)
 "" gh to show tooltip for code
 nnoremap <silent> gh :call CocActionAsync('doHover')<cr>
 "" gr to show references for code
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gr <plug>(coc-references)
 "" yh to show yank history
 nnoremap <silent> yh :<c-u>CocList -A --normal yank<cr>
 "" ALT+m to show problems
 nnoremap <silent> µ :CocList diagnostics<cr>
 "" ALT+r to open Refactorings/Code Actions
-nmap <silent> ® <Plug>(coc-codeaction)
+nmap <silent> ® <plug>(coc-codeaction)
 "" CTRL+d OR u to scroll floating window, downward or upward
 nnoremap <silent><expr> <c-d> coc#float#has_scroll() ? coc#float#scroll(1) : '<c-d>'
 nnoremap <silent><expr> <c-u> coc#float#has_scroll() ? coc#float#scroll(0) : '<c-u>'
@@ -176,7 +176,7 @@ inoremap <silent><expr> <c-u> coc#float#has_scroll() ? '<c-r>=coc#float#scroll(0
 "" ENTER to select auto-complete
 inoremap <silent><expr> <cr> coc#pum#visible() ? coc#pum#confirm() : '<c-g>u<cr><c-r>=coc#on_enter()<cr>'
 "" F2 to rename symbol
-nmap <silent> <f2> <Plug>(coc-rename)
+nmap <silent> <f2> <plug>(coc-rename)
 "" <leader>gu to copy GitHub URL of current line
 nnoremap <silent> <leader>gu :CocCommand git.copyUrl<cr>
 
@@ -192,7 +192,7 @@ let g:copilot_filetypes={
 
 "" EasyMotion
 "" SPACE to toggle EasyMotion
-nmap <silent> <space> <Plug>(easymotion-bd-w)
+nmap <silent> <space> <plug>(easymotion-bd-w)
 
 "" FZF
 "" Include hidden files and respect .gitignore when searching for file
@@ -236,7 +236,7 @@ colorscheme one
 function CustomizeTheme()
   highlight CocInfoSign ctermfg=blue
   highlight CocMenuSel ctermbg=black ctermfg=white
-  highlight ColorColumn guibg=gold
+  highlight ColorColumn guibg=darkseagreen
   highlight link EasyMotionTarget2First Search
   highlight link EasyMotionTarget2Second Search
 endfunction
@@ -265,6 +265,8 @@ nnoremap <silent> <f1> :UndotreeToggle<cr>
 set mouse=a
 "" Map keyboard
 let g:vimspector_enable_mappings='HUMAN'
+"" <leader>di to inspect symbol under cursor
+nnoremap <silent> <leader>di <plug>VimspectorBalloonEval
 
 "" ##################
 "" Setup autocommands
