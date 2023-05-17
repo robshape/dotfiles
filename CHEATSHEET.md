@@ -66,13 +66,12 @@ My favorite keyboard shortcuts and commands when using Vim.
 |            | gd                       | Jump to definition of code                                                                                       |
 |            | gh                       | Show tooltip for code \[CUSTOM SHORTCUT\]                                                                        |
 |            | gr                       | Show references for code                                                                                         |
-|            | yh                       | Show yank history \[CUSTOM SHORTCUT\]                                                                            |
 |            | ALT+m                    | Show problems \[CUSTOM SHORTCUT\]                                                                                |
 |            | ALT+r                    | Open Refactorings/Code Actions \[CUSTOM SHORTCUT\]                                                               |
 |            | CTRL+d OR u              | Scroll floating window, downward or upward \[CUSTOM SHORTCUT\]                                                   |
 |            | F2                       | Rename symbol \[CUSTOM SHORTCUT\]                                                                                |
 |            | \<leader\>gu             | Copy GitHub URL of current line \[CUSTOM SHORTCUT\]                                                              |
-|            | :CocCommand yank.clean   | Clean yank history                                                                                               |
+|            | \<leader\>yh             | Show yank history \[CUSTOM SHORTCUT\]                                                                            |
 | Commentary |                          |                                                                                                                  |
 |            | gc                       | Toggle line comments for selected lines                                                                          |
 |            | gcc                      | Toggle line comment for current line                                                                             |

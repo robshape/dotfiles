@@ -162,8 +162,6 @@ nmap <silent> gd <plug>(coc-definition)
 nnoremap <silent> gh :call CocActionAsync('doHover')<cr>
 "" gr to show references for code
 nmap <silent> gr <plug>(coc-references)
-"" yh to show yank history
-nnoremap <silent> yh :<c-u>CocList -A --normal yank<cr>
 "" ALT+m to show problems
 nnoremap <silent> µ :CocList diagnostics<cr>
 "" ALT+r to open Refactorings/Code Actions
@@ -179,6 +177,8 @@ inoremap <silent><expr> <cr> coc#pum#visible() ? coc#pum#confirm() : '<c-g>u<cr>
 nmap <silent> <f2> <plug>(coc-rename)
 "" <leader>gu to copy GitHub URL of current line
 nnoremap <silent> <leader>gu :CocCommand git.copyUrl<cr>
+"" <leader>yh to show yank history
+nnoremap <silent> <leader>yh :<c-u>CocList -A --normal yank<cr>
 
 "" Copilot
 "" Enable plugin
@@ -253,7 +253,7 @@ let g:UltiSnipsSnippetDirectories=['~/.vim/UltiSnips/']
 "" Undotree
 "" Hide diff window
 let g:undotree_DiffAutoOpen=0
-"" Focus tree on start
+"" Focus tree on toggle
 let g:undotree_SetFocusWhenToggle=1
 "" Shorten indicators
 let g:undotree_ShortIndicators=1
@@ -276,6 +276,8 @@ augroup autocommands
 "" CoC
 "" Highlight symbol, and its references, when under cursor
   au CursorHold * call CocActionAsync('highlight')
+"" Clean yank history on init
+  au User CocNvimInit CocCommand yank.clean
 "" Redraw statusline on status change (BUT FLASHES/HIDES CURSOR!)
   au User CocStatusChange redrawstatus
 
@@ -314,9 +316,9 @@ endfunction
 au User GoyoLeave call GoyoLeave()
 
 "" NERDTree
-"" Open tree on start
+"" Open tree on enter
   au VimEnter * NERDTree
-"" Defocus tree on start
+"" Defocus tree on enter
   au VimEnter * wincmd w
 
 "" Vim
