@@ -1,6 +1,7 @@
 # Cheatsheet
 
-My favorite keyboard shortcuts and commands when using Vim.
+My favorite keyboard shortcuts and commands when using Vim. Custom ones are inspired
+by Visual Studio Code and VSCodeVim.
 
 ## Vim
 
@@ -19,10 +20,10 @@ My favorite keyboard shortcuts and commands when using Vim.
 |            | za                       | Toggle fold                                                                                                      |
 |            | {                        | Move to previous paragraph                                                                                       |
 |            | }                        | Move to next paragraph                                                                                           |
-|            | ALT+q                    | Quit without prompt \[CUSTOM SHORTCUT\]                                                                          |
-|            | ALT+w                    | Close current pane \[CUSTOM SHORTCUT\]                                                                           |
-|            | CTRL+d OR u              | Scroll half a page, downward or upward                                                                           |
-|            | CTRL+h                   | Cycle panes horizontally \[CUSTOM SHORTCUT\]                                                                     |
+|            | ALT+q                    | Quit without prompt \[CUSTOM\]                                                                                   |
+|            | ALT+w                    | Close current pane \[CUSTOM\]                                                                                    |
+|            | CTRL+d OR u              | Scroll, downward or upward                                                                                       |
+|            | CTRL+h                   | Cycle panes horizontally \[CUSTOM\]                                                                              |
 |            | CTRL+i OR o              | Move position, next or previous                                                                                  |
 |            | ENTER                    | Clear highlight                                                                                                  |
 | Edit       |                          |                                                                                                                  |
@@ -47,11 +48,11 @@ My favorite keyboard shortcuts and commands when using Vim.
 |            | x                        | Delete current character                                                                                         |
 |            | yiw                      | Copy current word                                                                                                |
 |            | yy                       | Copy current line                                                                                                |
-|            | ALT+j OR k               | Move current line, down or up \[CUSTOM SHORTCUT\]                                                                |
-|            | ALT+s                    | Save current buffer \[CUSTOM SHORTCUT\]                                                                          |
-|            | CTRL+c                   | Escape                                                                                                           |
+|            | ALT+j OR k               | Move current line, down or up \[CUSTOM\]                                                                         |
+|            | ALT+s                    | Save current buffer \[CUSTOM\]                                                                                   |
+|            | CTRL+c                   | Escape \[CUSTOM\]                                                                                                |
 |            | CTRL+n OR p              | Navigate auto-complete, next or previous (`CTRL+y` to accept)                                                    |
-|            | \<leader\>sa             | Save current buffer without autocommands \[CUSTOM SHORTCUT\]                                                     |
+|            | \<leader\>sa             | Save current buffer without autocommands \[CUSTOM\]                                                              |
 | Select     |                          |                                                                                                                  |
 |            | V                        | Select lines                                                                                                     |
 |            | v                        | Select characters                                                                                                |
@@ -59,45 +60,45 @@ My favorite keyboard shortcuts and commands when using Vim.
 |            | /\<string\>              | Search in current buffer for \<string\> (`n` for next occurrence)                                                |
 |            | :ccl                     | Close quickfix                                                                                                   |
 |            | :cn                      | Move to next quickfix position                                                                                   |
-|            | :Replace abc%123         | Replace `abc` with `123` in all lines \[CUSTOM COMMAND\]                                                         |
-|            | :ReplaceCF abc%123       | Replace `abc` with `123` in all quickfix locations \[CUSTOM COMMAND\]                                            |
+|            | :Replace abc%123         | Replace `abc` with `123` in all lines \[CUSTOM\]                                                                 |
+|            | :ReplaceQF abc%123       | Replace `abc` with `123` in all quickfix locations \[CUSTOM\]                                                    |
 | CoC        |                          |                                                                                                                  |
-|            | :\<emoji\>               | Insert emoji (in Markdown) \[INSERT MODE\]                                                                       |
+|            | :\<emoji\>               | Insert emoji (in Markdown)                                                                                       |
 |            | gd                       | Jump to definition of code                                                                                       |
-|            | gh                       | Show tooltip for code \[CUSTOM SHORTCUT\]                                                                        |
+|            | gh                       | Show tooltip for code \[CUSTOM\]                                                                                 |
 |            | gr                       | Show references for code                                                                                         |
-|            | ALT+m                    | Show problems \[CUSTOM SHORTCUT\]                                                                                |
-|            | ALT+r                    | Open Refactorings/Code Actions \[CUSTOM SHORTCUT\]                                                               |
-|            | CTRL+d OR u              | Scroll floating window, downward or upward \[CUSTOM SHORTCUT\]                                                   |
-|            | F2                       | Rename symbol \[CUSTOM SHORTCUT\]                                                                                |
-|            | \<leader\>gu             | Copy GitHub URL of current line \[CUSTOM SHORTCUT\]                                                              |
-|            | \<leader\>yh             | Show yank history \[CUSTOM SHORTCUT\]                                                                            |
+|            | ALT+m                    | Show problems \[CUSTOM\]                                                                                         |
+|            | ALT+r                    | Open Code Actions \[CUSTOM\]                                                                                     |
+|            | CTRL+d OR u              | Scroll popup window, downward or upward \[CUSTOM\]                                                               |
+|            | F2                       | Rename symbol \[CUSTOM\]                                                                                         |
+|            | \<leader\>gu             | Copy GitHub URL of current line \[CUSTOM\]                                                                       |
+|            | \<leader\>yh             | Show yank history \[CUSTOM\]                                                                                     |
 | Commentary |                          |                                                                                                                  |
 |            | gc                       | Toggle line comments for selected lines                                                                          |
 |            | gcc                      | Toggle line comment for current line                                                                             |
 | Copilot    |                          |                                                                                                                  |
-|            | TAB                      | Accept suggestion \[INSERT MODE\]                                                                                |
+|            | TAB                      | Accept suggestion                                                                                                |
 | EasyMotion |                          |                                                                                                                  |
-|            | SPACE                    | Toggle EasyMotion \[CUSTOM SHORTCUT\]                                                                            |
+|            | SPACE                    | Toggle EasyMotion \[CUSTOM\]                                                                                     |
 | Fugitive   |                          |                                                                                                                  |
 |            | :G blame                 | Show author of current line                                                                                      |
 |            | :G mergetool             | Open merge conflicts in quickfix                                                                                 |
 |            | :Gdiffsplit              | Show diff of current file                                                                                        |
 | FZF        |                          |                                                                                                                  |
-|            | ALT+f                    | Search in workspace \[CUSTOM SHORTCUT\]                                                                          |
-|            | ALT+p                    | Search for file \[CUSTOM SHORTCUT\]                                                                              |
+|            | ALT+f                    | Search in workspace \[CUSTOM\]                                                                                   |
+|            | ALT+p                    | Search for file \[CUSTOM\]                                                                                       |
 |            | CTRL+n OR p              | Navigate search results, next or previous (`ENTER` to open file, `CTRL+v` to open file in vertically split pane) |
 |            | SHIFT+TAB                | Select search result (`ENTER` to open in quickfix)                                                               |
 |            | :Commits                 | Search for commit                                                                                                |
 |            | :Snippets                | Search for snippet for current filetype                                                                          |
 | Goyo       |                          |                                                                                                                  |
-|            | ALT+z                    | Toggle Zen Mode \[CUSTOM SHORTCUT\]                                                                              |
+|            | ALT+z                    | Toggle Zen Mode \[CUSTOM\]                                                                                       |
 | NERDTree   |                          |                                                                                                                  |
 |            | m                        | Open menu                                                                                                        |
 |            | R                        | Refresh tree                                                                                                     |
 |            | s                        | Open file in vertically split pane                                                                               |
-|            | ALT+d                    | Reveal file in tree \[CUSTOM SHORTCUT\]                                                                          |
-|            | ALT+t                    | Toggle tree \[CUSTOM SHORTCUT\]                                                                                  |
+|            | ALT+d                    | Reveal file in tree \[CUSTOM\]                                                                                   |
+|            | ALT+t                    | Toggle tree \[CUSTOM\]                                                                                           |
 |            | ENTER                    | Open file                                                                                                        |
 | Splitjoin  |                          |                                                                                                                  |
 |            | gJ                       | Join current block into line                                                                                     |
@@ -108,7 +109,7 @@ My favorite keyboard shortcuts and commands when using Vim.
 | UltiSnips  |                          |                                                                                                                  |
 |            | CTRL+j OR k              | Navigate placeholders, next or previous                                                                          |
 | Undotree   |                          |                                                                                                                  |
-|            | F1                       | Toggle tree \[CUSTOM SHORTCUT\]                                                                                  |
+|            | F1                       | Toggle tree \[CUSTOM\]                                                                                           |
 | Vimspector |                          |                                                                                                                  |
 |            | F5                       | Start debugging                                                                                                  |
 |            | F9                       | Toggle breakpoint                                                                                                |
@@ -118,21 +119,21 @@ My favorite keyboard shortcuts and commands when using Vim.
 
 Shortcuts and commands are prefixed with `CTRL+b`.
 
-| Category  | Input              | Description                                                         |
-| --------- | ------------------ | ------------------------------------------------------------------- |
-| Move      |                    |                                                                     |
-|           | CTRL+l             | Cycle panes horizontally \[CUSTOM SHORTCUT\]                        |
-| Shortcut  |                    |                                                                     |
-|           | "                  | Split pane horizontally                                             |
-|           | %                  | Split pane vertically                                               |
-|           | ,                  | Rename current window                                               |
-|           | 1..9               | Focus window at position 1..9                                       |
-|           | <                  | Resize current pane towards left by 100 columns \[CUSTOM SHORTCUT\] |
-|           | [                  | Activate scroll (`DOWN` or `UP` to scroll, `q` to exit)             |
-|           | c                  | Create new window                                                   |
-|           | z                  | Zoom current pane                                                   |
-| Command   |                    |                                                                     |
-|           | :swap-window -t 0  | Swap current window with window at position 0                       |
+| Category  | Input              | Description                                                |
+| --------- | ------------------ | ---------------------------------------------------------- |
+| Move      |                    |                                                            |
+|           | CTRL+l             | Cycle panes horizontally \[CUSTOM\]                        |
+| Shortcut  |                    |                                                            |
+|           | "                  | Split pane horizontally                                    |
+|           | %                  | Split pane vertically                                      |
+|           | ,                  | Rename current window                                      |
+|           | 1..9               | Focus window at position 1..9                              |
+|           | <                  | Resize current pane towards left by 100 columns \[CUSTOM\] |
+|           | [                  | Activate scroll (`DOWN` or `UP` to scroll, `q` to exit)    |
+|           | c                  | Create new window                                          |
+|           | z                  | Zoom current pane                                          |
+| Command   |                    |                                                            |
+|           | :swap-window -t 0  | Swap current window with window at position 0              |
 
 ## GNU Readline
 

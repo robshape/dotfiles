@@ -72,8 +72,8 @@ nnoremap <silent> <leader>sa :noa w<cr>
 "" ############
 "" :Replace to find and replace in all lines
 :command -nargs=1 Replace :%s%<args>%g
-"" :ReplaceCF to find and replace in all quickfix files
-:command -nargs=1 ReplaceCF :cfdo %s%<args>%g | up
+"" :ReplaceQF to find and replace in all quickfix locations
+:command -nargs=1 ReplaceQF :cfdo %s%<args>%g | up
 
 "" #############
 "" Setup plugins
@@ -164,9 +164,9 @@ nnoremap <silent> gh :call CocActionAsync('doHover')<cr>
 nmap <silent> gr <plug>(coc-references)
 "" ALT+m to show problems
 nnoremap <silent> µ :CocList diagnostics<cr>
-"" ALT+r to open Refactorings/Code Actions
+"" ALT+r to open Code Actions
 nmap <silent> ® <plug>(coc-codeaction)
-"" CTRL+d OR u to scroll floating window, downward or upward
+"" CTRL+d OR u to scroll popup window, downward or upward
 nnoremap <silent><expr> <c-d> coc#float#has_scroll() ? coc#float#scroll(1) : '<c-d>'
 nnoremap <silent><expr> <c-u> coc#float#has_scroll() ? coc#float#scroll(0) : '<c-u>'
 inoremap <silent><expr> <c-d> coc#float#has_scroll() ? '<c-r>=coc#float#scroll(1)<cr>' : '<right>'
@@ -205,8 +205,8 @@ nnoremap <silent> ƒ :Rg<cr>
 nnoremap <silent> π :Files<cr>
 
 "" Goyo
-"" Width to wrap text on
-let g:goyo_width=102 "" colorcolumn/textwidth plus 2
+"" Width to wrap text on (colorcolumn/textwidth plus 2)
+let g:goyo_width=102
 "" ALT+z to toggle Zen Mode
 nnoremap <silent> Ω :Goyo<cr>
 
