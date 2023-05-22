@@ -52,14 +52,14 @@ by Visual Studio Code and VSCodeVim.
 |            | ALT+s                    | Save current buffer \[CUSTOM\]                                                                                   |
 |            | CTRL+c                   | Escape \[CUSTOM\]                                                                                                |
 |            | CTRL+n OR p              | Navigate auto-complete, next or previous (`CTRL+y` to accept)                                                    |
+|            | \<leader\>cc             | Close quickfix \[CUSTOM\]                                                                                        |
+|            | \<leader\>cn             | Move to next quickfix location \[CUSTOM\]                                                                        |
 |            | \<leader\>sa             | Save current buffer without autocommands \[CUSTOM\]                                                              |
 | Select     |                          |                                                                                                                  |
 |            | V                        | Select lines                                                                                                     |
 |            | v                        | Select characters                                                                                                |
 | Command    |                          |                                                                                                                  |
 |            | /\<string\>              | Search in current buffer for \<string\> (`n` for next occurrence)                                                |
-|            | :ccl                     | Close quickfix                                                                                                   |
-|            | :cn                      | Move to next quickfix position                                                                                   |
 |            | :Replace abc%123         | Replace `abc` with `123` in all lines \[CUSTOM\]                                                                 |
 |            | :ReplaceQF abc%123       | Replace `abc` with `123` in all quickfix locations \[CUSTOM\]                                                    |
 | CoC        |                          |                                                                                                                  |
@@ -67,8 +67,8 @@ by Visual Studio Code and VSCodeVim.
 |            | gd                       | Jump to definition of code                                                                                       |
 |            | gh                       | Show tooltip for code \[CUSTOM\]                                                                                 |
 |            | gr                       | Show references for code                                                                                         |
+|            | ALT+.                    | Open Code Actions \[CUSTOM\]                                                                                     |
 |            | ALT+m                    | Show problems \[CUSTOM\]                                                                                         |
-|            | ALT+r                    | Open Code Actions \[CUSTOM\]                                                                                     |
 |            | CTRL+d OR u              | Scroll popup window, downward or upward \[CUSTOM\]                                                               |
 |            | F2                       | Rename symbol \[CUSTOM\]                                                                                         |
 |            | \<leader\>gu             | Copy GitHub URL of current line \[CUSTOM\]                                                                       |
@@ -81,23 +81,23 @@ by Visual Studio Code and VSCodeVim.
 | EasyMotion |                          |                                                                                                                  |
 |            | SPACE                    | Toggle EasyMotion \[CUSTOM\]                                                                                     |
 | Fugitive   |                          |                                                                                                                  |
-|            | :G blame                 | Show author of current line                                                                                      |
-|            | :G mergetool             | Open merge conflicts in quickfix                                                                                 |
-|            | :Gdiffsplit              | Show diff of current file                                                                                        |
+|            | \<leader\>gb             | Show author of current line \[CUSTOM\]                                                                           |
+|            | \<leader\>gd             | Show diff of current file \[CUSTOM\]                                                                             |
+|            | \<leader\>gm             | Open merge conflicts in quickfix \[CUSTOM\]                                                                      |
 | FZF        |                          |                                                                                                                  |
 |            | ALT+f                    | Search in workspace \[CUSTOM\]                                                                                   |
 |            | ALT+p                    | Search for file \[CUSTOM\]                                                                                       |
 |            | CTRL+n OR p              | Navigate search results, next or previous (`ENTER` to open file, `CTRL+v` to open file in vertically split pane) |
 |            | SHIFT+TAB                | Select search result (`ENTER` to open in quickfix)                                                               |
-|            | :Commits                 | Search for commit                                                                                                |
-|            | :Snippets                | Search for snippet for current filetype                                                                          |
+|            | \<leader\>fc             | Search for commit \[CUSTOM\]                                                                                     |
+|            | \<leader\>fs             | Search for snippet for current filetype \[CUSTOM\]                                                               |
 | Goyo       |                          |                                                                                                                  |
 |            | ALT+z                    | Toggle Zen Mode \[CUSTOM\]                                                                                       |
 | NERDTree   |                          |                                                                                                                  |
 |            | m                        | Open menu                                                                                                        |
 |            | R                        | Refresh tree                                                                                                     |
 |            | s                        | Open file in vertically split pane                                                                               |
-|            | ALT+d                    | Reveal file in tree \[CUSTOM\]                                                                                   |
+|            | ALT+r                    | Reveal file in tree \[CUSTOM\]                                                                                   |
 |            | ALT+t                    | Toggle tree \[CUSTOM\]                                                                                           |
 |            | ENTER                    | Open file                                                                                                        |
 | Splitjoin  |                          |                                                                                                                  |

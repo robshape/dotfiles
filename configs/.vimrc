@@ -23,8 +23,6 @@ set hlsearch
 set ignorecase
 set incsearch
 set smartcase
-"" Change leader
-let mapleader=','
 "" Disable backups
 set nobackup
 set noswapfile
@@ -49,6 +47,8 @@ set wildmenu
 "" ############
 "" Map keyboard
 "" ############
+"" Change leader
+let mapleader=','
 "" ALT+j OR k to move current line, down or up
 nnoremap <silent> ∆ :m .+1<cr>==
 nnoremap <silent> ˚ :m .-2<cr>==
@@ -64,6 +64,10 @@ inoremap <silent> <c-c> <esc>
 nnoremap <silent> <c-h> <c-w>w
 "" ENTER to clear highlighted search results
 nnoremap <silent> <cr> :noh<cr><cr>
+"" <leader>cc to close quickfix
+nnoremap <silent> <leader>cc :ccl<cr>
+"" <leader>cn to move to next quickfix location
+nnoremap <silent> <leader>cn :cn<cr>
 "" <leader>sa to save current buffer without autocommands
 nnoremap <silent> <leader>sa :noa w<cr>
 
@@ -162,10 +166,10 @@ nmap <silent> gd <plug>(coc-definition)
 nnoremap <silent> gh :call CocActionAsync('doHover')<cr>
 "" gr to show references for code
 nmap <silent> gr <plug>(coc-references)
+"" ALT+. to open Code Actions
+nmap <silent> ≥ <plug>(coc-codeaction)
 "" ALT+m to show problems
 nnoremap <silent> µ :CocList diagnostics<cr>
-"" ALT+r to open Code Actions
-nmap <silent> ® <plug>(coc-codeaction)
 "" CTRL+d OR u to scroll popup window, downward or upward
 nnoremap <silent><expr> <c-d> coc#float#has_scroll() ? coc#float#scroll(1) : '<c-d>'
 nnoremap <silent><expr> <c-u> coc#float#has_scroll() ? coc#float#scroll(0) : '<c-u>'
@@ -194,6 +198,14 @@ let g:copilot_filetypes={
 "" SPACE to toggle EasyMotion
 nmap <silent> <space> <plug>(easymotion-bd-w)
 
+"" Fugitive
+"" <leader>gb to show author of current line
+nnoremap <silent> <leader>gb :G blame<cr>
+"" <leader>gd to show diff of current file
+nnoremap <silent> <leader>gd :Gdiffsplit<cr>
+"" <leader>gm to open merge conflicts in quickfix
+nnoremap <silent> <leader>gm :G mergetool<cr>
+
 "" FZF
 "" Include hidden files and respect .gitignore when searching for file
 let $FZF_DEFAULT_COMMAND='rg -g "!.git/" --files --hidden'
@@ -203,6 +215,10 @@ command! -bang -nargs=* Rg call fzf#vim#grep('rg -nSg "!.git/" --color=always --
 nnoremap <silent> ƒ :Rg<cr>
 "" ALT+p to search for file
 nnoremap <silent> π :Files<cr>
+"" <leader>fc to search for commit
+nnoremap <silent> <leader>fc :Commits<cr>
+"" <leader>fs to search for snippet for current filetype
+nnoremap <silent> <leader>fs :Snippets<cr>
 
 "" Goyo
 "" Width to wrap text on (colorcolumn/textwidth plus 2)
@@ -222,8 +238,8 @@ let g:NERDTreeShowHidden=1
 let g:NERDTreeMinimalMenu=1
 "" Resize window
 let g:NERDTreeWinSize=45
-"" ALT+d to reveal file in tree
-nnoremap <silent> ∂ :NERDTreeFind<cr>
+"" ALT+r to reveal file in tree
+nnoremap <silent> ® :NERDTreeFind<cr>
 "" ALT+t to toggle tree
 nnoremap <silent> † :NERDTreeToggle<cr>
 
@@ -316,10 +332,10 @@ endfunction
 au User GoyoLeave call GoyoLeave()
 
 "" NERDTree
-"" Open tree on enter
-  au VimEnter * NERDTree
-"" Defocus tree on enter
-  au VimEnter * wincmd w
+"" Prevent buffers opening in tree
+  au BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 | let buf=bufnr() | buffer# | execute "normal! \<c-w>w" | execute 'buffer'.buf | endif
+"" Open and defocus tree on enter
+  au VimEnter * NERDTree | wincmd p
 
 "" Vim
 "" Trim final newlines on save
