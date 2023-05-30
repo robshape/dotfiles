@@ -63,7 +63,7 @@ gcompare() {
 }
 
 gpickcommits() {
-  git merge --no-commit --no-ff --squash "$1"
+  git merge --no-commit --squash "$1"
   git reset
 }
 
