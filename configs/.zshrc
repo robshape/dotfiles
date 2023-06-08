@@ -62,7 +62,7 @@ gcompare() {
   git diff main.."$(git branch --show-current)"
 }
 
-gpickcommits() {
+gpickbranch() {
   git merge --no-commit --squash "$1"
   git reset
 }
