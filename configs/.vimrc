@@ -68,8 +68,10 @@ nnoremap <silent> <cr> :noh<cr><cr>
 nnoremap <silent> <leader>cc :ccl<cr>
 "" <leader>cn to move to next quickfix location
 nnoremap <silent> <leader>cn :cn<cr>
-"" <leader>sa to save current buffer without autocommands
-nnoremap <silent> <leader>sa :noa w<cr>
+"" <leader>sa to save all buffers
+nnoremap <silent> <leader>sa :wa<cr>
+"" <leader>sc to save current buffer without autocommands
+nnoremap <silent> <leader>sc :noa w<cr>
 
 "" ############
 "" Map commands
@@ -115,6 +117,9 @@ let g:coc_global_extensions=[
 ""
 "" Vimspector
 let g:vimspector_install_gadgets=[]
+""
+"\'CodeLLDB',
+""
 "" vim-plug
 call plug#begin('~/.vim/plugged/')
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }

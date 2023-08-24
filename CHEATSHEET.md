@@ -54,7 +54,8 @@ by Visual Studio Code and VSCodeVim.
 |            | CTRL+n OR p              | Navigate auto-complete, next or previous (`CTRL+y` to accept)                                                    |
 |            | \<leader\>cc             | Close quickfix \[CUSTOM\]                                                                                        |
 |            | \<leader\>cn             | Move to next quickfix location \[CUSTOM\]                                                                        |
-|            | \<leader\>sa             | Save current buffer without autocommands \[CUSTOM\]                                                              |
+|            | \<leader\>sa             | Save all buffers \[CUSTOM\]                                                                                      |
+|            | \<leader\>sc             | Save current buffer without autocommands \[CUSTOM\]                                                              |
 | Select     |                          |                                                                                                                  |
 |            | V                        | Select lines                                                                                                     |
 |            | v                        | Select characters                                                                                                |
