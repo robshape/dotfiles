@@ -36,7 +36,7 @@ alias gc="git checkout"
 alias gcb="git checkout -b"
 alias gl="git log"
 alias gls="git show"
-alias gm="git commit"
+alias gm="git commit --no-edit"
 alias gmm="git commit -m"
 alias gp="git push"
 alias gr="git reset"
@@ -46,9 +46,10 @@ alias gt="git stash -ku"
 alias gtc="git stash clear"
 alias gtl="git stash list"
 alias gtp="git stash pop"
+alias gv="git revert --no-edit"
 alias gclean="git reset --hard && git clean -dfx && git gc"
 alias gdiff="git add -N . && git difftool -t vimdiff"
-alias grebase="git fetch && git merge origin/main"
+alias grebase="git fetch && git merge --no-edit origin/main"
 alias gundo="git reset --soft HEAD~1"
 
 ## #########
@@ -60,6 +61,22 @@ gclone() {
 
 gcompare() {
   git diff main.."$(git branch --show-current)"
+}
+
+gcontinue() {
+  git checkout main
+  git pull
+  git fetch -p
+
+  git checkout $1
+  git fetch
+  git merge --no-edit origin/main
+
+  git checkout main
+  git checkout -b $2
+
+  git merge --squash $1
+  git commit -m $1
 }
 
 gpickbranch() {
