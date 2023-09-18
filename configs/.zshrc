@@ -79,6 +79,10 @@ gcontinue() {
   git commit -m $1
 }
 
+glog() {
+  git log -P --author='^((?!dependabot).*)$'
+}
+
 gpickbranch() {
   git merge --no-commit --squash "$1"
   git reset
