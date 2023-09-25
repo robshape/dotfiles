@@ -49,6 +49,7 @@ alias gtp="git stash pop"
 alias gv="git revert --no-edit"
 alias gclean="git reset --hard && git clean -dfx && git gc"
 alias gdiff="git add -N . && git difftool -t vimdiff"
+alias gpick="git cherry-pick"
 alias grebase="git fetch && git merge --no-edit origin/main"
 alias gundo="git reset --soft HEAD~1"
 
@@ -68,15 +69,15 @@ gcontinue() {
   git pull
   git fetch -p
 
-  git checkout $1
+  git checkout "$1"
   git fetch
   git merge --no-edit origin/main
 
   git checkout main
-  git checkout -b $2
+  git checkout -b "$2"
 
-  git merge --squash $1
-  git commit -m $1
+  git merge --squash "$1"
+  git commit -m "$1"
 }
 
 glog() {
@@ -84,7 +85,7 @@ glog() {
 }
 
 gpickbranch() {
-  git merge --no-commit --squash "$1"
+  git merge --squash "$1"
   git reset
 }
 
