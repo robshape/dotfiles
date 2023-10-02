@@ -105,7 +105,8 @@ by Visual Studio Code and VSCodeVim.
 |            | gJ                       | Join current block into line                                                                                     |
 |            | gS                       | Split current line into block                                                                                    |
 | Surround   |                          |                                                                                                                  |
-|            | cs})                     | Replace `}` with `)` in between cursor                                                                           |
+|            | cs{(                     | Replace `{}` with `()` in between cursor                                                                         |
+|            | ds\<character\>          | Delete \<character\> in between cursor                                                                           |
 |            | ysiw\<character\>        | Surround current word with \<character\>                                                                         |
 | UltiSnips  |                          |                                                                                                                  |
 |            | CTRL+j OR k              | Navigate placeholders, next or previous                                                                          |
