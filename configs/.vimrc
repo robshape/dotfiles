@@ -68,6 +68,8 @@ nnoremap <silent> <cr> :noh<cr><cr>
 nnoremap <silent> <leader>cc :ccl<cr>
 "" <leader>cn to move to next quickfix location
 nnoremap <silent> <leader>cn :cn<cr>
+"" <leader>cp to move to previous quickfix location
+nnoremap <silent> <leader>cp :cp<cr>
 "" <leader>sa to save all buffers
 nnoremap <silent> <leader>sa :wa<cr>
 "" <leader>sc to save current buffer without autocommands

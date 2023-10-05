@@ -54,6 +54,7 @@ by Visual Studio Code and VSCodeVim.
 |            | CTRL+n OR p              | Navigate auto-complete, next or previous (`CTRL+y` to accept)                                                    |
 |            | \<leader\>cc             | Close quickfix \[CUSTOM\]                                                                                        |
 |            | \<leader\>cn             | Move to next quickfix location \[CUSTOM\]                                                                        |
+|            | \<leader\>cp             | Move to previous quickfix location \[CUSTOM\]                                                                    |
 |            | \<leader\>sa             | Save all buffers \[CUSTOM\]                                                                                      |
 |            | \<leader\>sc             | Save current buffer without autocommands \[CUSTOM\]                                                              |
 | Select     |                          |                                                                                                                  |
@@ -61,6 +62,7 @@ by Visual Studio Code and VSCodeVim.
 |            | v                        | Select characters                                                                                                |
 | Command    |                          |                                                                                                                  |
 |            | /\<string\>              | Search in current buffer for \<string\> (`n` for next occurrence)                                                |
+|            | :\<number\>              | Move to line \<number\>                                                                                          |
 |            | :Replace abc%123         | Replace `abc` with `123` in all lines \[CUSTOM\]                                                                 |
 |            | :ReplaceQF abc%123       | Replace `abc` with `123` in all quickfix locations \[CUSTOM\]                                                    |
 | CoC        |                          |                                                                                                                  |
