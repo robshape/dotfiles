@@ -121,6 +121,11 @@ let g:coc_global_extensions=[
 let g:vimspector_install_gadgets=[]
 ""
 "\'CodeLLDB',
+"\'debugger-for-chrome',
+"\'debugpy',
+"\'delve',
+"\'vscode-java-debug',
+"\'vscode-js-debug',
 ""
 "" vim-plug
 call plug#begin('~/.vim/plugged/')
