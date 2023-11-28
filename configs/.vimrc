@@ -200,8 +200,11 @@ nnoremap <silent> <leader>yh :<c-u>CocList -A --normal yank<cr>
 "" Enable plugin
 let g:copilot_filetypes={
   \'*':v:false,
+  \'go':v:true,
   \'javascript':v:true,
   \'javascriptreact':v:true,
+  \'make':v:true,
+  \'sh':v:true,
   \'typescript':v:true,
   \'typescriptreact':v:true,
 \}
