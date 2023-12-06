@@ -11,6 +11,7 @@ by Visual Studio Code and VSCodeVim.
 |            | \$                       | Move to end of current line                                                                                      |
 |            | *                        | Search in current buffer for current word                                                                        |
 |            | 0                        | Move to start of current line                                                                                    |
+|            | _                        | Move to first character on current line                                                                          |
 |            | b                        | Move backward to start of word                                                                                   |
 |            | e                        | Move forward to end of word                                                                                      |
 |            | f\<character\>           | Move to first occurrence of \<character\> on current line (`;` for next occurrence)                              |
@@ -30,7 +31,7 @@ by Visual Studio Code and VSCodeVim.
 |            | .                        | Repeat last shortcut that edited text                                                                            |
 |            | >>                       | Indent current line                                                                                              |
 |            | a                        | Insert after cursor                                                                                              |
-|            | cgn                      | Replace search occurrence (use `*` before and `.` after)                                                         |
+|            | cgn                      | Replace search occurrence (use `*` before `cgn` and `.` after `cgn`)                                             |
 |            | ci\<character\>          | Replace in between \<character\>                                                                                 |
 |            | ciw                      | Replace current word                                                                                             |
 |            | D                        | Cut to end of current line                                                                                       |
@@ -60,6 +61,7 @@ by Visual Studio Code and VSCodeVim.
 | Select     |                          |                                                                                                                  |
 |            | V                        | Select lines                                                                                                     |
 |            | v                        | Select characters                                                                                                |
+|            | vi\<character\>          | Move to first occurrence of \<character\> on current line and select in between \<character\>                    |
 | Command    |                          |                                                                                                                  |
 |            | /\<string\>              | Search in current buffer for \<string\> (`n` for next occurrence)                                                |
 |            | :\<number\>              | Move to line \<number\>                                                                                          |
