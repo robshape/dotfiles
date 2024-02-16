@@ -17,5 +17,6 @@
   "stylelintplus.autoFixOnSave": true,
   "stylelintplus.cssInJs": true,
   "stylelintplus.validateOnSave": true,
-  "stylelintplus.validateOnType": false
+  "stylelintplus.validateOnType": false,
+  "svelte.enable-ts-plugin": false
 }

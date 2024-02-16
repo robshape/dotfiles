@@ -129,15 +129,17 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | --------- | ------------------ | ---------------------------------------------------------- |
 | Move      |                    |                                                            |
 |           | CTRL+l             | Cycle panes horizontally \[CUSTOM\]                        |
+|           | CTRL+p             | Cycle panes vertically \[CUSTOM\]                          |
+|           | CTRL+z             | Zoom current pane \[CUSTOM\]                               |
 | Shortcut  |                    |                                                            |
 |           | "                  | Split pane horizontally                                    |
 |           | %                  | Split pane vertically                                      |
 |           | ,                  | Rename current window                                      |
 |           | 1..9               | Focus window at position 1..9                              |
-|           | <                  | Resize current pane towards left by 100 columns \[CUSTOM\] |
+|           | <                  | Resize current pane leftwards by 25 columns \[CUSTOM\]     |
+|           | >                  | Resize current pane downwards by 25 columns \[CUSTOM\]     |
 |           | [                  | Activate scroll (`DOWN` or `UP` to scroll, `q` to exit)    |
 |           | c                  | Create new window                                          |
-|           | z                  | Zoom current pane                                          |
 | Command   |                    |                                                            |
 |           | :swap-window -t 0  | Swap current window with window at position 0              |
 

@@ -60,7 +60,7 @@ nnoremap <silent> ß :w<cr>
 nnoremap <silent> ∑ <c-w>q
 "" CTRL+c to escape
 inoremap <silent> <c-c> <esc>
-"" CTRL+h to navigate panes
+"" CTRL+h to cycle panes horizontally
 nnoremap <silent> <c-h> <c-w>w
 "" ENTER to clear highlighted search results
 nnoremap <silent> <cr> :noh<cr><cr>
