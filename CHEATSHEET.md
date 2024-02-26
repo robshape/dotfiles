@@ -9,7 +9,7 @@ by Visual Studio Code and VSCodeVim.
 | ---------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
 | Move       |                          |                                                                                                                  |
 |            | \$                       | Move to end of current line                                                                                      |
-|            | *                        | Search in current buffer for current word                                                                        |
+|            | *                        | Search in current buffer for current word (`n` for next occurrence, `N` for previous occurrence)                 |
 |            | 0                        | Move to start of current line                                                                                    |
 |            | _                        | Move to first character on current line                                                                          |
 |            | b                        | Move backward to start of word                                                                                   |
@@ -63,7 +63,7 @@ by Visual Studio Code and VSCodeVim.
 |            | v                        | Select characters                                                                                                |
 |            | vi\<character\>          | Move to first occurrence of \<character\> on current line and select in between \<character\>                    |
 | Command    |                          |                                                                                                                  |
-|            | /\<string\>              | Search in current buffer for \<string\> (`n` for next occurrence)                                                |
+|            | /\<string\>              | Search in current buffer for \<string\> (`n` for next occurrence, `N` for previous occurrence)                   |
 |            | :\<number\>              | Move to line \<number\>                                                                                          |
 |            | :Replace abc%123         | Replace `abc` with `123` in all lines \[CUSTOM\]                                                                 |
 |            | :ReplaceQF abc%123       | Replace `abc` with `123` in all quickfix locations \[CUSTOM\]                                                    |
@@ -128,8 +128,8 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | Category  | Input              | Description                                                |
 | --------- | ------------------ | ---------------------------------------------------------- |
 | Move      |                    |                                                            |
+|           | CTRL+a             | Cycle panes vertically \[CUSTOM\]                          |
 |           | CTRL+l             | Cycle panes horizontally \[CUSTOM\]                        |
-|           | CTRL+p             | Cycle panes vertically \[CUSTOM\]                          |
 |           | CTRL+z             | Zoom current pane \[CUSTOM\]                               |
 | Shortcut  |                    |                                                            |
 |           | "                  | Split pane horizontally                                    |
