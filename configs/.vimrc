@@ -70,6 +70,10 @@ nnoremap <silent> <leader>cc :ccl<cr>
 nnoremap <silent> <leader>cn :cn<cr>
 "" <leader>cp to move to previous quickfix location
 nnoremap <silent> <leader>cp :cp<cr>
+"" <leader>pd to disable Copilot
+nnoremap <silent> <leader>pd :Copilot disable<cr>
+"" <leader>pe to enable Copilot
+nnoremap <silent> <leader>pe :Copilot enable<cr>
 "" <leader>sa to save all buffers
 nnoremap <silent> <leader>sa :wa<cr>
 "" <leader>sc to save current buffer without autocommands
@@ -81,7 +85,7 @@ nnoremap <silent> <leader>sc :noa w<cr>
 "" :Replace to find and replace in all lines
 :command -nargs=1 Replace :%s%<args>%g
 "" :ReplaceQF to find and replace in all quickfix locations
-:command -nargs=1 ReplaceQF :cfdo %s%<args>%g | up
+:command -nargs=1 ReplaceQF :noa cfdo %s%<args>%g | up
 
 "" #############
 "" Setup plugins

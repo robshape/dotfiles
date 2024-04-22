@@ -56,6 +56,8 @@ by Visual Studio Code and VSCodeVim.
 |            | \<leader\>cc             | Close quickfix \[CUSTOM\]                                                                                        |
 |            | \<leader\>cn             | Move to next quickfix location \[CUSTOM\]                                                                        |
 |            | \<leader\>cp             | Move to previous quickfix location \[CUSTOM\]                                                                    |
+|            | \<leader\>pd             | Disable Copilot \[CUSTOM\]                                                                                       |
+|            | \<leader\>pe             | Enable Copilot \[CUSTOM\]                                                                                        |
 |            | \<leader\>sa             | Save all buffers \[CUSTOM\]                                                                                      |
 |            | \<leader\>sc             | Save current buffer without autocommands \[CUSTOM\]                                                              |
 | Select     |                          |                                                                                                                  |
