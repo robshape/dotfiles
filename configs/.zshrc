@@ -27,6 +27,7 @@ alias v="vim"
 alias vr="vim -R"
 alias awake="caffeinate -dimsu"
 alias checksum="shasum -a 256"
+alias delete="rm -fr"
 alias download="curl -LOC -"
 alias permission="stat -f %A"
 alias size="du -hs"
@@ -54,7 +55,6 @@ alias gv="git revert --no-edit"
 alias gclean="git reset --hard && git stash clear && git clean -dfx && git gc"
 alias gdiff="git add -N . && git difftool -t vimdiff"
 alias gpick="git cherry-pick"
-alias grebase="git fetch && git merge --no-edit origin/main"
 alias gundo="git reset --soft HEAD~1"
 
 ## #########
@@ -100,6 +100,16 @@ gpickfile() {
 gpr() {
   git fetch origin pull/"$1"/head:pr/"$1"
   git checkout pr/"$1"
+}
+
+grebase() {
+  git fetch
+
+  if [ -n "$1" ]; then
+    git merge --no-edit origin/"$1"
+  else
+    git merge --no-edit origin/main
+  fi
 }
 
 gupdate() {
