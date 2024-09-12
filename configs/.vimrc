@@ -35,6 +35,8 @@ set signcolumn=number
 set scrolloff=10
 "" Hide intro message
 set shortmess+=I
+"" Show search matches count
+set shortmess-=S
 "" Show shortcut/command while typing
 set showcmd
 "" Recognize <esc> immediately
