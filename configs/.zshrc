@@ -139,6 +139,14 @@ tclean() {
   rm -fr ~/.zsh_history
 }
 
+tmemory() {
+  date=$(date "+%Y-%m-%d")
+  time=$(date "+%H:%M:%S")
+  memory_pressure=$(memory_pressure | grep "System-wide" | awk '{ print $5 }')
+  swapusage=$(sysctl vm.swapusage | awk '{ print $7 }')
+  echo "$date $time\t\t$memory_pressure memory free\t\t$swapusage swap used"
+}
+
 tstart() {
   if [ -z "$TMUX" ]; then
     tmux new-session -As main
