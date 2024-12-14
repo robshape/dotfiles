@@ -61,6 +61,34 @@ alias gundo="git reset --soft HEAD~1"
 ## #########
 ## Functions
 ## #########
+auth() {
+  ssh-add ~/.ssh/shapeless-key
+}
+
+clean() {
+  rm -fr ~/.zsh_sessions/
+  rm -fr ~/.NERDTreeBookmarks
+  rm -fr ~/.viminfo
+  rm -fr ~/.zsh_history
+}
+
+memory() {
+  date=$(date "+%Y-%m-%d")
+  time=$(date "+%H:%M:%S")
+  memory_pressure=$(memory_pressure | grep "System-wide" | awk '{ print $5 }')
+  swapusage=$(sysctl vm.swapusage | awk '{ print $7 }')
+  echo "$date $time\t\t$memory_pressure memory free\t\t$swapusage swap used"
+}
+
+update() {
+  brew update
+  brew upgrade
+  brew cleanup -s
+  rm -fr "$(brew --cache)"
+
+  vim -c "PlugUpgrade | PlugUpdate | VimspectorUpdate | CocUpdate"
+}
+
 gclone() {
   git clone git@github.com:"$1".git
 }
@@ -128,25 +156,6 @@ gupload() {
   git push -u origin "$(git symbolic-ref -q --short HEAD)"
 }
 
-tauth() {
-  ssh-add ~/.ssh/shapeless-key
-}
-
-tclean() {
-  rm -fr ~/.zsh_sessions/
-  rm -fr ~/.NERDTreeBookmarks
-  rm -fr ~/.viminfo
-  rm -fr ~/.zsh_history
-}
-
-tmemory() {
-  date=$(date "+%Y-%m-%d")
-  time=$(date "+%H:%M:%S")
-  memory_pressure=$(memory_pressure | grep "System-wide" | awk '{ print $5 }')
-  swapusage=$(sysctl vm.swapusage | awk '{ print $7 }')
-  echo "$date $time\t\t$memory_pressure memory free\t\t$swapusage swap used"
-}
-
 tstart() {
   if [ -z "$TMUX" ]; then
     tmux new-session -As main
@@ -158,13 +167,4 @@ tstop() {
     tmux kill-session -a
     tmux kill-session
   fi
-}
-
-tupdate() {
-  brew update
-  brew upgrade
-  brew cleanup -s
-  rm -fr "$(brew --cache)"
-
-  vim -c "PlugUpgrade | PlugUpdate | VimspectorUpdate | CocUpdate"
 }
