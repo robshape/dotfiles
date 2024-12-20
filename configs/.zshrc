@@ -77,7 +77,7 @@ memory() {
   time=$(date "+%H:%M:%S")
   memory_pressure=$(memory_pressure | grep "System-wide" | awk '{ print $5 }')
   swapusage=$(sysctl vm.swapusage | awk '{ print $7 }')
-  echo "$date $time\t\t$memory_pressure memory free\t\t$swapusage swap used"
+  echo "$date $time, $memory_pressure memory free, $swapusage swap used"
 }
 
 update() {
