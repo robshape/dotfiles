@@ -7,13 +7,15 @@ set expandtab
 set shiftround
 set shiftwidth=2
 set tabstop=2
+"" Wrap text
+set breakindent
+set diffopt+=followwrap
+let &showbreak='  '
 "" Use system clipboard
 set clipboard=unnamed
 "" Width to wrap text on
 set colorcolumn=100
 set textwidth=100
-"" Wrap text in diff mode
-set diffopt+=followwrap
 "" Use UTF-8
 set encoding=utf-8
 "" Hide unsaved buffers to avoid save prompt
@@ -22,6 +24,7 @@ set hidden
 set hlsearch
 set ignorecase
 set incsearch
+set shortmess-=S
 set smartcase
 "" Disable backups
 set nobackup
@@ -35,8 +38,6 @@ set signcolumn=number
 set scrolloff=10
 "" Hide intro message
 set shortmess+=I
-"" Show search matches count
-set shortmess-=S
 "" Show shortcut/command while typing
 set showcmd
 "" Recognize <esc> immediately
@@ -106,8 +107,8 @@ let g:coc_global_extensions=[
   \'coc-sh',
   \'coc-snippets',
   \'coc-spell-checker',
+  \'coc-styled-components',
   \'coc-stylelintplus',
-  \'coc-svelte',
   \'coc-tsserver',
   \'coc-yaml',
   \'coc-yank',
@@ -121,7 +122,7 @@ let g:coc_global_extensions=[
 "\'coc-jest',
 "\'coc-pyright',
 "\'coc-rust-analyzer',
-"\'coc-styled-components',
+"\'coc-svelte',
 ""
 "" Vimspector
 let g:vimspector_install_gadgets=[]
@@ -335,22 +336,22 @@ augroup autocommands
 "" Restore theme on toggle
   au ColorScheme * call CustomizeTheme()
 "" Customize Zen Mode
-function GoyoEnter()
+function EnterGoyo()
   set noshowcmd
   set scrolloff=999
   silent !tmux set status off
   silent !tmux resize-pane -Z
   Limelight
 endfunction
-au User GoyoEnter call GoyoEnter()
-function GoyoLeave()
+au User GoyoEnter call EnterGoyo()
+function LeaveGoyo()
   Limelight!
   silent !tmux resize-pane -Z
   silent !tmux set status on
   set scrolloff=10
   set showcmd
 endfunction
-au User GoyoLeave call GoyoLeave()
+au User GoyoLeave call LeaveGoyo()
 
 "" NERDTree
 "" Prevent buffers opening in tree
