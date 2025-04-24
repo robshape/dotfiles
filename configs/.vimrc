@@ -137,7 +137,7 @@ let g:vimspector_install_gadgets=[]
 "" vim-plug
 call plug#begin('~/.vim/plugged/')
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-"Plug 'github/copilot.vim'
+Plug 'github/copilot.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
@@ -210,10 +210,13 @@ let g:copilot_filetypes={
   \'go':v:true,
   \'javascript':v:true,
   \'javascriptreact':v:true,
+  \'json':v:true,
+  \'jsonc':v:true,
   \'make':v:true,
   \'sh':v:true,
   \'typescript':v:true,
   \'typescriptreact':v:true,
+  \'yaml':v:true,
 \}
 
 "" EasyMotion

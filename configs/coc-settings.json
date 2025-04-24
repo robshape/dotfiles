@@ -3,7 +3,9 @@
   "bashIde.shellcheckPath": "",
   "coc.preferences.formatOnSave": true,
   "colors.enable": true,
-  "eslint.autoFixOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
   "eslint.run": "onSave",
   "git.realtimeGutters": false,
   "go.goplsOptions": {

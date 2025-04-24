@@ -66,9 +66,12 @@ auth() {
 }
 
 clean() {
+  rm -fr ~/.local/
   rm -fr ~/.zsh_sessions/
   rm -fr ~/.NERDTreeBookmarks
   rm -fr ~/.viminfo
+  rm -fr ~/.vimspector.log
+  rm -fr ~/.zcompdump
   rm -fr ~/.zsh_history
 }
 
