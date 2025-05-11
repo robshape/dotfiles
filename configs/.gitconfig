@@ -1,11 +1,34 @@
+[column]
+  ui=auto
+
 [core]
-  excludesfile=~/.gitignore
+  excludesFile=~/.gitignore
+
+[diff]
+  algorithm=histogram
+  colorMoved=true
+  renames=true
 
 [difftool]
   prompt=false
+
+[help]
+  autocorrect=prompt
 
 [includeIf "gitdir:~/Developer/shapeless/"]
   path=~/Developer/shapeless/.gitconfig
 
 [includeIf "gitdir:~/Developer/shapeless-oss/"]
   path=~/Developer/shapeless-oss/.gitconfig
+
+[init]
+  defaultBranch=main
+
+[merge]
+  conflictStyle=zdiff3
+
+[push]
+  autoSetupRemote=true
+
+[tag]
+  sort=version:refname

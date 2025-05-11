@@ -27,7 +27,6 @@ alias v="vim"
 alias vr="vim -R"
 alias awake="caffeinate -dimsu"
 alias checksum="shasum -a 256"
-alias delete="rm -fr"
 alias download="curl -LOC -"
 alias permission="stat -f %A"
 alias size="du -hs"
@@ -104,7 +103,7 @@ gcompare() {
 gcontinue() {
   git checkout main
   git pull
-  git fetch -p
+  git fetch -Pp
 
   git checkout "$1"
   git fetch
@@ -147,17 +146,13 @@ grebase() {
 
 gupdate() {
   git pull
-  git fetch -p
+  git fetch -Pp
 
   if [ "$1" = "n" ]; then
     npm ci
   elif [ "$1" = "y" ]; then
     yarn install --frozen-lockfile
   fi
-}
-
-gupload() {
-  git push -u origin "$(git symbolic-ref -q --short HEAD)"
 }
 
 tstart() {

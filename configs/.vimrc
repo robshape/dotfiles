@@ -360,7 +360,7 @@ au User GoyoLeave call LeaveGoyo()
 "" Prevent buffers opening in tree
   au BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 | let buf=bufnr() | buffer# | execute "normal! \<c-w>w" | execute 'buffer'.buf | endif
 "" Open and defocus tree on enter
-  au VimEnter * NERDTree | wincmd p
+  "au VimEnter * NERDTree | wincmd p
 
 "" Vim
 "" Trim final newlines on save

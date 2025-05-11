@@ -152,3 +152,48 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | CTRL+a | Move to start of line      |
 | CTRL+e | Move to end of line        |
 | CTRL+r | Search backward in history |
+
+## VSCode
+
+### Extensions
+
+* christian-kohler.npm-intellisense
+* christian-kohler.path-intellisense
+* davidanson.vscode-markdownlint
+* dbaeumer.vscode-eslint
+* esbenp.prettier-vscode
+* formulahendry.code-runner
+* github.vscode-github-actions
+* golang.go
+* orta.vscode-jest
+* streetsidesoftware.code-spell-checker
+* stylelint.vscode-stylelint
+* vscodevim.vim
+
+### Shortcuts
+
+| Input                | Description                                              |
+| -------------------- | -------------------------------------------------------- |
+| ALT+CLICK            | Add another cursor at click position                     |
+| ALT+DOWN or UP       | Move current line, down or up                            |
+| ALT+ESC              | Show auto-complete                                       |
+| ALT+SHIFT+DOWN or UP | Duplicate current line, down or up                       |
+| CMD+1..3             | Focus `x` pane                                           |
+| CMD+\                | Split pane vertically                                    |
+| CMD+b                | Toggle side bar                                          |
+| CMD+d                | Add another cursor at same word                          |
+| CMD+f                | Search in current file                                   |
+| CMD+k THEN z         | Toggle Zen mode                                          |
+| CMD+p                | Search for file (or `>` for actions and `@` for symbols) |
+| CMD+q                | Quit                                                     |
+| CMD+s                | Save current file                                        |
+| CMD+w                | Close current pane                                       |
+| CMD+ALT+DOWN or UP   | Add another cursor, down or up                           |
+| CMD+ENTER            | Open file in vertically split pane                       |
+| CMD+SHIFT+e          | Focus file explorer                                      |
+| CMD+SHIFT+f          | Search in workspace                                      |
+| CTRL+\`              | Open/focus Terminal                                      |
+| CTRL+SHIFT+r         | Open Refactorings/Code Actions                           |
+| CTRL+TAB             | Navigate tabs                                            |
+| F2                   | Rename symbol                                            |
+| SHIFT+ESC            | Hide auto-complete                                       |
