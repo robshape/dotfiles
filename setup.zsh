@@ -35,16 +35,15 @@ fi
 if ! (($+commands[brew])) then
   /bin/bash -c "$(curl -fLSs https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
-
-### Development
+brew install fzf
 brew install git
 brew install go
 brew install node
-brew install yarn
-
-### Vim
 brew install ripgrep
 brew install tmux
 brew install vim
+brew install yarn
+
+## Vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo

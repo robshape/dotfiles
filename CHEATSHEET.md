@@ -168,6 +168,7 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 * orta.vscode-jest
 * streetsidesoftware.code-spell-checker
 * stylelint.vscode-stylelint
+* TomRijndorp.find-it-faster
 * vscodevim.vim
 
 ### Shortcuts
@@ -192,6 +193,8 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | CMD+ENTER            | Open file in vertically split pane                       |
 | CMD+SHIFT+e          | Focus file explorer                                      |
 | CMD+SHIFT+f          | Search in workspace                                      |
+| CMD+SHIFT+j          | Search for file [FindItFaster]                           |
+| CMD+SHIFT+u          | Search in workspace [FindItFaster]                       |
 | CTRL+\`              | Open/focus Terminal                                      |
 | CTRL+SHIFT+r         | Open Refactorings/Code Actions                           |
 | CTRL+TAB             | Navigate tabs                                            |
