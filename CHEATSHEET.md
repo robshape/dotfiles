@@ -193,8 +193,8 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | CMD+ENTER            | Open file in vertically split pane                       |
 | CMD+SHIFT+e          | Focus file explorer                                      |
 | CMD+SHIFT+f          | Search in workspace                                      |
-| CMD+SHIFT+j          | Search for file [FindItFaster]                           |
-| CMD+SHIFT+u          | Search in workspace [FindItFaster]                       |
+| CMD+SHIFT+j          | Search for file [FIND-IT-FASTER]                         |
+| CMD+SHIFT+u          | Search in workspace [FIND-IT-FASTER]                     |
 | CTRL+\`              | Open/focus Terminal                                      |
 | CTRL+SHIFT+r         | Open Refactorings/Code Actions                           |
 | CTRL+TAB             | Navigate tabs                                            |
