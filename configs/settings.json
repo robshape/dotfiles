@@ -33,6 +33,10 @@
   "git.promptToSaveFilesBeforeCommit": "staged",
   "github.copilot.chat.codesearch.enabled": true,
   "github.copilot.chat.scopeSelection": true,
+  "github.copilot.enable": {
+    "*": true,
+    "dotenv": false
+  },
   "github.copilot.nextEditSuggestions.enabled": true,
   "go.toolsManagement.autoUpdate": true,
   "inlineChat.holdToSpeech": false,
@@ -44,6 +48,7 @@
   "search.followSymlinks": false,
   "security.workspace.trust.enabled": false,
   "stylelint.reportNeedlessDisables": true,
+  "telemetry.feedback.enabled": false,
   "telemetry.telemetryLevel": "off",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vim.easymotion": true,
@@ -56,7 +61,8 @@
   "vim.useSystemClipboard": true,
   "workbench.colorTheme": "Default Light Modern",
   "workbench.commandPalette.history": 0,
+  "workbench.enableExperiments": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "none",
-  "workbench.tips.enabled": false,
+  "workbench.tips.enabled": false
 }
