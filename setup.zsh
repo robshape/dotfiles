@@ -39,6 +39,7 @@ brew install fzf
 brew install git
 brew install go
 brew install node
+brew install pnpm
 brew install ripgrep
 brew install tmux
 brew install vim

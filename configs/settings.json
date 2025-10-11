@@ -1,5 +1,11 @@
 {
-  "chat.agent.enabled": true,
+  "chat.agent.maxRequests": 100,
+  "chat.mcp.gallery.enabled": true,
+  "chat.tools.terminal.autoApprove": {
+    "npm run build": true,
+    "npm run dev": true,
+    "npm test": true
+  },
   "code-runner.enableAppInsights": false,
   "debug.internalConsoleOptions": "openOnSessionStart",
   "debug.openDebug": "openOnSessionStart",
@@ -18,7 +24,15 @@
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "editor.wrappingIndent": "indent",
+  "errorLens.enabledDiagnosticLevels": [
+    "error",
+    "warning"
+  ],
+  "errorLens.onSave": true,
   "eslint.run": "onSave",
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
   "extensions.ignoreRecommendations": true,
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
@@ -31,14 +45,17 @@
   "find-it-faster.general.showMaximizedTerminal": true,
   "git.confirmSync": false,
   "git.promptToSaveFilesBeforeCommit": "staged",
+  "github.copilot.chat.agent.thinkingTool": true,
   "github.copilot.chat.codesearch.enabled": true,
-  "github.copilot.chat.scopeSelection": true,
   "github.copilot.enable": {
     "*": true,
     "dotenv": false
   },
+  "github.copilot.nextEditSuggestions.allowWhitespaceOnlyChanges": false,
   "github.copilot.nextEditSuggestions.enabled": true,
   "go.toolsManagement.autoUpdate": true,
+  "gutterpreview.showImagePreviewOnGutter": false,
+  "gutterpreview.showUnderline": false,
   "inlineChat.holdToSpeech": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "jest.runMode": "on-demand",
@@ -52,6 +69,8 @@
   "telemetry.telemetryLevel": "off",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vim.easymotion": true,
+  "vim.easymotionMarkerForegroundColorTwoCharFirst": "#1f51ff",
+  "vim.easymotionMarkerForegroundColorTwoCharSecond": "#1f51ff",
   "vim.normalModeKeyBindings": [
     {
       "after": ["<leader>", "<leader>", "<leader>", "b", "d", "w"],

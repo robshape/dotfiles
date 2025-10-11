@@ -165,11 +165,18 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 * formulahendry.code-runner
 * github.vscode-github-actions
 * golang.go
+* kisstkondoros.vscode-gutter-preview
 * orta.vscode-jest
 * streetsidesoftware.code-spell-checker
 * stylelint.vscode-stylelint
 * TomRijndorp.find-it-faster
+* usernamehw.errorlens
 * vscodevim.vim
+
+## MCP servers
+
+* microsoft/playwright-mcp
+* upstash/context
 
 ### Shortcuts
 
@@ -184,6 +191,7 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | CMD+b                | Toggle side bar                                          |
 | CMD+d                | Add another cursor at same word                          |
 | CMD+f                | Search in current file                                   |
+| CMD+k THEN w         | Close all tabs                                           |
 | CMD+k THEN z         | Toggle Zen mode                                          |
 | CMD+p                | Search for file (or `>` for actions and `@` for symbols) |
 | CMD+q                | Quit                                                     |
@@ -194,8 +202,11 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | CMD+SHIFT+e          | Focus file explorer                                      |
 | CMD+SHIFT+f          | Search in workspace                                      |
 | CMD+SHIFT+j          | Search for file [FIND-IT-FASTER]                         |
+| CMD+SHIFT+m          | Toggle problems                                          |
 | CMD+SHIFT+u          | Search in workspace [FIND-IT-FASTER]                     |
-| CTRL+\`              | Open/focus Terminal                                      |
+| CMD+SHIFT+v          | Open Preview                                             |
+| CTRL+\`              | Toggle/focus Terminal                                    |
+| CTRL+CMD+i           | Toggle Chat                                              |
 | CTRL+SHIFT+r         | Open Refactorings/Code Actions                           |
 | CTRL+TAB             | Navigate tabs                                            |
 | F2                   | Rename symbol                                            |
