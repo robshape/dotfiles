@@ -175,7 +175,6 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 
 ## MCP servers
 
-* microsoft/playwright-mcp
 * upstash/context
 
 ### Shortcuts

@@ -4,6 +4,7 @@
   "chat.tools.terminal.autoApprove": {
     "npm run build": true,
     "npm run dev": true,
+    "npm run lint": true,
     "npm test": true
   },
   "code-runner.enableAppInsights": false,
