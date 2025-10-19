@@ -208,6 +208,7 @@ nnoremap <silent> <leader>yh :<c-u>CocList -A --normal yank<cr>
 let g:copilot_filetypes={
   \'*':v:false,
   \'go':v:true,
+  \'html':v:true,
   \'javascript':v:true,
   \'javascriptreact':v:true,
   \'json':v:true,
@@ -326,9 +327,9 @@ augroup autocommands
 "" Disable plugin for specific directories and files
   function DisableCopilot()
     let cwd=expand('%:p')
-    let items=['/rodah/', '/shapeless/', 'Notes.md']
+    let items=['Notes.md']
     for item in items
-      if cwd =~ item
+      if cwd =~? item
         let b:copilot_enabled=v:false
       endif
     endfor
