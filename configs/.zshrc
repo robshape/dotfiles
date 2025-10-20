@@ -150,6 +150,8 @@ gupdate() {
 
   if [ "$1" = "n" ]; then
     npm ci
+  elif [ "$1" = "p" ]; then
+    pnpm i --frozen-lockfile
   elif [ "$1" = "y" ]; then
     yarn install --frozen-lockfile
   fi

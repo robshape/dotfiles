@@ -138,8 +138,8 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 |           | %                  | Split pane vertically                                      |
 |           | ,                  | Rename current window                                      |
 |           | 1..9               | Focus window at position 1..9                              |
-|           | <                  | Resize current pane leftwards by 25 columns \[CUSTOM\]     |
-|           | >                  | Resize current pane downwards by 25 columns \[CUSTOM\]     |
+|           | <                  | Resize current pane leftwards by 10 columns \[CUSTOM\]     |
+|           | >                  | Resize current pane rightwards by 10 columns \[CUSTOM\]    |
 |           | [                  | Activate scroll (`DOWN` or `UP` to scroll, `q` to exit)    |
 |           | c                  | Create new window                                          |
 | Command   |                    |                                                            |
