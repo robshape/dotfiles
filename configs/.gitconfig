@@ -15,8 +15,8 @@
 [includeIf "gitdir:~/Developer/shapeless/"]
   path=~/Developer/shapeless/.gitconfig
 
-[includeIf "gitdir:~/Developer/shapeless-oss/"]
-  path=~/Developer/shapeless-oss/.gitconfig
+[includeIf "gitdir:~/Developer/shapeless-gh/"]
+  path=~/Developer/shapeless-gh/.gitconfig
 
 [init]
   defaultBranch=main
