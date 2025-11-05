@@ -157,6 +157,8 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 
 ### Extensions
 
+* biomejs.biome
+* bradlc.vscode-tailwindcss
 * christian-kohler.npm-intellisense
 * christian-kohler.path-intellisense
 * davidanson.vscode-markdownlint

@@ -95,6 +95,7 @@ nnoremap <silent> <leader>sc :noa w<cr>
 "" #############
 "" CoC
 let g:coc_global_extensions=[
+  \'coc-biome',
   \'coc-emoji',
   \'coc-eslint',
   \'coc-git',
@@ -109,6 +110,7 @@ let g:coc_global_extensions=[
   \'coc-spell-checker',
   \'coc-styled-components',
   \'coc-stylelintplus',
+  \'@yaegassy/coc-tailwindcss3',
   \'coc-tsserver',
   \'coc-yaml',
   \'coc-yank',

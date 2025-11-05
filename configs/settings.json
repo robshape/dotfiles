@@ -1,4 +1,6 @@
 {
+  "biome.requireConfiguration": true,
+  "biome.suggestInstallingGlobally": false,
   "chat.agent.maxRequests": 100,
   "chat.mcp.gallery.enabled": true,
   "chat.tools.terminal.autoApprove": {
@@ -15,10 +17,14 @@
   "editor.autoClosingQuotes": "beforeWhitespace",
   "editor.autoIndent": "keep",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.editContext": false,
   "editor.formatOnSave": true,
   "editor.lineNumbers": "relative",
   "editor.linkedEditing": true,
   "editor.links": false,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
   "editor.renderWhitespace": "boundary",
   "editor.scrollBeyondLastLine": false,
   "editor.snippetSuggestions": "none",
@@ -35,6 +41,9 @@
     "vscodevim.vim": 1
   },
   "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
   "files.restoreUndoStack": false,

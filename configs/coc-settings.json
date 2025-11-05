@@ -20,5 +20,6 @@
   "stylelintplus.cssInJs": true,
   "stylelintplus.validateOnSave": true,
   "stylelintplus.validateOnType": false,
-  "svelte.enable-ts-plugin": false
+  "svelte.enable-ts-plugin": false,
+  "tailwindCSS.headwind.runOnSave": true
 }
