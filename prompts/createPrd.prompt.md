@@ -61,7 +61,7 @@ Your output should ONLY be the complete PRD in Markdown format.
    * Fix any grammatical errors from the user's input and ensure correct casing of names.
    * Refer to the project conversationally (e.g., "the project," "this feature").
 
-10. **Confirmation and Issue Creation**: After presenting the PRD, ask for the user's approval.
+10. **Confirmation**: After presenting the PRD, ask for the user's approval.
 
 ---
 
