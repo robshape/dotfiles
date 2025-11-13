@@ -2,6 +2,7 @@
   "biome.requireConfiguration": true,
   "biome.suggestInstallingGlobally": false,
   "chat.agent.maxRequests": 100,
+  "chat.agentSessionsViewLocation": "single-view",
   "chat.mcp.gallery.enabled": true,
   "chat.tools.terminal.autoApprove": {
     "npm run build": true,
@@ -55,7 +56,6 @@
   "find-it-faster.general.showMaximizedTerminal": true,
   "git.confirmSync": false,
   "git.promptToSaveFilesBeforeCommit": "staged",
-  "github.copilot.chat.agent.thinkingTool": true,
   "github.copilot.chat.codesearch.enabled": true,
   "github.copilot.enable": {
     "*": true,

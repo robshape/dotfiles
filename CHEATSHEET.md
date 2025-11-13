@@ -192,6 +192,7 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | CMD+b                | Toggle side bar                                          |
 | CMD+d                | Add another cursor at same word                          |
 | CMD+f                | Search in current file                                   |
+| CMD+i                | Generate code                                            |
 | CMD+k THEN w         | Close all tabs                                           |
 | CMD+k THEN z         | Toggle Zen mode                                          |
 | CMD+p                | Search for file (or `>` for actions and `@` for symbols) |
