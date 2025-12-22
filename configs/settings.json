@@ -10,6 +10,7 @@
     "npm run lint": true,
     "npm test": true
   },
+  "chat.useClaudeSkills": true,
   "code-runner.enableAppInsights": false,
   "debug.internalConsoleOptions": "openOnSessionStart",
   "debug.openDebug": "openOnSessionStart",
@@ -38,8 +39,6 @@
   ],
   "errorLens.onSave": true,
   "eslint.run": "onSave",
-  "extensions.autoCheckUpdates": false,
-  "extensions.autoUpdate": false,
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
@@ -80,7 +79,6 @@
   "telemetry.feedback.enabled": false,
   "telemetry.telemetryLevel": "off",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "update.mode": "manual",
   "vim.easymotion": true,
   "vim.easymotionMarkerForegroundColorTwoCharFirst": "#1f51ff",
   "vim.easymotionMarkerForegroundColorTwoCharSecond": "#1f51ff",
