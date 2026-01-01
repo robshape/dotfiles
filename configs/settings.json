@@ -8,7 +8,13 @@
     "npm run build": true,
     "npm run dev": true,
     "npm run lint": true,
-    "npm test": true
+    "npm test": true,
+    "pnpm build": true,
+    "pnpm dev": true,
+    "pnpm format": true,
+    "pnpm lint": true,
+    "pnpm test": true,
+    "pnpm types": true
   },
   "chat.useClaudeSkills": true,
   "code-runner.enableAppInsights": false,
@@ -74,6 +80,7 @@
   "npm-intellisense.showBuildInLibs": true,
   "prettier.requireConfig": true,
   "search.followSymlinks": false,
+  "search.quickOpen.includeHistory": false,
   "security.workspace.trust.enabled": false,
   "stylelint.reportNeedlessDisables": true,
   "telemetry.feedback.enabled": false,
