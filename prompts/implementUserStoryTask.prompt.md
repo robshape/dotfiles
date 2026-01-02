@@ -1,7 +1,7 @@
 ---
-mode: plan
+agent: Plan
 description: 'Create a plan for implementing a user story task and then implement it.'
-tools: ['edit/editFiles', 'fetch', 'search']
+tools: ['search']
 ---
 
 # Implement user story task

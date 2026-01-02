@@ -1,7 +1,7 @@
 ---
-mode: agent
+agent: agent
 description: 'Generate a comprehensive Product Requirements Document (PRD) in Markdown, detailing user stories, acceptance criteria, technical considerations, and metrics.'
-tools: ['edit/editFiles', 'fetch', 'search']
+tools: ['edit/editFiles', 'search', 'web/fetch']
 ---
 
 # Create PRD
