@@ -179,6 +179,14 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 
 * upstash/context
 
+### Prompts
+
+| Input                                     | Description                                         |
+| ----------------------------------------- | --------------------------------------------------- |
+| /cleanupCodebase                          | Align codebase with LLM AI coding principles        |
+| /createPrd \<product\>                    | Create Product Requirement Document for \<product\> |
+| /implementUserStoryTask \<userStoryTask\> | Plan and implement user \<userStoryTask\>           |
+
 ### Shortcuts
 
 | Input                | Description                                              |

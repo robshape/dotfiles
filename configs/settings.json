@@ -45,6 +45,7 @@
   ],
   "errorLens.onSave": true,
   "eslint.run": "onSave",
+  "explorer.autoReveal": false,
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
@@ -98,6 +99,7 @@
   "vim.useSystemClipboard": true,
   "workbench.colorTheme": "Default Light Modern",
   "workbench.commandPalette.history": 0,
+  "workbench.editor.restoreViewState": false,
   "workbench.enableExperiments": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "none",
