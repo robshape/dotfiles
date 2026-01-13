@@ -20,7 +20,7 @@ if ! [[ -L "$HOME/.zshrc" ]]; then
   ## Visual Studio Code
   VISUAL_STUDIO_CODE_DIRECTORY="$HOME/Library/Application Support/Code/User/"
   if [[ -d "$VISUAL_STUDIO_CODE_DIRECTORY" ]]; then
-    rm -fr "$VISUAL_STUDIO_CODE_DIRECTORY/prompts"
+    rm -fr "$VISUAL_STUDIO_CODE_DIRECTORY/prompts/"
     ln -fs "$PWD/configs/settings.json" "$VISUAL_STUDIO_CODE_DIRECTORY"
     ln -fs "$PWD/prompts/" "$VISUAL_STUDIO_CODE_DIRECTORY"
   fi
