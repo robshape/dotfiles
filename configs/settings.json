@@ -2,7 +2,6 @@
   "biome.requireConfiguration": true,
   "biome.suggestInstallingGlobally": false,
   "chat.agent.maxRequests": 100,
-  "chat.agentSessionsViewLocation": "single-view",
   "chat.mcp.gallery.enabled": true,
   "chat.useAgentSkills": true,
   "code-runner.enableAppInsights": false,

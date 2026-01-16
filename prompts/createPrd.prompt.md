@@ -1,5 +1,6 @@
 ---
 agent: agent
+model: GPT-5.2 (copilot)
 tools: ['edit/editFiles', 'search', 'web/fetch']
 ---
 
