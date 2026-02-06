@@ -54,7 +54,7 @@
   "github.copilot.chat.agentCustomizationSkill.enabled": true,
   "github.copilot.chat.anthropic.contextEditing.enabled": true,
   "github.copilot.chat.codesearch.enabled": true,
-  "github.copilot.chat.implementAgent.model": "Claude Opus 4.5 (copilot)",
+  "github.copilot.chat.implementAgent.model": "Claude Opus 4.6 (copilot)",
   "github.copilot.chat.organizationInstructions.enabled": false,
   "github.copilot.chat.responsesApiReasoningEffort": "high",
   "github.copilot.chat.searchSubagent.enabled": true,
