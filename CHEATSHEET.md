@@ -181,11 +181,12 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 
 ### Prompts
 
-| Input                                     | Description                                         |
-| ----------------------------------------- | --------------------------------------------------- |
-| /cleanupCodebase                          | Align codebase with LLM AI coding principles        |
-| /createPrd \<product\>                    | Create Product Requirement Document for \<product\> |
-| /implementUserStoryTask \<userStoryTask\> | Plan and implement user \<userStoryTask\>           |
+| Input                         | Description                                         |
+| ----------------------------- | --------------------------------------------------- |
+| /cleanupCodebase              | Align codebase with LLM AI coding principles        |
+| /codeReview                   | Review pending code changes                         |
+| /createPrd \<product\>        | Create Product Requirement Document for \<product\> |
+| /implementFeature \<feature\> | Plan and implement \<feature\>                      |
 
 ### Shortcuts
 
@@ -221,3 +222,10 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | CTRL+TAB             | Navigate tabs                                            |
 | F2                   | Rename symbol                                            |
 | SHIFT+ESC            | Hide auto-complete                                       |
+
+### Commands
+
+
+| Input                 | Description         |
+| --------------------- | ------------------- |
+| >Simple Browser: Show | Show simple browser |

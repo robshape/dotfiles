@@ -72,6 +72,14 @@
   "inlineChat.holdToSpeech": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "jest.runMode": "on-demand",
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev/": true
+  },
   "markdownlint.run": "onSave",
   "npm-intellisense.showBuildInLibs": true,
   "prettier.requireConfig": true,
