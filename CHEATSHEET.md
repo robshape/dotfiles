@@ -225,7 +225,6 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 
 ### Commands
 
-
 | Input                 | Description         |
 | --------------------- | ------------------- |
 | >Simple Browser: Show | Show simple browser |
