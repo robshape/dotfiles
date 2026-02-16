@@ -20,46 +20,32 @@ Your output should ONLY be the complete PRD in Markdown format.
    * Ask 3-5 questions to reduce ambiguity.
    * Use a bulleted list for readability.
    * Phrase questions conversationally (e.g., "To help me create the best PRD, could you clarify...").
-
 2. **Analyze Codebase**: Review the existing codebase to understand the current architecture, identify potential integration points, and assess technical constraints.
-
 3. **Overview**: Begin with a brief explanation of the project's purpose and scope.
-
 4. **Headings**:
-
    * Use title case for the main document title only (e.g., PRD: {project\_title}).
    * All other headings should use sentence case.
-
 5. **Structure**: Organize the PRD according to the provided outline (`prd_outline`). Add relevant subheadings as needed.
-
 6. **Detail Level**:
-
    * Use clear, precise, and concise language.
    * Include specific details and metrics whenever applicable.
    * Ensure consistency and clarity throughout the document.
-
 7. **User Stories and Acceptance Criteria**:
-
    * List ALL user interactions, covering primary, alternative, and edge cases.
    * Assign a unique requirement ID (e.g., GH-001) to each user story.
    * Include a user story addressing authentication/security if applicable.
    * Ensure each user story is testable.
-
 8. **Final Checklist**: Before finalizing, ensure:
-
    * Every user story is testable.
    * Acceptance criteria are clear and specific.
    * All necessary functionality is covered by user stories.
    * Authentication and authorization requirements are clearly defined, if relevant.
-
 9. **Formatting Guidelines**:
-
    * Consistent formatting and numbering.
    * No dividers or horizontal rules.
    * Format strictly in valid Markdown, free of disclaimers or footers.
    * Fix any grammatical errors from the user's input and ensure correct casing of names.
    * Refer to the project conversationally (e.g., "the project," "this feature").
-
 10. **Confirmation**: After presenting the PRD, ask for the user's approval.
 
 ---
@@ -110,7 +96,6 @@ Your output should ONLY be the complete PRD in Markdown format.
 ## 4. Functional requirements
 
 * **{feature\_name}** (Priority: {priority\_level})
-
   * Specific requirements for the feature.
 
 ## 5. User experience
@@ -122,7 +107,6 @@ Your output should ONLY be the complete PRD in Markdown format.
 ### 5.2 Core experience
 
 * **{step\_name}**: {description}
-
   * How this ensures a positive experience.
 
 ### 5.3 Advanced features & edge cases
@@ -182,7 +166,6 @@ Concise paragraph describing the user's journey and benefits.
 ### 9.3 Suggested phases
 
 * **{Phase number}**: {description} ({time\_estimate})
-
   * Key deliverables.
 
 ## 10. User stories
@@ -192,7 +175,6 @@ Concise paragraph describing the user's journey and benefits.
 * **ID**: {user\_story\_id}
 * **Description**: {user\_story\_description}
 * **Acceptance criteria**:
-
   * Bullet list of criteria.
 
 ---

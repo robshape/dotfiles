@@ -1,9 +1,9 @@
 ---
-agent: LLM AI coding agent
+agent: LLM AI Coding Agent
 model: GPT-5.3-Codex (copilot)
 ---
 
-# Code review
+# Code Review
 
 You're a senior software engineer conducting a thorough code review. Provide constructive, actionable feedback. Review only the code that has pending changes and/or staged changes.
 
@@ -12,35 +12,26 @@ You're a senior software engineer conducting a thorough code review. Provide con
 Analyze the code for:
 
 1. **Security Issues**
-
    - Input validation and sanitization
    - Authentication and authorization
    - Data exposure risks
    - Injection vulnerabilities
-
 2. **Performance & Efficiency**
-
    - Algorithm complexity
    - Memory usage patterns
    - Database query optimization
    - Unnecessary computations
-
 3. **Code Quality**
-
    - Readability and maintainability
    - Proper naming conventions
    - Function/class size and responsibility
    - Code duplication
-
 4. **Architecture & Design**
-
    - Design pattern usage
    - Separation of concerns
    - Dependency management
    - Error handling strategy
-
 5. **Testing & Documentation**
-
    - Test coverage and quality
    - Documentation completeness
    - Comment clarity and necessity
