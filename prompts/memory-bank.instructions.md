@@ -142,7 +142,7 @@ flowchart TD
     Start --> Process
 ```
 
-Note: When triggered by **update memory bank**, I MUST review every memory bank file, even if some don't require updates. Focus particularly on activeContext.md, progress.md, and the tasks/ folder (including _index.md) as they track current state.
+Note: When triggered by **update memory bank**, I MUST review every memory bank file, even if some don't require updates. Focus particularly on activeContext.md, progress.md, and the tasks/ folder (including \_index.md) as they track current state.
 
 ## Project Intelligence (instructions)
 
@@ -194,19 +194,23 @@ The `_index.md` file maintains a structured record of all tasks sorted by status
 # Tasks Index
 
 ## In Progress
+
 - [TASK003] Implement user authentication - Working on OAuth integration
 - [TASK005] Create dashboard UI - Building main components
 
 ## Pending
+
 - [TASK006] Add export functionality - Planned for next sprint
 - [TASK007] Optimize database queries - Waiting for performance testing
 
 ## Completed
+
 - [TASK001] Project setup - Completed on 2025-03-15
 - [TASK002] Create database schema - Completed on 2025-03-17
 - [TASK004] Implement login page - Completed on 2025-03-20
 
 ## Abandoned
+
 - [TASK008] Integrate with legacy system - Abandoned due to API deprecation
 ```
 
@@ -222,12 +226,15 @@ Each task file follows this format:
 **Updated**: [Date Last Updated]
 
 ## Original Request
+
 [The original task description as provided by the user]
 
 ## Thought Process
+
 [Documentation of the discussion and reasoning that shaped the approach to this task]
 
 ## Implementation Plan
+
 - [Step 1]
 - [Step 2]
 - [Step 3]
@@ -237,6 +244,7 @@ Each task file follows this format:
 **Overall Status**: [Not Started/In Progress/Blocked/Completed] - [Completion Percentage]
 
 ### Subtasks
+
 | ID | Description | Status | Updated | Notes |
 |----|-------------|--------|---------|-------|
 | 1.1 | [Subtask description] | [Complete/In Progress/Not Started/Blocked] | [Date] | [Any relevant notes] |
@@ -244,13 +252,16 @@ Each task file follows this format:
 | 1.3 | [Subtask description] | [Complete/In Progress/Not Started/Blocked] | [Date] | [Any relevant notes] |
 
 ## Progress Log
+
 ### [Date]
+
 - Updated subtask 1.1 status to Complete
 - Started work on subtask 1.2
 - Encountered issue with [specific problem]
 - Made decision to [approach/solution]
 
 ### [Date]
+
 - [Additional updates as work progresses]
 ```
 
@@ -259,7 +270,7 @@ Each task file follows this format:
 1. Update the overall task status and completion percentage
 2. Update the status of relevant subtasks with the current date
 3. Add a new entry to the progress log with specific details about what was accomplished, challenges encountered, and decisions made
-4. Update the task status in the _index.md file to reflect current progress
+4. Update the task status in the \_index.md file to reflect current progress
 
 These detailed progress updates ensure that after memory resets, I can quickly understand the exact state of each task and continue work without losing context.
 
@@ -271,14 +282,14 @@ When you request **add task** or use the command **create task**, I will:
 2. Document our thought process about the approach
 3. Develop an implementation plan
 4. Set an initial status
-5. Update the _index.md file to include the new task
+5. Update the \_index.md file to include the new task
 
 For existing tasks, the command **update task [ID]** will prompt me to:
 
 1. Open the specific task file
 2. Add a new progress log entry with today's date
 3. Update the task status if needed
-4. Update the _index.md file to reflect any status changes
+4. Update the \_index.md file to reflect any status changes
 5. Integrate any new decisions into the thought process
 
 To view tasks, the command **show tasks [filter]** will:
