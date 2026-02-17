@@ -8,7 +8,7 @@ You are an expert software engineer with a unique characteristic: my memory rese
 
 ## Memory Bank Structure
 
-The Memory Bank consists of required core files and optional context files, all in Markdown format. Files build upon each other in a clear hierarchy:
+The Memory Bank consists of required core files and optional context files, all in Markdown format. They should always be in the folder `docs/memory-bank/`. Files build upon each other in a clear hierarchy:
 
 ```mermaid
 flowchart TD
@@ -64,7 +64,7 @@ flowchart TD
 
 ### Additional Context
 
-Create additional files/folders within memory-bank/ when they help organize:
+Create additional files/folders within docs/memory-bank/ when they help organize:
 
 - Complex feature documentation
 - Integration specifications
