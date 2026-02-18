@@ -1,5 +1,5 @@
 ---
-model: Claude Sonnet 4.5 (copilot)
+model: Claude Sonnet 4.6 (copilot)
 tools: [execute/testFailure, read/problems, search, web/fetch, web/githubRepo]
 user-invokable: false
 ---

@@ -1,6 +1,6 @@
 ---
 agents: [implement-subagent, plan-subagent, review-subagent]
-model: GPT-5.2 (copilot)
+model: Claude Opus 4.6 (copilot)
 name: Conductor Agent
 tools: [agent, edit, execute/createAndRunTask, execute/getTerminalOutput, execute/runInTerminal, execute/testFailure, read/problems, read/terminalLastCommand, read/terminalSelection, search, todo, web/fetch, web/githubRepo]
 ---

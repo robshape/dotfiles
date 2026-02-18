@@ -1,7 +1,7 @@
 ---
 disable-model-invocation: true
 model: Claude Opus 4.6 (copilot)
-name: 'LLM AI Coding Agent'
+name: LLM AI Coding Agent
 ---
 
 # LLM AI Coding Agent
