@@ -4,6 +4,17 @@
   "chat.agent.maxRequests": 100,
   "chat.customAgentInSubagent.enabled": true,
   "chat.mcp.gallery.enabled": true,
+  "chat.tools.terminal.autoApprove": {
+    "go doc": true,
+    "go fmt": true,
+    "go list": true,
+    "go mod tidy": true,
+    "go test": true,
+    "gofmt": true,
+    "make format": true,
+    "make lint": true,
+    "make test": true
+  },
   "code-runner.enableAppInsights": false,
   "debug.internalConsoleOptions": "openOnSessionStart",
   "debug.openDebug": "openOnSessionStart",
@@ -68,7 +79,7 @@
   "gutterpreview.showImagePreviewOnGutter": false,
   "gutterpreview.showUnderline": false,
   "inlineChat.affordance": "gutter",
-  "inlineChat.defaultModel": "Raptor mini (Preview) (copilot)",
+  "inlineChat.defaultModel": "Claude Haiku 4.5 (copilot)",
   "inlineChat.holdToSpeech": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "jest.runMode": "on-demand",
@@ -78,7 +89,7 @@
     "https://www.schemastore.org/": true,
     "https://json.schemastore.org/": true,
     "https://json-schema.org/": true,
-    "https://biomejs.dev/": true
+    "https://biomejs.dev": true
   },
   "markdownlint.run": "onSave",
   "npm-intellisense.showBuildInLibs": true,

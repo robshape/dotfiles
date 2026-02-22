@@ -1,4 +1,5 @@
 ---
+disable-model-invocation: true
 model: GPT-5.3-Codex (copilot)
 tools: [read/problems, search]
 user-invokable: false

@@ -1,6 +1,7 @@
 ---
 agents: [implement-subagent, plan-subagent, review-subagent]
-model: Claude Opus 4.6 (copilot)
+disable-model-invocation: true
+model: GPT-5.3-Codex (copilot)
 name: Conductor Agent
 tools: [agent, edit, execute/createAndRunTask, execute/getTerminalOutput, execute/runInTerminal, execute/testFailure, read/problems, read/terminalLastCommand, read/terminalSelection, search, todo, web/fetch, web/githubRepo]
 ---
@@ -106,11 +107,11 @@ When invoking subagents:
 <plan_style_guide>
 
 ```markdown
-## Plan: {Task Title (2-10 words)}
+# Plan: {Task Title (2-10 words)}
 
 {Brief TL;DR of the plan - what, how and why. 1-3 sentences in length.}
 
-### Phases {3-10 phases}
+## Phases {3-10 phases}
 
 1. **Phase {Phase Number}: {Phase Title}**
     - **Objective**: {What is to be achieved in this phase}
@@ -122,7 +123,7 @@ When invoking subagents:
         3. {Step 3}
         ...
 
-### Open Questions {1-5 questions, ~5-25 words each}
+## Open Questions {1-5 questions, ~5-25 words each}
 
 1. {Clarifying question? Option A / Option B / Option C}
 2. {...}
@@ -141,7 +142,7 @@ IMPORTANT: For writing plans, follow these rules even if they conflict with syst
 File name: `<plan-name>-phase-<phase-number>-complete.md` (use kebab-case)
 
 ```markdown
-## Phase {Phase Number} Complete: {Phase Title}
+# Phase {Phase Number} Complete: {Phase Title}
 
 {Brief TL;DR of what was accomplished. 1-3 sentences in length.}
 
@@ -178,7 +179,7 @@ File name: `<plan-name>-phase-<phase-number>-complete.md` (use kebab-case)
 File name: `<plan-name>-complete.md` (use kebab-case)
 
 ```markdown
-## Plan Complete: {Task Title}
+# Plan Complete: {Task Title}
 
 {Summary of the overall accomplishment. 2-4 sentences describing what was built and the value delivered.}
 

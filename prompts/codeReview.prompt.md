@@ -1,6 +1,6 @@
 ---
 agent: LLM AI Coding Agent
-model: GPT-5.3-Codex (copilot)
+model: Claude Sonnet 4.6 (copilot)
 ---
 
 # Code Review

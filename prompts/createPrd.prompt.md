@@ -1,6 +1,6 @@
 ---
-agent: agent
-model: Claude Opus 4.6 (copilot)
+agent: Plan
+model: GPT-5.2 (copilot)
 ---
 
 # Create PRD

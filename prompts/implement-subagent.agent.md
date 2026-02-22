@@ -1,5 +1,6 @@
 ---
-model: Claude Sonnet 4.6 (copilot)
+disable-model-invocation: true
+model: GPT-5.3-Codex (copilot)
 tools: [edit, execute/createAndRunTask, execute/getTerminalOutput, execute/runInTerminal, execute/testFailure, read/problems, read/terminalLastCommand, read/terminalSelection, search, todo, web/fetch, web/githubRepo]
 user-invokable: false
 ---
