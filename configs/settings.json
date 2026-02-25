@@ -5,11 +5,13 @@
   "chat.customAgentInSubagent.enabled": true,
   "chat.mcp.gallery.enabled": true,
   "chat.tools.terminal.autoApprove": {
+    "go build": true,
     "go doc": true,
     "go fmt": true,
     "go list": true,
     "go mod tidy": true,
     "go test": true,
+    "go vet": true,
     "gofmt": true,
     "make format": true,
     "make lint": true,
