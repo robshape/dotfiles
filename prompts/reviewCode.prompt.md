@@ -55,7 +55,7 @@ Be constructive and educational in your feedback.
 
 ## LLM Output
 
-At the end, present the Critical Issues and Suggestions as a single merged list. Use the template below to format the output. Present it as a text codeblock that can easily be copy-pasted into another LLM. Do not summarize, keep all the details.
+At the end, present the Critical Issues and Suggestions as a single merged list. Use the template below to format the output. Present it as a text code block that can easily be copy-pasted into another LLM. Do not summarize, keep all the details.
 
 ```text
 Review feedback:

@@ -1,5 +1,5 @@
 ---
-applyTo: **
+applyTo: '**'
 ---
 
 # AGENTS
@@ -18,3 +18,5 @@ applyTo: **
 - When unsure, ALWAYS stop and ask. Don't guess.
 - DO NOT assume undocumented APIs, files, or infrastructure exist.
 - ALWAYS organize code by domain and/or feature, not by type.
+- For Node.js projects, ALWAYS use `pnpm` for package management and scripts.
+- ALWAYS use Context7 MCP when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.

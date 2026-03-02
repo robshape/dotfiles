@@ -241,7 +241,7 @@ CRITICAL PAUSE POINTS - You must stop and wait for user input at:
 2. After each phase is reviewed and commit message is provided (before proceeding to next phase)
 3. After plan completion document is created
 
-DO NOT proceed past these points without explicit user confirmation.
+DO NOT proceed past these points without explicit user confirmation. UNLESS the changes in the phase only include Markdown files (.md) then DO proceed to the next phase without waiting for user confirmation.
 
 </stopping_rules>
 

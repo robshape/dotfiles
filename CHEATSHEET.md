@@ -184,9 +184,10 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | Input                         | Description                                         |
 | ----------------------------- | --------------------------------------------------- |
 | /cleanupCodebase              | Align codebase with LLM AI coding principles        |
-| /codeReview                   | Review pending code changes                         |
+| /createImplementationPlan     | Create implementation plan                          |
+| /createMockups                | Create SVG mockups                                  |
 | /createPrd \<product\>        | Create Product Requirement Document for \<product\> |
-| /implementFeature \<feature\> | Plan and implement \<feature\>                      |
+| /reviewCode                   | Review pending code changes                         |
 
 ### Shortcuts
 

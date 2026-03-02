@@ -15,7 +15,8 @@
     "gofmt": true,
     "make format": true,
     "make lint": true,
-    "make test": true
+    "make test": true,
+    "pnpm exec vitest run": true
   },
   "code-runner.enableAppInsights": false,
   "debug.internalConsoleOptions": "openOnSessionStart",
@@ -67,7 +68,6 @@
   "github.copilot.chat.agentCustomizationSkill.enabled": true,
   "github.copilot.chat.anthropic.contextEditing.enabled": true,
   "github.copilot.chat.codesearch.enabled": true,
-  "github.copilot.chat.implementAgent.model": "Claude Opus 4.6 (copilot)",
   "github.copilot.chat.organizationInstructions.enabled": false,
   "github.copilot.chat.responsesApiReasoningEffort": "high",
   "github.copilot.chat.searchSubagent.enabled": true,

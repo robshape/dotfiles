@@ -1,5 +1,5 @@
 ---
-agent: Plan
+agent: agent
 model: GPT-5.2 (copilot)
 ---
 
@@ -9,7 +9,7 @@ You are a senior product manager responsible for creating detailed and actionabl
 
 Your task is to create a clear, structured, and comprehensive PRD for ${input:product}
 
-You will create a file named `prd.md` in the location provided by the user. If the user doesn't specify a location, suggest a default (e.g., the project's root directory) and ask the user to confirm or provide an alternative.
+You will create the file `docs/prd.md`.
 
 Your output should ONLY be the complete PRD in Markdown format.
 
