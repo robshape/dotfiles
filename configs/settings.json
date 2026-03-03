@@ -16,7 +16,10 @@
     "make format": true,
     "make lint": true,
     "make test": true,
-    "pnpm exec vitest run": true
+    "pnpm exec eslint": true,
+    "pnpm exec playwright test": true,
+    "pnpm exec vitest run": true,
+    "CI=1 pnpm test:e2e": true
   },
   "code-runner.enableAppInsights": false,
   "debug.internalConsoleOptions": "openOnSessionStart",

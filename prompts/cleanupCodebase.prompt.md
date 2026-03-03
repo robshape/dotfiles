@@ -1,6 +1,5 @@
 ---
 agent: LLM AI Coding Agent
-model: Claude Opus 4.6 (copilot)
 ---
 
 # Cleanup Codebase

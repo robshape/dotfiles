@@ -1,4 +1,5 @@
 {
+  "astro.useWorkspaceTsdk": true,
   "bashIde.backgroundAnalysisMaxFiles": 0,
   "bashIde.shellcheckPath": "",
   "coc.preferences.formatOnSave": true,

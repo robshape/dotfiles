@@ -95,6 +95,7 @@ nnoremap <silent> <leader>sc :noa w<cr>
 "" #############
 "" CoC
 let g:coc_global_extensions=[
+  \'@yaegassy/coc-astro',
   \'coc-biome',
   \'coc-emoji',
   \'coc-eslint',
@@ -150,6 +151,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips'
 Plug 'mbbill/undotree'
 Plug 'vim-airline/vim-airline'
+Plug 'wuelnerdotexe/vim-astro'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-commentary'
 Plug 'easymotion/vim-easymotion'
@@ -173,6 +175,10 @@ endif
 set noshowmode
 "" Show diff in statusline
 let g:airline#extensions#hunks#coc_git=1
+
+"" Astro
+"" Enable TypeScript
+let g:astro_typescript='enable'
 
 "" Close Tag
 "" Enable plugin

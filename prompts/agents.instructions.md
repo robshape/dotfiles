@@ -20,3 +20,6 @@ applyTo: '**'
 - ALWAYS organize code by domain and/or feature, not by type.
 - For Node.js projects, ALWAYS use `pnpm` for package management and scripts.
 - ALWAYS use Context7 MCP when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.
+- ALWAYS follow Kent C. Dodds's "The Testing Trophy and Testing Classifications" and "Write fewer, longer tests".
+- ALWAYS prefer writing BDD-style tests over TDD-style tests.
+- When asking questions, ALWAYS provide recommendations.

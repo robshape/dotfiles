@@ -157,6 +157,7 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 
 ### Extensions
 
+* astro-build.astro-vscode
 * biomejs.biome
 * bradlc.vscode-tailwindcss
 * christian-kohler.npm-intellisense
