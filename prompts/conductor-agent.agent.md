@@ -1,7 +1,7 @@
 ---
 agents: [implement-subagent, plan-subagent, review-subagent]
 disable-model-invocation: true
-model: GPT-5.3-Codex (copilot)
+model: GPT-5.4 (copilot)
 name: Conductor Agent
 tools: [agent, edit, execute/createAndRunTask, execute/getTerminalOutput, execute/runInTerminal, execute/testFailure, read/problems, read/terminalLastCommand, read/terminalSelection, search, todo, web/fetch, web/githubRepo]
 ---
@@ -241,7 +241,7 @@ CRITICAL PAUSE POINTS - You must stop and wait for user input at:
 2. After each phase is reviewed and commit message is provided (before proceeding to next phase)
 3. After plan completion document is created
 
-DO NOT proceed past these points without explicit user confirmation. UNLESS the changes in the phase only include Markdown files (.md) then DO proceed to the next phase without waiting for user confirmation.
+DO NOT proceed past these points without explicit user confirmation. UNLESS the changes in the phase only include Markdown files (.md) then DO proceed to the next phase without waiting for user confirmation. Also, ALWAYS do Phase 3 and/or the creation of a final "complete" report without pausing for user confirmation first.
 
 </stopping_rules>
 

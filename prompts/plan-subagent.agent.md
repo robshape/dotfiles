@@ -1,8 +1,8 @@
 ---
 disable-model-invocation: true
-model: GPT-5.3-Codex (copilot)
+model: Claude Sonnet 4.6 (copilot)
 tools: [execute/testFailure, read/problems, search, web/fetch, web/githubRepo]
-user-invokable: false
+user-invocable: false
 ---
 
 # Plan Subagent

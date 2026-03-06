@@ -1,6 +1,6 @@
 ---
 agent: LLM AI Coding Agent
-model: Claude Sonnet 4.6 (copilot)
+model: GPT-5.4 (copilot)
 ---
 
 # Code Review
@@ -55,7 +55,7 @@ Be constructive and educational in your feedback.
 
 ## LLM Output
 
-At the end, present the Critical Issues and Suggestions as a single merged list. Use the template below to format the output. Present it as a text code block that can easily be copy-pasted into another LLM. Do not summarize, keep all the details.
+At the end, present the Critical Issues and Suggestions as a single merged list. Use the template below to format the output. Present it as a text code block that can easily be copy-pasted into another LLM. Do not summarize, keep all the details. DO NOT answer the question "Should this be fixed?" in the output, let the other LLM decide if to fix the issues or not.
 
 ```text
 Review feedback:

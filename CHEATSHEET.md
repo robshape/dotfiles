@@ -166,6 +166,7 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 * dbaeumer.vscode-eslint
 * esbenp.prettier-vscode
 * formulahendry.code-runner
+* GitHub.vscode-pull-request-github
 * github.vscode-github-actions
 * golang.go
 * kisstkondoros.vscode-gutter-preview
@@ -184,10 +185,12 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 
 | Input                         | Description                                         |
 | ----------------------------- | --------------------------------------------------- |
+| /analyzeCodebase              | Analyze and evaluate codebase                       |
 | /cleanupCodebase              | Align codebase with LLM AI coding principles        |
 | /createImplementationPlan     | Create implementation plan                          |
 | /createMockups                | Create SVG mockups                                  |
 | /createPrd \<product\>        | Create Product Requirement Document for \<product\> |
+| /createTechStackDocument      | Create tech stack recommendation document           |
 | /reviewCode                   | Review pending code changes                         |
 
 ### Shortcuts

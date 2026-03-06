@@ -1,6 +1,6 @@
 ---
 agent: agent
-model: GPT-5.2 (copilot)
+model: GPT-5.4 (copilot)
 ---
 
 # Create PRD

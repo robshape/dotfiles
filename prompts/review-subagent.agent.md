@@ -1,8 +1,8 @@
 ---
 disable-model-invocation: true
-model: GPT-5.3-Codex (copilot)
+model: Claude Sonnet 4.6 (copilot)
 tools: [read/problems, search]
-user-invokable: false
+user-invocable: false
 ---
 
 # Review Subagent
