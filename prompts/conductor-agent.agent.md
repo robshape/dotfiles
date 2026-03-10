@@ -47,7 +47,7 @@ For each phase in the plan, execute this cycle:
    - **If NEEDS_REVISION**: Return to 2A with specific revision requirements
    - **If FAILED**: Stop and consult user for guidance
 
-### 2C. Return to User for Commit
+### 2C. Return to User
 
 1. **Pause and Present Summary**:
    - Phase number and objective
@@ -55,11 +55,6 @@ For each phase in the plan, execute this cycle:
    - Files/functions created/changed
    - Review status (approved/issues addressed)
 2. **Write Phase Completion File**: Create `docs/plans/<task-name>-phase-<N>-complete.md` following <phase_complete_style_guide>.
-3. **Generate Git Commit Message**: Provide a commit message following <git_commit_style_guide> in a plain text code block for easy copying.
-4. **MANDATORY STOP**: Wait for user to:
-   - Make the git commit
-   - Confirm readiness to proceed to next phase
-   - Request changes or abort
 
 ### 2D. Continue or Complete
 
@@ -75,6 +70,7 @@ For each phase in the plan, execute this cycle:
    - Key functions/tests added
    - Final verification that all tests pass
 2. **Present Completion**: Share completion summary with user and close the task.
+3. **Generate Git Commit Message**: Provide a commit message, that summarizes everything that has been done, following <git_commit_style_guide> in a plain text code block for easy copying.
 
 </workflow>
 
@@ -238,10 +234,9 @@ DON'T include references to the plan or phase numbers in the commit message. The
 CRITICAL PAUSE POINTS - You must stop and wait for user input at:
 
 1. After presenting the plan (before starting implementation)
-2. After each phase is reviewed and commit message is provided (before proceeding to next phase)
-3. After plan completion document is created
+2. After plan completion document is created
 
-DO NOT proceed past these points without explicit user confirmation. UNLESS the changes in the phase only include Markdown files (.md) then DO proceed to the next phase without waiting for user confirmation. Also, ALWAYS do Phase 3 and/or the creation of a final "complete" report without pausing for user confirmation first.
+DO NOT proceed past these points without explicit user confirmation.
 
 </stopping_rules>
 

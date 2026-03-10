@@ -24,7 +24,6 @@
     "pnpm playwright test": true,
     "pnpm prettier": true,
     "CI=1 pnpm test:e2e*": true,
-    "pnpm view": true,
     "pnpm vitest run": true
   },
   "chat.useNestedAgentsMdFiles": true,
