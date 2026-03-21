@@ -3,7 +3,7 @@ agents: [implement-subagent, plan-subagent, review-subagent]
 disable-model-invocation: true
 model: GPT-5.4 (copilot)
 name: Conductor Agent
-tools: [agent, edit, execute/createAndRunTask, execute/getTerminalOutput, execute/runInTerminal, execute/testFailure, read/problems, read/terminalLastCommand, read/terminalSelection, search, todo, web/fetch, web/githubRepo]
+tools: [agent, browser, edit, execute/createAndRunTask, execute/getTerminalOutput, execute/runInTerminal, execute/testFailure, read/problems, read/terminalLastCommand, read/terminalSelection, search, todo, vscode/askQuestions, web/fetch, web/githubRepo]
 ---
 
 # Conductor Agent
@@ -54,7 +54,6 @@ For each phase in the plan, execute this cycle:
    - What was accomplished
    - Files/functions created/changed
    - Review status (approved/issues addressed)
-2. **Write Phase Completion File**: Create `docs/plans/<task-name>-phase-<N>-complete.md` following <phase_complete_style_guide>.
 
 ### 2D. Continue or Complete
 
@@ -87,7 +86,7 @@ When invoking subagents:
 **implement-subagent**:
 
 - Provide the specific phase number, objective, files/functions, and test requirements
-- Instruct to follow strict TDD: tests first (failing), minimal code, tests pass, lint/format
+- Instruct to follow strict TDD (red -> green -> refactor): tests first (failing), minimal code, tests pass, lint/format
 - Tell them to work autonomously and only ask user for input on critical implementation decisions
 - Remind them NOT to proceed to next phase or write completion files (Conductor handles this)
 
@@ -210,6 +209,8 @@ File name: `<plan-name>-complete.md` (use kebab-case)
 - {Optional suggestion 1}
 - {Optional suggestion 2}
 ...
+
+**Git Commit Message**: {Git commit message following <git_commit_style_guide>}
 ```
 
 </plan_complete_style_guide>
@@ -252,3 +253,10 @@ Track your progress through the workflow:
 Provide this status in your responses to keep the user informed. Use the #todo tool to track progress.
 
 </state_tracking>
+
+<tool_usage_rules>
+
+- NEVER use terminal commands (`cat`, `grep`, `find`, `head`, `tail`, `python`, `python3`, `node`) for reading files or writing files or searching code. Use the search and file-reading and file-writing tools provided by the harness.
+- Only use the terminal for: running tests, running build/lint commands, running git commands, and installing packages.
+
+</tool_usage_rules>

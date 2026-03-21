@@ -1,7 +1,7 @@
 ---
 disable-model-invocation: true
-model: Claude Sonnet 4.6 (copilot)
-tools: [execute/testFailure, read/problems, search, web/fetch, web/githubRepo]
+model: GPT-5.4 (copilot)
+tools: [read/problems, read/readFile, search, web/fetch, web/githubRepo]
 user-invocable: false
 ---
 

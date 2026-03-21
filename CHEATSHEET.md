@@ -198,12 +198,14 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | ALT+DOWN or UP       | Move current line, down or up                            |
 | ALT+ESC              | Show auto-complete                                       |
 | ALT+SHIFT+DOWN or UP | Duplicate current line, down or up                       |
+| CMD+.                | Quick fix current line                                   |
 | CMD+1..3             | Focus `x` pane                                           |
 | CMD+\                | Split pane vertically                                    |
 | CMD+b                | Toggle side bar                                          |
 | CMD+d                | Add another cursor at same word                          |
 | CMD+f                | Search in current file                                   |
 | CMD+i                | Generate code                                            |
+| CMD+j                | Hide panel                                               |
 | CMD+k THEN w         | Close all tabs                                           |
 | CMD+k THEN z         | Toggle Zen mode                                          |
 | CMD+p                | Search for file (or `>` for actions and `@` for symbols) |
@@ -223,10 +225,6 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | CTRL+SHIFT+r         | Open Refactorings/Code Actions                           |
 | CTRL+TAB             | Navigate tabs                                            |
 | F2                   | Rename symbol                                            |
+| F5                   | Start debugging                                          |
+| F5+SHIFT             | Stop debugging                                           |
 | SHIFT+ESC            | Hide auto-complete                                       |
-
-### Commands
-
-| Input                 | Description         |
-| --------------------- | ------------------- |
-| >Simple Browser: Show | Show simple browser |
