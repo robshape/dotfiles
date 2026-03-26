@@ -146,6 +146,16 @@ grebase() {
   fi
 }
 
+gsquash() {
+  branch=$(git rev-parse --abbrev-ref HEAD)
+  if [ "$branch" != "main" ] && [ -z "$(git status --porcelain)" ]; then
+    git checkout main
+    git merge --squash "$branch"
+    git commit -m "$1"
+    git branch -D "$branch"
+  fi
+}
+
 gupdate() {
   git pull
   git fetch -Pp

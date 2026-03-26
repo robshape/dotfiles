@@ -257,6 +257,6 @@ Provide this status in your responses to keep the user informed. Use the #todo t
 <tool_usage_rules>
 
 - NEVER use terminal commands (`cat`, `grep`, `find`, `head`, `tail`, `python`, `python3`, `node`) for reading files or writing files or searching code. Use the search and file-reading and file-writing tools provided by the harness.
-- Only use the terminal for: running tests, running build/lint commands, running git commands, and installing packages.
+- Only use the terminal for: running tests, running build/lint commands, running git commands, and installing packages
 
 </tool_usage_rules>
