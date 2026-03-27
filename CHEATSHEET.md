@@ -177,7 +177,7 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 * usernamehw.errorlens
 * vscodevim.vim
 
-## MCP servers
+### MCP servers
 
 * upstash/context
 
@@ -189,6 +189,57 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | /cleanupCodebase              | Align codebase with LLM AI coding principles        |
 | /createMockups                | Create SVG mockups                                  |
 | /reviewCode                   | Review pending code changes                         |
+
+#### Impeccable
+
+```text
+[Diagnostic]
+/audit (Run technical quality checks [a11y, performance, responsive])
+/critique (UX design review: hierarchy, clarity, emotional resonance)
+
+[Quality]
+/harden (Error handling, i18n, edge cases)
+/normalize (Align with design system standards)
+/optimize (Performance improvements)
+/polish (Final pass before shipping)
+
+[Intensity]
+/bolder (Amplify boring designs)
+/quieter (Tone down overly bold designs)
+
+[Adaption]
+/adapt (Adapt for different devices)
+/clarify (Improve unclear UX copy)
+/distill (Strip to essence)
+
+[Enhancement]
+/animate (Add purposeful motion)
+/arrange (Fix layout, spacing, visual rhythm)
+/colorize (Introduce strategic color)
+/delight (Add moments of joy)
+/onboard (Design onboarding flows)
+/overdrive (Add technically extraordinary effects)
+/typeset (Fix font choices, hierarchy, sizing)
+
+[System]
+/extract (Pull into reusable components)
+/teach-impeccable (One-time setup: gather design context, save to config)
+```
+
+#### Spec Kit
+
+```text
+[Agent, Auto]
+/speckit.specify See "Step 0 (0.1 to 0.6)" in the attached document.
+/speckit.clarify
+/speckit.plan
+Now I want you to go and audit the implementation plan and the implementation detail files. Read through it with an eye on determining whether or not there is a sequence of tasks that you need to be doing that are obvious from reading this. Because I don't know if there's enough here. For example, when I look at the core implementation, it would be useful to reference the appropriate places in the implementation details where it can find the information as it walks through each step in the core implementation or in the refinement. Apply any improvements.
+/speckit.tasks
+/speckit.implement
+
+[LLM AI Coding Agent, Claude Sonnet 4.6]
+/reviewCode
+```
 
 ### Shortcuts
 
@@ -227,54 +278,3 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | F5                   | Start debugging                                          |
 | F5+SHIFT             | Stop debugging                                           |
 | SHIFT+ESC            | Hide auto-complete                                       |
-
-## Impeccable
-
-```text
-[Diagnostic]
-/audit (Run technical quality checks [a11y, performance, responsive])
-/critique (UX design review: hierarchy, clarity, emotional resonance)
-
-[Quality]
-/harden (Error handling, i18n, edge cases)
-/normalize (Align with design system standards)
-/optimize (Performance improvements)
-/polish (Final pass before shipping)
-
-[Intensity]
-/bolder (Amplify boring designs)
-/quieter (Tone down overly bold designs)
-
-[Adaption]
-/adapt (Adapt for different devices)
-/clarify (Improve unclear UX copy)
-/distill (Strip to essence)
-
-[Enhancement]
-/animate (Add purposeful motion)
-/arrange (Fix layout, spacing, visual rhythm)
-/colorize (Introduce strategic color)
-/delight (Add moments of joy)
-/onboard (Design onboarding flows)
-/overdrive (Add technically extraordinary effects)
-/typeset (Fix font choices, hierarchy, sizing)
-
-[System]
-/extract (Pull into reusable components)
-/teach-impeccable (One-time setup: gather design context, save to config)
-```
-
-### Spec Kit
-
-```text
-[Agent, Auto]
-/speckit.specify See "Step 0 (0.1 to 0.6)" in the attached document.
-/speckit.clarify
-/speckit.plan
-Now I want you to go and audit the implementation plan and the implementation detail files. Read through it with an eye on determining whether or not there is a sequence of tasks that you need to be doing that are obvious from reading this. Because I don't know if there's enough here. For example, when I look at the core implementation, it would be useful to reference the appropriate places in the implementation details where it can find the information as it walks through each step in the core implementation or in the refinement. Apply any improvements.
-/speckit.tasks
-/speckit.implement
-
-[LLM AI Coding Agent, Claude Sonnet 4.6]
-/reviewCode
-```
