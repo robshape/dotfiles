@@ -4,6 +4,7 @@
   "chat.agent.maxRequests": 100,
   "chat.customAgentInSubagent.enabled": true,
   "chat.mcp.gallery.enabled": true,
+  "chat.tips.enabled": false,
   "chat.tools.terminal.autoApprove": {
     "/^bash\\s+(?:\\.\\/)?\\.specify\\/scripts\\/bash\\/[^\\/]+\\.sh(\\s+[^;&|$`]+)*$/": true,
     "/^go (build|doc|fmt|list|mod tidy|test|vet)$/": true,
@@ -105,7 +106,6 @@
   "prettier.requireConfig": true,
   "search.followSymlinks": false,
   "search.quickOpen.includeHistory": false,
-  "security.workspace.trust.enabled": false,
   "stylelint.reportNeedlessDisables": true,
   "telemetry.feedback.enabled": false,
   "telemetry.telemetryLevel": "off",
