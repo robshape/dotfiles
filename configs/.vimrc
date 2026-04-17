@@ -7,6 +7,8 @@ set expandtab
 set shiftround
 set shiftwidth=2
 set tabstop=2
+"" Reload file when edited outside of Vim
+set autoread
 "" Wrap text
 set breakindent
 set diffopt+=followwrap
@@ -139,9 +141,9 @@ let g:vimspector_install_gadgets=[]
 ""
 "" vim-plug
 call plug#begin('~/.vim/plugged/')
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'neoclide/coc.nvim',{'branch':'release'}
 Plug 'github/copilot.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf',{'do':{->fzf#install()}}
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'Yggdroot/indentLine'
@@ -163,7 +165,7 @@ Plug 'tpope/vim-surround'
 Plug 'puremourning/vimspector'
 call plug#end()
 "" Install plugins (if missing)
-if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+if len(filter(values(g:plugs),'!isdirectory(v:val.dir)'))
   au VimEnter * PlugInstall --sync | q
 endif
 
@@ -210,6 +212,20 @@ nmap <silent> <f2> <plug>(coc-rename)
 nnoremap <silent> <leader>gu :CocCommand git.copyUrl<cr>
 "" <leader>yh to show yank history
 nnoremap <silent> <leader>yh :<c-u>CocList -A --normal yank<cr>
+"" <leader>yp to copy popup buffer to clipboard
+function CopyPopupBufferToClipboard()
+  let buffers=getbufinfo({'bufloaded':1,'buftype':'nofile'})
+  for buf in buffers
+    if has_key(buf,'popups') && len(buf.popups) > 0
+      let lines = getbufline(buf['bufnr'],1,'$')
+      call setreg('*',lines)
+      echo 'Popup buffer copied to clipboard.'
+      return
+    endif
+  endfor
+  echo 'No popup found!'
+endfunction
+nnoremap <silent> <leader>yp :call CopyPopupBufferToClipboard()<cr>
 
 "" Copilot
 "" Enable plugin
@@ -244,7 +260,7 @@ nnoremap <silent> <leader>gm :G mergetool<cr>
 "" Include hidden files and respect .gitignore when searching for file
 let $FZF_DEFAULT_COMMAND='rg -g "!.git/" --files --hidden'
 "" Include hidden files and search only file content when searching in workspace
-command! -bang -nargs=* Rg call fzf#vim#grep('rg -nSg "!.git/" --color=always --column --hidden --no-heading -- '.shellescape(<q-args>), 1, fzf#vim#with_preview({ 'options': '-d : -n 4..' }), <bang>0)
+command! -bang -nargs=* Rg call fzf#vim#grep('rg -nSg "!.git/" --color=always --column --hidden --no-heading -- '.shellescape(<q-args>),1,fzf#vim#with_preview({ 'options':'-d : -n 4..' }),<bang>0)
 "" ALT+f to search in workspace
 nnoremap <silent> ƒ :Rg<cr>
 "" ALT+p to search for file
@@ -262,7 +278,7 @@ nnoremap <silent> Ω :Goyo<cr>
 
 "" indentLine
 "" Disable conceal for JSON and Markdown
-let g:indentLine_fileTypeExclude=['json', 'jsonc', 'markdown']
+let g:indentLine_fileTypeExclude=['json','jsonc','markdown']
 
 "" NERDTree
 "" Show hidden files
@@ -372,17 +388,17 @@ au User GoyoLeave call LeaveGoyo()
   "au VimEnter * NERDTree | wincmd p
 
 "" Vim
+"" Reload file when edited outside of Vim
+  au BufEnter,CursorHold,CursorHoldI,FocusGained * checktime
 "" Trim final newlines on save
   function TrimFinalNewlines()
     let cursor_position=getpos('.')
     silent! %s#\($\n\s*\)\+\%$##
-    call setpos('.', cursor_position)
+    call setpos('.',cursor_position)
   endfunction
   au BufWritePre * call TrimFinalNewlines()
 "" Trim trailing whitespace on save
   au BufWritePre * %s/\s\+$//e
-"" Prompt when current buffer has been edited outside of Vim (by Git, for example)
-  au CursorHold,CursorHoldI * checktime
 "" Highlight cursor in current buffer
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorcolumn cursorline
   au WinLeave * setlocal nocursorcolumn nocursorline

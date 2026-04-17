@@ -80,6 +80,7 @@ by Visual Studio Code and VSCodeVim.
 |            | F2                       | Rename symbol \[CUSTOM\]                                                                                         |
 |            | \<leader\>gu             | Copy GitHub URL of current line \[CUSTOM\]                                                                       |
 |            | \<leader\>yh             | Show yank history \[CUSTOM\]                                                                                     |
+|            | \<leader\>yp             | Copy popup buffer to clipboard \[CUSTOM\]                                                                        |
 | Commentary |                          |                                                                                                                  |
 |            | gc                       | Toggle line comments for selected lines                                                                          |
 |            | gcc                      | Toggle line comment for current line                                                                             |
@@ -263,6 +264,7 @@ Now I want you to go and audit the implementation plan and the implementation de
 | CMD+q                | Quit                                                     |
 | CMD+s                | Save current file                                        |
 | CMD+w                | Close current pane                                       |
+| CMD+ALT+/            | Open integrated browser                                  |
 | CMD+ALT+DOWN or UP   | Add another cursor, down or up                           |
 | CMD+ENTER            | Open file in vertically split pane                       |
 | CMD+SHIFT+e          | Focus file explorer                                      |

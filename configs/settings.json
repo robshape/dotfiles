@@ -5,6 +5,7 @@
   "chat.customAgentInSubagent.enabled": true,
   "chat.mcp.gallery.enabled": true,
   "chat.tips.enabled": false,
+  "chat.tools.confirmationCarousel.enabled": true,
   "chat.tools.terminal.autoApprove": {
     "/^bash\\s+(?:\\.\\/)?\\.specify\\/scripts\\/bash\\/[^\\/]+\\.sh(\\s+[^;&|$`]+)*$/": true,
     "/^go (build|doc|fmt|list|mod tidy|test|vet)$/": true,
@@ -101,6 +102,7 @@
     "https://json-schema.org/": true,
     "https://biomejs.dev": true
   },
+  "jsts-chat-features.skills.enabled": true,
   "markdownlint.run": "onSave",
   "npm-intellisense.showBuildInLibs": true,
   "prettier.requireConfig": true,
