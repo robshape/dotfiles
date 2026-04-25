@@ -186,7 +186,6 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 
 | Input                         | Description                                         |
 | ----------------------------- | --------------------------------------------------- |
-| /analyzeCodebase              | Analyze and evaluate codebase                       |
 | /cleanupCodebase              | Align codebase with LLM AI coding principles        |
 | /createMockups                | Create SVG mockups                                  |
 | /createPrd \<product\>        | Create Product Requirement Document for \<product\> |

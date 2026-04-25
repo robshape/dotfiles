@@ -1,6 +1,6 @@
 ---
 disable-model-invocation: true
-model: Claude Opus 4.6 (copilot)
+model: Claude Sonnet 4.6 (copilot)
 name: LLM AI Coding Agent
 ---
 
