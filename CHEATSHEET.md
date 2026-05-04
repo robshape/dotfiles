@@ -126,7 +126,7 @@ by Visual Studio Code and VSCodeVim.
 
 ## tmux
 
-Shortcuts and commands are prefixed with `CTRL+q` \[CUSTOM\].
+Shortcuts and commands are prefixed with `CTRL+b`.
 
 | Category  | Input              | Description                                                |
 | --------- | ------------------ | ---------------------------------------------------------- |
@@ -156,6 +156,7 @@ Shortcuts and commands are prefixed with `CTRL+q` \[CUSTOM\].
 | CTRL+a | Move to start of line      |
 | CTRL+e | Move to end of line        |
 | CTRL+r | Search backward in history |
+| CTRL+w | Delete last word           |
 
 ## VSCode
 
