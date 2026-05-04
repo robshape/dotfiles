@@ -126,6 +126,7 @@ let g:coc_global_extensions=[
 "\'coc-java',
 "\'coc-jest',
 "\'coc-pyright',
+"\'@yaegassy/coc-ruff',
 "\'coc-rust-analyzer',
 "\'coc-svelte',
 ""

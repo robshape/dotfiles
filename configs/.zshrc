@@ -23,6 +23,8 @@ export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 alias c="clear"
 alias e="exit"
 alias l="ls -a"
+alias m="mkdir"
+alias t="touch"
 alias awake="caffeinate -dimsu"
 alias checksum="shasum -a 256"
 alias download="curl -LOC -"
@@ -64,6 +66,11 @@ alias vr="vim -R"
 ## #########
 auth() {
   ssh-add ~/.ssh/shapeless-key
+}
+
+bellify() {
+  "$@"
+  echo "\a"
 }
 
 clean() {

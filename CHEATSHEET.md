@@ -126,7 +126,7 @@ by Visual Studio Code and VSCodeVim.
 
 ## tmux
 
-Shortcuts and commands are prefixed with `CTRL+b`.
+Shortcuts and commands are prefixed with `CTRL+q` \[CUSTOM\].
 
 | Category  | Input              | Description                                                |
 | --------- | ------------------ | ---------------------------------------------------------- |
@@ -138,11 +138,14 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 |           | "                  | Split pane horizontally                                    |
 |           | %                  | Split pane vertically                                      |
 |           | ,                  | Rename current window                                      |
-|           | 1..9               | Focus window at position 1..9                              |
-|           | <                  | Resize current pane leftwards by 10 columns \[CUSTOM\]     |
-|           | >                  | Resize current pane rightwards by 10 columns \[CUSTOM\]    |
-|           | [                  | Activate scroll (`DOWN` or `UP` to scroll, `q` to exit)    |
+|           | 1..9               | Show window at position 1..9                               |
+|           | <                  | Resize current pane leftwards by 20 columns \[CUSTOM\]     |
+|           | >                  | Resize current pane rightwards by 20 columns \[CUSTOM\]    |
+|           | ?                  | Resize current pane downwards by 20 columns \[CUSTOM\]     |
+|           | [                  | Activate Vim-style copy mode (`q` to exit)                 |
 |           | c                  | Create new window                                          |
+|           | q                  | Show pane numbers                                          |
+|           | x                  | Kill current pane                                          |
 | Command   |                    |                                                            |
 |           | :swap-window -t 0  | Swap current window with window at position 0              |
 

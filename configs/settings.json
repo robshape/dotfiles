@@ -2,7 +2,6 @@
   "biome.requireConfiguration": true,
   "biome.suggestInstallingGlobally": false,
   "chat.agent.maxRequests": 100,
-  "chat.customAgentInSubagent.enabled": true,
   "chat.mcp.gallery.enabled": true,
   "chat.tips.enabled": false,
   "chat.tools.confirmationCarousel.enabled": true,
