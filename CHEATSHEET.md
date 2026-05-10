@@ -11,10 +11,10 @@ by Visual Studio Code and VSCodeVim.
 |            | \$                       | Move to end of current line                                                                                      |
 |            | *                        | Search in current buffer for current word (`n` for next occurrence, `N` for previous occurrence)                 |
 |            | 0                        | Move to start of current line                                                                                    |
-|            | _                        | Move to first character on current line                                                                          |
+|            | _                        | Move to first character of current line                                                                          |
 |            | b                        | Move backward to start of word                                                                                   |
 |            | e                        | Move forward to end of word                                                                                      |
-|            | f\<character\>           | Move to first occurrence of \<character\> on current line (`;` for next occurrence)                              |
+|            | f\<character\>           | Move to first occurrence of \<character\> of current line (`;` for next occurrence)                              |
 |            | G                        | Move to last line of document                                                                                    |
 |            | gg                       | Move to first line of document                                                                                   |
 |            | gt                       | Move to next tab                                                                                                 |
@@ -38,7 +38,7 @@ by Visual Studio Code and VSCodeVim.
 |            | daB                      | Cut `{}` block                                                                                                   |
 |            | dab                      | Cut `()` block                                                                                                   |
 |            | dd                       | Cut current line                                                                                                 |
-|            | dt\<character\>          | Cut to first occurrence of \<character\> on current line                                                         |
+|            | dt\<character\>          | Cut to first occurrence of \<character\> of current line                                                         |
 |            | i                        | Insert before cursor                                                                                             |
 |            | O                        | Append new line above current line                                                                               |
 |            | o                        | Append new line below current line                                                                               |
@@ -63,7 +63,7 @@ by Visual Studio Code and VSCodeVim.
 | Select     |                          |                                                                                                                  |
 |            | V                        | Select lines                                                                                                     |
 |            | v                        | Select characters                                                                                                |
-|            | vi\<character\>          | Move to first occurrence of \<character\> on current line and select in between \<character\>                    |
+|            | vi\<character\>          | Move to first occurrence of \<character\> of current line and select in between \<character\>                    |
 | Command    |                          |                                                                                                                  |
 |            | /\<string\>              | Search in current buffer for \<string\> (`n` for next occurrence, `N` for previous occurrence)                   |
 |            | :\<number\>              | Move to line \<number\>                                                                                          |
@@ -80,7 +80,7 @@ by Visual Studio Code and VSCodeVim.
 |            | F2                       | Rename symbol \[CUSTOM\]                                                                                         |
 |            | \<leader\>gu             | Copy GitHub URL of current line \[CUSTOM\]                                                                       |
 |            | \<leader\>yh             | Show yank history \[CUSTOM\]                                                                                     |
-|            | \<leader\>yp             | Copy popup buffer to clipboard \[CUSTOM\]                                                                        |
+|            | \<leader\>yp             | Copy popup buffer \[CUSTOM\]                                                                                     |
 | Commentary |                          |                                                                                                                  |
 |            | gc                       | Toggle line comments for selected lines                                                                          |
 |            | gcc                      | Toggle line comment for current line                                                                             |
@@ -126,28 +126,22 @@ by Visual Studio Code and VSCodeVim.
 
 ## tmux
 
-Shortcuts and commands are prefixed with `CTRL+b`.
+Shortcuts and commands are prefixed with `CTRL+q` \[CUSTOM\].
 
 | Category  | Input              | Description                                                |
 | --------- | ------------------ | ---------------------------------------------------------- |
 | Move      |                    |                                                            |
-|           | CTRL+a             | Cycle panes vertically \[CUSTOM\]                          |
-|           | CTRL+l             | Cycle panes horizontally \[CUSTOM\]                        |
+|           | CTRL+a             | Cycle panes \[CUSTOM\]                                     |
+|           | CTRL+l             | Cycle windows \[CUSTOM\]                                   |
 |           | CTRL+z             | Zoom current pane \[CUSTOM\]                               |
 | Shortcut  |                    |                                                            |
 |           | "                  | Split pane horizontally                                    |
 |           | %                  | Split pane vertically                                      |
 |           | ,                  | Rename current window                                      |
-|           | 1..9               | Show window at position 1..9                               |
-|           | <                  | Resize current pane leftwards by 20 columns \[CUSTOM\]     |
-|           | >                  | Resize current pane rightwards by 20 columns \[CUSTOM\]    |
-|           | ?                  | Resize current pane downwards by 20 columns \[CUSTOM\]     |
 |           | [                  | Activate Vim-style copy mode (`q` to exit)                 |
 |           | c                  | Create new window                                          |
 |           | q                  | Show pane numbers                                          |
 |           | x                  | Kill current pane                                          |
-| Command   |                    |                                                            |
-|           | :swap-window -t 0  | Swap current window with window at position 0              |
 
 ## GNU Readline
 
@@ -155,7 +149,9 @@ Shortcuts and commands are prefixed with `CTRL+b`.
 | ------ | -------------------------- |
 | CTRL+a | Move to start of line      |
 | CTRL+e | Move to end of line        |
+| CTRL+j | Append new line            |
 | CTRL+r | Search backward in history |
+| CTRL+u | Delete until start of line |
 | CTRL+w | Delete last word           |
 
 ## VSCode

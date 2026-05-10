@@ -213,7 +213,7 @@ nmap <silent> <f2> <plug>(coc-rename)
 nnoremap <silent> <leader>gu :CocCommand git.copyUrl<cr>
 "" <leader>yh to show yank history
 nnoremap <silent> <leader>yh :<c-u>CocList -A --normal yank<cr>
-"" <leader>yp to copy popup buffer to clipboard
+"" <leader>yp to copy popup buffer
 function CopyPopupBufferToClipboard()
   let buffers=getbufinfo({'bufloaded':1,'buftype':'nofile'})
   for buf in buffers

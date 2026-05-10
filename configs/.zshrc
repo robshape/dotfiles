@@ -22,8 +22,10 @@ export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 ## #######
 alias c="clear"
 alias e="exit"
+alias k="kill -9"
 alias l="ls -a"
 alias m="mkdir"
+alias p="lsof -i"
 alias t="touch"
 alias awake="caffeinate -dimsu"
 alias checksum="shasum -a 256"
@@ -110,19 +112,22 @@ gcompare() {
 }
 
 gcontinue() {
-  git checkout main
-  git pull
-  git fetch -Pp
+  branch=$(git rev-parse --abbrev-ref HEAD)
+  if [ "$branch" != "main" ] && [ -z "$(git status --porcelain)" ]; then
+    git checkout main
+    git pull
+    git fetch -Pp
 
-  git checkout "$1"
-  git fetch
-  git merge --no-edit origin/main
+    git checkout "$branch"
+    git fetch
+    git merge --no-edit origin/main
 
-  git checkout main
-  git checkout -b "$2"
+    git checkout main
+    git checkout -b "$1"
 
-  git merge --squash "$1"
-  git commit -m "$1"
+    git merge --squash "$branch"
+    git commit -m "$branch"
+  fi
 }
 
 glog() {
@@ -171,9 +176,19 @@ gupdate() {
     npm ci
   elif [ "$1" = "p" ]; then
     pnpm i --frozen-lockfile
+  elif [ "$1" = "u" ]; then
+    uv sync
   elif [ "$1" = "y" ]; then
     yarn install --frozen-lockfile
   fi
+}
+
+tlayout() {
+  tmux split-window -h
+  tmux split-window -h
+  tmux select-layout even-horizontal
+  tmux select-pane -t 1
+  tmux split-window -v
 }
 
 tstart() {
