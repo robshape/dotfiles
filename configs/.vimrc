@@ -218,7 +218,7 @@ function CopyPopupBufferToClipboard()
   let buffers=getbufinfo({'bufloaded':1,'buftype':'nofile'})
   for buf in buffers
     if has_key(buf,'popups') && len(buf.popups) > 0
-      let lines = getbufline(buf['bufnr'],1,'$')
+      let lines=getbufline(buf['bufnr'],1,'$')
       call setreg('*',lines)
       echo 'Popup buffer copied to clipboard.'
       return
@@ -261,7 +261,7 @@ nnoremap <silent> <leader>gm :G mergetool<cr>
 "" Include hidden files and respect .gitignore when searching for file
 let $FZF_DEFAULT_COMMAND='rg -g "!.git/" --files --hidden'
 "" Include hidden files and search only file content when searching in workspace
-command! -bang -nargs=* Rg call fzf#vim#grep('rg -nSg "!.git/" --color=always --column --hidden --no-heading -- '.shellescape(<q-args>),1,fzf#vim#with_preview({ 'options':'-d : -n 4..' }),<bang>0)
+command! -bang -nargs=* Rg call fzf#vim#grep('rg -nSg "!.git/" --color=always --column --hidden --no-heading -- '.shellescape(<q-args>),1,fzf#vim#with_preview({'options':'-d : -n 4..'}),<bang>0)
 "" ALT+f to search in workspace
 nnoremap <silent> ƒ :Rg<cr>
 "" ALT+p to search for file

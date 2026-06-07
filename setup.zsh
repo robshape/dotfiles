@@ -50,6 +50,7 @@ brew install node
 brew install pnpm
 brew install ripgrep
 brew install tmux
+brew install uv
 brew install vim
 brew install yarn
 

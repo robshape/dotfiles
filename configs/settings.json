@@ -14,7 +14,6 @@
     "/^pnpm exec (eslint|lhci|playwright test|prettier|tsc|vitest run)(\\s+[^\\;&\\|\\$\\`]+)?$/": true,
     "/^CI=1 pnpm (test:e2e.*)(\\s+[^\\;&\\|\\$\\`]+)?$/": true
   },
-  "chat.useCustomAgentHooks": true,
   "chat.useCustomizationsInParentRepositories": true,
   "chat.useNestedAgentsMdFiles": true,
   "code-runner.enableAppInsights": false,
@@ -90,7 +89,6 @@
   "gutterpreview.showUnderline": false,
   "inlineChat.affordance": "editor",
   "inlineChat.defaultModel": "Claude Haiku 4.5 (copilot)",
-  "inlineChat.renderMode": "hover",
   "jest.runMode": "on-demand",
   "js/ts.updateImportsOnFileMove.enabled": "always",
   "json.schemaDownload.trustedDomains": {

@@ -27,6 +27,8 @@ alias l="ls -a"
 alias m="mkdir"
 alias p="lsof -i"
 alias t="touch"
+alias y="cp"
+alias yr="cp -R"
 alias awake="caffeinate -dimsu"
 alias checksum="shasum -a 256"
 alias download="curl -LOC -"
@@ -72,7 +74,7 @@ auth() {
 
 bellify() {
   "$@"
-  echo "\a"
+  printf "\a"
 }
 
 clean() {
@@ -92,6 +94,16 @@ memory() {
   memory_pressure=$(memory_pressure | grep "System-wide" | awk '{ print $5 }')
   swapusage=$(sysctl vm.swapusage | awk '{ print $7 }')
   echo "$date $time, $memory_pressure memory free, $swapusage swap used"
+}
+
+today() {
+  NOTES="$HOME/Developer/notes/"
+  date=$(date "+%Y-%m-%d")
+  cd "$NOTES" || exit
+  if [ ! -f "$date.md" ]; then
+    echo "# ${date}" > "$date.md"
+  fi
+  vim "$date.md"
 }
 
 update() {
