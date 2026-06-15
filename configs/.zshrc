@@ -10,9 +10,10 @@ preexec() { clear }
 export BROWSER="none"
 export CYPRESS_CACHE_FOLDER="$HOME/.cache/cypress/"
 export CYPRESS_CRASH_REPORTS=0
+export PATH="/opt/homebrew/bin:$PATH"
 export GOPATH="$HOME/.go"
 export GOROOT="$(brew --prefix go)/libexec"
-export PATH="/opt/homebrew/bin:$PATH:$GOPATH/bin/:$GOROOT/bin/:$HOME/.local/bin/"
+export PATH="$PATH:$GOPATH/bin/:$GOROOT/bin/:$HOME/.local/bin/"
 export PROMPT="%2~ ⚡️ "
 
 if [[ -f "$HOME/.zshrc.secrets" ]]; then

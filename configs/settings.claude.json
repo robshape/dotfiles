@@ -64,12 +64,15 @@
       "Bash(rtk git status *)",
       "Bash(rtk go build *)",
       "Bash(rtk go test *)",
+      "Bash(rtk go vet *)",
       "Bash(rtk grep *)",
       "Bash(rtk ls *)",
+      "Bash(sed *)",
       "mcp__plugin_context7_context7__query-docs",
       "mcp__plugin_context7_context7__resolve-library-id"
     ]
   },
+  "spinnerTipsEnabled": false,
   "statusLine": {
     "command": "~/.claude/statusline/statusline.sh",
     "type": "command"
