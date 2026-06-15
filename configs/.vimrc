@@ -344,7 +344,7 @@ augroup autocommands
 "" Highlight symbol, and its references, when under cursor
   au CursorHold * call CocActionAsync('highlight')
 "" Clean yank history on init
-  au User CocNvimInit CocCommand yank.clean
+  au User CocNvimInit call timer_start(1000,{->execute('CocCommand yank.clean')})
 "" Redraw statusline on status change (BUT FLASHES/HIDES CURSOR!)
   au User CocStatusChange redrawstatus
 

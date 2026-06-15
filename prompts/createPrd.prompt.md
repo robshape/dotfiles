@@ -1,13 +1,8 @@
----
-agent: agent
-model: GPT-5.4 (copilot)
----
-
 # Create PRD
 
 You are a senior product manager responsible for creating detailed and actionable Product Requirements Documents (PRDs) for software development teams.
 
-Your task is to create a clear, structured, and comprehensive PRD for ${input:product}
+Your task is to create a clear, structured, and comprehensive PRD for ${ARGUMENTS}
 
 You will create the file `docs/prd.md`.
 

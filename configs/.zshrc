@@ -8,18 +8,21 @@ preexec() { clear }
 ## Environment variables
 ## #####################
 export BROWSER="none"
-export CYPRESS_CACHE_FOLDER="$HOME/.cache/cypress"
+export CYPRESS_CACHE_FOLDER="$HOME/.cache/cypress/"
 export CYPRESS_CRASH_REPORTS=0
-export PATH="/opt/homebrew/bin:$PATH"
-export PROMPT="%2~ ⚡️ "
-
 export GOPATH="$HOME/.go"
 export GOROOT="$(brew --prefix go)/libexec"
-export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
+export PATH="/opt/homebrew/bin:$PATH:$GOPATH/bin/:$GOROOT/bin/:$HOME/.local/bin/"
+export PROMPT="%2~ ⚡️ "
+
+if [[ -f "$HOME/.zshrc.secrets" ]]; then
+  source "$HOME/.zshrc.secrets"
+fi
 
 ## #######
 ## Aliases
 ## #######
+alias a="claude"
 alias c="clear"
 alias e="exit"
 alias k="kill -9"
@@ -33,6 +36,7 @@ alias awake="caffeinate -dimsu"
 alias checksum="shasum -a 256"
 alias download="curl -LOC -"
 alias permission="stat -f %A"
+alias qwen="llama-server -m ~/Developer/oss/Qwen3.6-35B-A3B-MTP-UD-Q4_K_XL.gguf --mmproj ~/Developer/oss/Qwen3.6-35B-A3B-MTP-UD-mmproj-F16.gguf -c 131072 -fa on -ngl all -np 1 --min-p 0.00 --presence-penalty 0.0 --repeat-penalty 1.0 --spec-draft-n-max 2 --spec-type draft-mtp --temp 0.6 --top-k 20 --top-p 0.95"
 alias size="du -hs"
 
 alias ga="git add"
@@ -97,10 +101,10 @@ memory() {
 }
 
 today() {
-  NOTES="$HOME/Developer/notes/"
+  NOTES="$HOME/Developer/Notes/"
   date=$(date "+%Y-%m-%d")
   cd "$NOTES" || exit
-  if [ ! -f "$date.md" ]; then
+  if [[ ! -f "$date.md" ]]; then
     echo "# ${date}" > "$date.md"
   fi
   vim "$date.md"
@@ -125,7 +129,7 @@ gcompare() {
 
 gcontinue() {
   branch=$(git rev-parse --abbrev-ref HEAD)
-  if [ "$branch" != "main" ] && [ -z "$(git status --porcelain)" ]; then
+  if [[ "$branch" != "main" ]] && [[ -z "$(git status --porcelain)" ]]; then
     git checkout main
     git pull
     git fetch -Pp
@@ -163,7 +167,7 @@ gpr() {
 grebase() {
   git fetch
 
-  if [ -n "$1" ]; then
+  if [[ -n "$1" ]]; then
     git merge --no-edit origin/"$1"
   else
     git merge --no-edit origin/main
@@ -172,7 +176,7 @@ grebase() {
 
 gsquash() {
   branch=$(git rev-parse --abbrev-ref HEAD)
-  if [ "$branch" != "main" ] && [ -z "$(git status --porcelain)" ]; then
+  if [[ "$branch" != "main" ]] && [[ -z "$(git status --porcelain)" ]]; then
     git checkout main
     git merge --squash "$branch"
     git commit -m "$1"
@@ -184,13 +188,13 @@ gupdate() {
   git pull
   git fetch -Pp
 
-  if [ "$1" = "n" ]; then
+  if [[ "$1" = "n" ]]; then
     npm ci
-  elif [ "$1" = "p" ]; then
+  elif [[ "$1" = "p" ]]; then
     pnpm i --frozen-lockfile
-  elif [ "$1" = "u" ]; then
+  elif [[ "$1" = "u" ]]; then
     uv sync
-  elif [ "$1" = "y" ]; then
+  elif [[ "$1" = "y" ]]; then
     yarn install --frozen-lockfile
   fi
 }
@@ -204,13 +208,13 @@ tlayout() {
 }
 
 tstart() {
-  if [ -z "$TMUX" ]; then
+  if [[ -z "$TMUX" ]]; then
     tmux new-session -As main
   fi
 }
 
 tstop() {
-  if [ -n "$TMUX" ]; then
+  if [[ -n "$TMUX" ]]; then
     tmux kill-session -a
     tmux kill-session
   fi
