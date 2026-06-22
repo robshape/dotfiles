@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "effortLevel": "medium",
+  "effortLevel": "high",
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
     "gopls-lsp@claude-plugins-official": true,
@@ -8,6 +8,7 @@
   },
   "env": {
     "ANTHROPIC_BASE_URL": "https://openrouter.ai/api/",
+    "ANTHROPIC_CUSTOM_MODEL_OPTION": "z-ai/glm-5.2",
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "google/gemma-4-31b-it:free",
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek/deepseek-v4-pro",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek/deepseek-v4-flash",
@@ -31,17 +32,6 @@
         ]
       }
     ],
-    "PreToolUse": [
-      {
-        "hooks": [
-          {
-            "command": "rtk hook claude",
-            "type": "command"
-          }
-        ],
-        "matcher": "Bash"
-      }
-    ],
     "Stop": [
       {
         "hooks": [
@@ -56,20 +46,24 @@
   "model": "sonnet",
   "permissions": {
     "allow": [
-      "Bash(rtk find *)",
-      "Bash(rtk git branch *)",
-      "Bash(rtk git diff *)",
-      "Bash(rtk git log *)",
-      "Bash(rtk git stash *)",
-      "Bash(rtk git status *)",
-      "Bash(rtk go build *)",
-      "Bash(rtk go test *)",
-      "Bash(rtk go vet *)",
-      "Bash(rtk grep *)",
-      "Bash(rtk ls *)",
+      "Bash(find *)",
+      "Bash(git branch *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git stash *)",
+      "Bash(git status *)",
+      "Bash(go build *)",
+      "Bash(go test *)",
+      "Bash(go vet *)",
+      "Bash(grep *)",
+      "Bash(ls *)",
       "Bash(sed *)",
       "mcp__plugin_context7_context7__query-docs",
       "mcp__plugin_context7_context7__resolve-library-id"
+    ],
+    "deny": [
+      "Bash(git add *)",
+      "Bash(git commit *)"
     ]
   },
   "spinnerTipsEnabled": false,
@@ -77,5 +71,6 @@
     "command": "~/.claude/statusline/statusline.sh",
     "type": "command"
   },
-  "theme": "light"
+  "theme": "light",
+  "tui": "fullscreen"
 }
