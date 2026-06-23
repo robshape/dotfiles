@@ -37,7 +37,7 @@ alias awake="caffeinate -dimsu"
 alias checksum="shasum -a 256"
 alias download="curl -LOC -"
 alias permission="stat -f %A"
-alias qwen="llama-server -m ~/Developer/oss/Qwen3.6-35B-A3B-MTP-UD-Q4_K_XL.gguf --mmproj ~/Developer/oss/Qwen3.6-35B-A3B-MTP-UD-mmproj-F16.gguf -c 131072 -fa on -ngl all -np 1 --min-p 0.00 --presence-penalty 0.0 --repeat-penalty 1.0 --spec-draft-n-max 2 --spec-type draft-mtp --temp 0.6 --top-k 20 --top-p 0.95"
+alias qwen="llama-server -m ~/Developer/oss/Qwen3.6-35B-A3B-MTP-UD-Q5_K_XL.gguf --mmproj ~/Developer/oss/Qwen3.6-35B-A3B-MTP-UD-mmproj-F16.gguf -c 131072 -fa on -ngl all -np 1 --min-p 0.00 --presence-penalty 0.0 --repeat-penalty 1.0 --spec-draft-n-max 2 --spec-type draft-mtp --temp 0.6 --top-k 20 --top-p 0.95"
 alias size="du -hs"
 
 alias ga="git add"

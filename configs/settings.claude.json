@@ -8,17 +8,16 @@
   },
   "env": {
     "ANTHROPIC_BASE_URL": "https://openrouter.ai/api/",
-    "ANTHROPIC_CUSTOM_MODEL_OPTION": "z-ai/glm-5.2",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "google/gemma-4-31b-it:free",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek/deepseek-v4-pro",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek/deepseek-v4-flash",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "deepseek/deepseek-v4-flash",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "z-ai/glm-5.2",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek/deepseek-v4-pro",
     "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "75",
     "CLAUDE_CODE_ATTRIBUTION_HEADER": "0",
     "CLAUDE_CODE_DISABLE_1M_CONTEXT": "1",
     "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
     "CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS": "1",
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
-    "CLAUDE_CODE_SUBAGENT_MODEL": "google/gemma-4-31b-it:free",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "deepseek/deepseek-v4-flash",
     "MAX_THINKING_TOKENS": "10000"
   },
   "hooks": {
@@ -43,7 +42,7 @@
       }
     ]
   },
-  "model": "sonnet",
+  "model": "haiku",
   "permissions": {
     "allow": [
       "Bash(find *)",
