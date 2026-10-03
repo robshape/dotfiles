@@ -13,10 +13,20 @@
     "gofumpt": true,
     "staticcheck": true
   },
+  "json.schemaDownload.trustedDomains": {
+    "https://json.schemastore.org": true,
+    "https://raw.githubusercontent.com": true
+  },
   "markdownlint.onChange": false,
   "markdownlint.onOpen": false,
   "prettier.onlyUseLocalVersion": true,
   "prettier.requireConfig": true,
+  "pyright.organizeimports.provider": "ruff",
+  "pyright.testing.provider": "pytest",
+  "python.formatting.provider": "ruff",
+  "python.linting.ruffEnabled": true,
+  "ruff.autoFixOnSave": true,
+  "ruff.configurationPreference": "filesystemFirst",
   "stylelintplus.autoFixOnSave": true,
   "stylelintplus.cssInJs": true,
   "stylelintplus.validateOnSave": true,

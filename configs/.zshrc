@@ -104,7 +104,7 @@ memory() {
 today() {
   NOTES="$HOME/Developer/Notes/"
   date=$(date "+%Y-%m-%d")
-  cd "$NOTES" || exit
+  cd "$NOTES" || return 1
   if [[ ! -f "$date.md" ]]; then
     echo "# ${date}" > "$date.md"
   fi
@@ -198,6 +198,22 @@ gupdate() {
   elif [[ "$1" = "y" ]]; then
     yarn install --frozen-lockfile
   fi
+}
+
+gwremove() {
+  [[ -d .git && "$PWD" == *.* ]] || return 1
+  dst="$PWD"
+  src="${PWD%.*}"
+  [[ -d "$src/.git" ]] || return 1
+  cd "$src" || return 1
+  rm -fr "$dst"
+}
+
+gwswitch() {
+  [[ -n "$1" && -d .git ]] || return 1
+  dst="${PWD}.${1}"
+  [[ -e "$dst" ]] || cp -R "$PWD" "$dst"
+  cd "$dst" || return 1
 }
 
 tlayout() {

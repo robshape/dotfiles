@@ -260,6 +260,8 @@ nnoremap <silent> <leader>gm :G mergetool<cr>
 "" FZF
 "" Include hidden files and respect .gitignore when searching for file
 let $FZF_DEFAULT_COMMAND='rg -g "!.git/" --files --hidden'
+"" Use Vim popup window
+let g:fzf_layout={'window':{'height':0.6,'width':0.9}}
 "" Include hidden files and search only file content when searching in workspace
 command! -bang -nargs=* Rg call fzf#vim#grep('rg -nSg "!.git/" --color=always --column --hidden --no-heading -- '.shellescape(<q-args>),1,fzf#vim#with_preview({'options':'-d : -n 4..'}),<bang>0)
 "" ALT+f to search in workspace
