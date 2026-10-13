@@ -15,6 +15,7 @@
   },
   "json.schemaDownload.trustedDomains": {
     "https://json.schemastore.org": true,
+    "https://pi.dev": true,
     "https://raw.githubusercontent.com": true
   },
   "markdownlint.onChange": false,

@@ -330,6 +330,8 @@ let g:undotree_ShortIndicators=1
 nnoremap <silent> <f1> :UndotreeToggle<cr>
 
 "" Vimspector
+"" Set base directory
+let g:vimspector_base_dir=expand('~/.vim/plugged/vimspector/')
 "" Enable mouse debugging
 set mouse=a
 "" Map keyboard

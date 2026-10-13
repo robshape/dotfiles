@@ -1,0 +1,15 @@
+{
+  "$schema": "https://pi.dev/schemas/models.schema.json",
+  "providers": {
+    "openrouter": {
+      "api": "openai-completions",
+      "apiKey": "$OPENROUTER_API_KEY",
+      "baseUrl": "https://openrouter.ai/api/",
+      "models": [
+        {
+          "id": "@preset/deepseek-flash"
+        }
+      ]
+    }
+  }
+}

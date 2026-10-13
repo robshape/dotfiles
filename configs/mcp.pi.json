@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "context7": {
+      "exposure": "direct",
+      "url": "https://mcp.contex7.com/mcp/"
+    }
+  }
+}

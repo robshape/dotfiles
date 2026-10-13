@@ -102,7 +102,7 @@ memory() {
 }
 
 today() {
-  NOTES="$HOME/Developer/Notes/"
+  NOTES="$HOME/Developer/shapeless/notes/"
   date=$(date "+%Y-%m-%d")
   cd "$NOTES" || return 1
   if [[ ! -f "$date.md" ]]; then
@@ -205,8 +205,8 @@ gwremove() {
   dst="$PWD"
   src="${PWD%.*}"
   [[ -d "$src/.git" ]] || return 1
-  cd "$src" || return 1
   rm -fr "$dst"
+  [[ -n "$1" ]] && gwswitch "$1" || exit
 }
 
 gwswitch() {
@@ -214,6 +214,9 @@ gwswitch() {
   dst="${PWD}.${1}"
   [[ -e "$dst" ]] || cp -R "$PWD" "$dst"
   cd "$dst" || return 1
+  git pull
+  git fetch -Pp
+  git switch -c "$1" --no-track origin/main
 }
 
 tlayout() {
