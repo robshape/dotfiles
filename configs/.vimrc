@@ -316,6 +316,8 @@ call CustomizeTheme()
 let g:vim_svelte_plugin_use_typescript=1
 
 "" UltiSnips
+"" Disable python3 warning
+let g:UltiSnipsNoPythonWarning=1
 "" Set snippets directory
 let g:UltiSnipsSnippetDirectories=['~/.vim/UltiSnips/']
 
@@ -330,10 +332,10 @@ let g:undotree_ShortIndicators=1
 nnoremap <silent> <f1> :UndotreeToggle<cr>
 
 "" Vimspector
-"" Set base directory
-let g:vimspector_base_dir=expand('~/.vim/plugged/vimspector/')
 "" Enable mouse debugging
 set mouse=a
+"" Set base directory
+let g:vimspector_base_dir=expand('~/.vim/plugged/vimspector/')
 "" Map keyboard
 let g:vimspector_enable_mappings='HUMAN'
 "" <leader>di to inspect symbol under cursor
@@ -353,7 +355,7 @@ augroup autocommands
   au User CocStatusChange redrawstatus
 
 "" Copilot
-"" Disable plugin for specific directories and files
+"" Disable Copilot for specific directories and files
   function DisableCopilot()
     let cwd=expand('%:p')
     let items=['Notes.md']

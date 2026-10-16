@@ -5,7 +5,7 @@
   "coc.preferences.formatOnSave": true,
   "colors.enable": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
+    "source.fixAll.eslint": true
   },
   "eslint.run": "onSave",
   "git.realtimeGutters": false,
@@ -28,6 +28,7 @@
   "python.linting.ruffEnabled": true,
   "ruff.autoFixOnSave": true,
   "ruff.configurationPreference": "filesystemFirst",
+  "snippets.ultisnips.pythonPrompt": false,
   "stylelintplus.autoFixOnSave": true,
   "stylelintplus.cssInJs": true,
   "stylelintplus.validateOnSave": true,

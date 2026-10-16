@@ -2,6 +2,10 @@
   "$schema": "https://pi.dev/schemas/settings.schema.json",
   "defaultModel": "@preset/deepseek-flash",
   "defaultThinkingLevel": "max",
+  "defaultTools": [
+    "+codemode",
+    "+tool_search"
+  ],
   "enableInstallTelemetry": false,
   "hideThinkingBlock": true,
   "packages": [

@@ -73,8 +73,8 @@ brew install llama.cpp
 brew install node
 brew install pi-coding-agent
 brew install pnpm
+brew install python@3.15
 brew install ripgrep
-brew install rtk
 brew install tmux
 brew install uv
 brew install vim
