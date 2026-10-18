@@ -1,7 +1,8 @@
 {
   "$schema": "https://pi.dev/schemas/settings.schema.json",
   "defaultModel": "@preset/deepseek-flash",
-  "defaultThinkingLevel": "max",
+  "defaultProvider": "openrouter",
+  "defaultThinkingLevel": "high",
   "defaultTools": [
     "+codemode",
     "+tool_search"
@@ -9,6 +10,7 @@
   "enableInstallTelemetry": false,
   "hideThinkingBlock": true,
   "packages": [
-    "git:github.com/obra/superpowers"
+    "git:github.com/obra/superpowers",
+    "npm:@upstash/context7-pi"
   ]
 }

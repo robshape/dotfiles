@@ -10,8 +10,8 @@ if ! [[ -L "$HOME/.zshrc" ]]; then
   fi
   ln -fs "$PWD/configs/.claudeignore" "$CLAUDE_CODE_DIRECTORY"
   ln -fs "$PWD/configs/settings.claude.json" "$CLAUDE_CODE_DIRECTORY/settings.json"
-  ln -fs "$PWD/prompts/agents.instructions.md" "$CLAUDE_CODE_DIRECTORY/CLAUDE.md"
   ln -fs "$PWD/prompts/" "$CLAUDE_CODE_DIRECTORY/commands"
+  ln -fs "$PWD/prompts/agents.instructions.md" "$CLAUDE_CODE_DIRECTORY/CLAUDE.md"
 
   ## Git
   ln -fs "$PWD/configs/.gitconfig" "$HOME"
@@ -21,13 +21,16 @@ if ! [[ -L "$HOME/.zshrc" ]]; then
   PI_DIRECTORY="$HOME/.pi/agent/"
   if ! [[ -d "$PI_DIRECTORY" ]]; then
     mkdir -p "$PI_DIRECTORY"
+    mkdir "$PI_DIRECTORY/prompts/"
   fi
   ln -fs "$PWD/configs/mcp.pi.json" "$PI_DIRECTORY/mcp.json"
   ln -fs "$PWD/configs/models.pi.json" "$PI_DIRECTORY/models.json"
   ln -fs "$PWD/configs/settings.pi.json" "$PI_DIRECTORY/settings.json"
   ln -fs "$PWD/extensions/pi/" "$PI_DIRECTORY/extensions"
+  ln -fs "$PWD/extensions/pi/subagent/agents/" "$PI_DIRECTORY"
   ln -fs "$PWD/prompts/agents.instructions.md" "$PI_DIRECTORY/AGENTS.override.md"
-  ln -fs "$PWD/prompts/" "$PI_DIRECTORY"
+  find "$PWD/extensions/pi/subagent/prompts/" -maxdepth 1 -type f -exec ln -fs {} "$PI_DIRECTORY/prompts/" \;
+  find "$PWD/prompts/" -maxdepth 1 -type f -exec ln -fs {} "$PI_DIRECTORY/prompts/" \;
 
   ## Vim
   VIM_DIRECTORY="$HOME/.vim/"
