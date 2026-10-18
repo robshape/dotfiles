@@ -32,9 +32,6 @@ import type { AssistantMessage } from "@earendil-works/pi-ai";
 
 const STATUS_KEY = "cost";
 const ENTRY_TYPE = "cost";
-// Entries written by the earlier, OpenRouter-only version. Read for restore.
-const LEGACY_ENTRY_TYPE = "openrouter-cost";
-const LEGACY_STATUS_KEY = "openrouter-cost";
 const OPENROUTER_CREDITS_URL = "https://openrouter.ai/api/v1/credits";
 
 /** One settled prompt's real cost, stored branch-scoped in the session. */
@@ -173,9 +170,7 @@ function rebuild(ctx: Ctx): void {
 	let last = 0;
 	let lastCached = false;
 	for (const entry of ctx.sessionManager.getBranch()) {
-		if (entry.type !== "custom") continue;
-		// Accept entries from both this version and the OpenRouter-only one.
-		if (entry.customType !== ENTRY_TYPE && entry.customType !== LEGACY_ENTRY_TYPE) continue;
+		if (entry.type !== "custom" || entry.customType !== ENTRY_TYPE) continue;
 		const data = entry.data as CostEntry | undefined;
 		if (typeof data?.cost === "number") {
 			sum += data.cost;
@@ -192,12 +187,6 @@ export default function (pi: ExtensionAPI) {
 	pi.on("session_start", (_event, ctx) => {
 		active = true;
 		lastStatus = undefined;
-		// Clear a status left by the earlier, OpenRouter-only version.
-		try {
-			ctx.ui.setStatus(LEGACY_STATUS_KEY, undefined);
-		} catch {
-			// No UI, or a torn-down context.
-		}
 		balance = undefined;
 		keySpend = undefined;
 		rebuild(ctx);

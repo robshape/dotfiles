@@ -1,6 +1,6 @@
 {
   "$schema": "https://pi.dev/schemas/settings.schema.json",
-  "defaultModel": "@preset/deepseek-flash",
+  "defaultModel": "@preset/shapeless-coder",
   "defaultProvider": "openrouter",
   "defaultThinkingLevel": "high",
   "defaultTools": [

@@ -6,7 +6,7 @@
       "baseUrl": "https://openrouter.ai/api/v1/",
       "models": [
         {
-          "id": "@preset/deepseek-flash"
+          "id": "@preset/shapeless-coder"
         }
       ]
     }
