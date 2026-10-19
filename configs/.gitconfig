@@ -5,6 +5,7 @@
   algorithm=histogram
   colorMoved=true
   renames=true
+  tool=vimdiff
 
 [difftool]
   prompt=false

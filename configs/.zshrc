@@ -63,7 +63,7 @@ alias gtl="git stash list"
 alias gtp="git stash pop"
 alias gv="git mv"
 alias gclean="git reset --hard && git stash clear && git clean -dfx && git gc"
-alias gdiff="git add -N . && git difftool -t vimdiff"
+alias gdiff="git add -N . && git difftool"
 alias gpick="git cherry-pick"
 alias gundo="git reset --soft HEAD~1"
 
