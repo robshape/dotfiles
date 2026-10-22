@@ -55,6 +55,8 @@ interface Balance {
 let sessionCost = 0;
 let lastPromptCost = 0;
 let promptCost = 0;
+// Assistant messages in the current prompt; > 0 means the prompt made a call.
+let promptCalls = 0;
 let rawUsage: RawUsage | undefined;
 // Real charge from a LiteLLM x-litellm-response-cost header, awaiting its message.
 let headerCost: number | undefined;
@@ -214,6 +216,7 @@ export default function (pi: ExtensionAPI) {
 
 	pi.on("agent_start", () => {
 		promptCost = 0;
+		promptCalls = 0;
 		rawUsage = undefined;
 		headerCost = undefined;
 		promptCacheHit = undefined;
@@ -260,6 +263,7 @@ export default function (pi: ExtensionAPI) {
 	pi.on("message_end", (event) => {
 		if (event.message.role !== "assistant") return;
 		const usage = (event.message as AssistantMessage).usage;
+		promptCalls++;
 
 		// Prefer the provider's real cost when the captured usage is this
 		// message's. The token match guards against attributing a nested or
@@ -271,8 +275,8 @@ export default function (pi: ExtensionAPI) {
 	});
 
 	pi.on("agent_settled", (_event, ctx) => {
-		// Record the prompt once it made at least one call, even a free cached one.
-		if (promptCost > 0 || promptCacheHit !== undefined) {
+		// Record the prompt once it made at least one call, even a free one.
+		if (promptCalls > 0) {
 			lastPromptCost = promptCost;
 			lastPromptCached = promptCost === 0 && promptCacheHit === true;
 			sessionCost += promptCost;

@@ -6,7 +6,8 @@
       "baseUrl": "https://openrouter.ai/api/v1/",
       "models": [
         {
-          "id": "@preset/shapeless-coder"
+          "id": "@preset/shapeless-coder",
+          "reasoning": true
         }
       ]
     }
