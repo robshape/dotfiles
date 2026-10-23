@@ -12,17 +12,13 @@
  *             $0.0000 is genuinely free rather than untracked.
  * - "session" is the running total for this session.
  * - "$x left" is the OpenRouter account balance, fetched from the credits API.
- *             Only shown when the active provider is OpenRouter. When no balance
- *             is available, LiteLLM's cumulative key spend is shown as
- *             "$x spent" instead.
+ *             Only shown when the active provider is OpenRouter.
  *
  * How cost is found, in order:
  *   1. Some OpenAI-compatible providers (OpenRouter and friends) report the
  *      real charge on the final stream chunk as `usage.cost`. We capture that
  *      before pi normalizes usage into its own shape.
- *   2. LiteLLM reports the real charge for each call as a decimal-USD
- *      `x-litellm-response-cost` response header.
- *   3. Failing both, we fall back to pi's own number
+ *   2. Otherwise, we fall back to pi's own number
  *      (`AssistantMessage.usage.cost.total`), which pi prices from its model
  *      registry. For models pi has no pricing for, that is simply $0.
  */
@@ -58,11 +54,7 @@ let promptCost = 0;
 // Assistant messages in the current prompt; > 0 means the prompt made a call.
 let promptCalls = 0;
 let rawUsage: RawUsage | undefined;
-// Real charge from a LiteLLM x-litellm-response-cost header, awaiting its message.
-let headerCost: number | undefined;
 let balance: Balance | undefined;
-// LiteLLM's cumulative spend for the API key; shown when no balance is known.
-let keySpend: number | undefined;
 let fetching = false;
 // True once every model call in the current prompt was a cache hit; undefined
 // until we have seen a response. A prompt whose calls were all cached costs $0.
@@ -88,15 +80,6 @@ function usd(value: number, decimals?: number): string {
 	return `$${value.toFixed(places)}`;
 }
 
-/** Parse a decimal-USD header value, ignoring blanks and non-numbers. */
-function parseUsdHeader(value: string | undefined): number | undefined {
-	if (value === undefined) return undefined;
-	const trimmed = value.trim();
-	if (trimmed === "") return undefined;
-	const amount = Number(trimmed);
-	return Number.isFinite(amount) ? amount : undefined;
-}
-
 type Ctx = Parameters<Parameters<ExtensionAPI["on"]>[1]>[1];
 
 function render(ctx: Ctx): void {
@@ -115,9 +98,6 @@ function render(ctx: Ctx): void {
 		const exhausted = balance.remaining <= 0;
 		const value = theme.fg(exhausted ? "error" : "success", `$${balance.remaining.toFixed(2)}`);
 		parts.push(`${value}${dim(` left`)}`);
-	} else if (keySpend !== undefined) {
-		// No balance source, but LiteLLM knows the key's cumulative spend.
-		parts.push(`${theme.fg("success", `$${keySpend.toFixed(2)}`)}${dim(" spent")}`);
 	}
 
 	// setStatus triggers a render on every call, even when the text is unchanged,
@@ -190,7 +170,6 @@ export default function (pi: ExtensionAPI) {
 		active = true;
 		lastStatus = undefined;
 		balance = undefined;
-		keySpend = undefined;
 		rebuild(ctx);
 		render(ctx);
 		void refreshBalance(ctx);
@@ -206,10 +185,9 @@ export default function (pi: ExtensionAPI) {
 		render(ctx);
 	});
 
-	// Switching providers changes whether a balance or spend line applies.
+	// Switching providers changes whether a balance line applies.
 	pi.on("model_select", (_event, ctx) => {
 		balance = undefined;
-		keySpend = undefined;
 		render(ctx);
 		void refreshBalance(ctx);
 	});
@@ -218,16 +196,12 @@ export default function (pi: ExtensionAPI) {
 		promptCost = 0;
 		promptCalls = 0;
 		rawUsage = undefined;
-		headerCost = undefined;
 		promptCacheHit = undefined;
 	});
 
-	// Response headers carry provider-specific cost data:
-	//  - OpenRouter marks every response with its cache verdict; a HIT means the
-	//    request was served from cache and billed nothing, so only a prompt whose
-	//    calls were *all* HITs is genuinely free.
-	//  - LiteLLM reports the real charge for the call and the key's cumulative
-	//    spend as decimal-USD headers.
+	// OpenRouter marks every response with its cache verdict; a HIT means the
+	// request was served from cache and billed nothing, so only a prompt whose
+	// calls were *all* HITs is genuinely free.
 	pi.on("after_provider_response", (event) => {
 		const headers = event.headers ?? {};
 		const get = (name: string): string | undefined => {
@@ -240,12 +214,6 @@ export default function (pi: ExtensionAPI) {
 			const hit = cacheStatus.toUpperCase() === "HIT";
 			promptCacheHit = promptCacheHit === undefined ? hit : promptCacheHit && hit;
 		}
-
-		const cost = parseUsdHeader(get("x-litellm-response-cost"));
-		if (cost !== undefined) headerCost = cost;
-
-		const spend = parseUsdHeader(get("x-litellm-key-spend"));
-		if (spend !== undefined) keySpend = spend;
 	});
 
 	// Some OpenAI-compatible providers (OpenRouter and friends) report the real
@@ -269,9 +237,8 @@ export default function (pi: ExtensionAPI) {
 		// message's. The token match guards against attributing a nested or
 		// compaction call. Otherwise use pi's own pricing.
 		const matches = rawUsage && (rawUsage.totalTokens === undefined || rawUsage.totalTokens === usage?.totalTokens);
-		promptCost += matches ? rawUsage!.cost : (headerCost ?? usage?.cost?.total ?? 0);
+		promptCost += matches ? rawUsage!.cost : (usage?.cost?.total ?? 0);
 		rawUsage = undefined;
-		headerCost = undefined;
 	});
 
 	pi.on("agent_settled", (_event, ctx) => {
