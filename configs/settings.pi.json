@@ -11,7 +11,8 @@
   "hideThinkingBlock": true,
   "packages": [
     "git:github.com/obra/superpowers",
-    "npm:@upstash/context7-pi"
+    "npm:@upstash/context7-pi",
+    "npm:pi-web-access"
   ],
   "theme": "pi"
 }

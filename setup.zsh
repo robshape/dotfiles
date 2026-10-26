@@ -21,15 +21,14 @@ if ! [[ -L "$HOME/.zshrc" ]]; then
   PI_DIRECTORY="$HOME/.pi/agent/"
   if ! [[ -d "$PI_DIRECTORY" ]]; then
     mkdir -p "$PI_DIRECTORY"
-    mkdir "$PI_DIRECTORY/prompts/"
     mkdir "$PI_DIRECTORY/themes/"
   fi
   ln -fs "$PWD/configs/models.pi.json" "$PI_DIRECTORY/models.json"
   ln -fs "$PWD/configs/settings.pi.json" "$PI_DIRECTORY/settings.json"
   ln -fs "$PWD/configs/theme.pi.json" "$PI_DIRECTORY/themes/pi.json"
   ln -fs "$PWD/extensions/pi/" "$PI_DIRECTORY/extensions"
+  ln -fs "$PWD/prompts/" "$PI_DIRECTORY"
   ln -fs "$PWD/prompts/agents.instructions.md" "$PI_DIRECTORY/AGENTS.override.md"
-  find "$PWD/prompts/" -maxdepth 1 -type f -exec ln -fs {} "$PI_DIRECTORY/prompts/" \;
 
   ## Vim
   VIM_DIRECTORY="$HOME/.vim/"
