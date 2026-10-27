@@ -10,6 +10,7 @@ if ! [[ -L "$HOME/.zshrc" ]]; then
   fi
   ln -fs "$PWD/configs/.claudeignore" "$CLAUDE_CODE_DIRECTORY"
   ln -fs "$PWD/configs/settings.claude.json" "$CLAUDE_CODE_DIRECTORY/settings.json"
+  ln -fs "$PWD/extensions/claude/" "$CLAUDE_CODE_DIRECTORY/statusline"
   ln -fs "$PWD/prompts/" "$CLAUDE_CODE_DIRECTORY/commands"
   ln -fs "$PWD/prompts/agents.instructions.md" "$CLAUDE_CODE_DIRECTORY/CLAUDE.md"
 
