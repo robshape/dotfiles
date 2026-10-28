@@ -6,8 +6,18 @@
       "baseUrl": "https://openrouter.ai/api/v1/",
       "models": [
         {
+          "contextWindow": 1000000,
           "id": "@preset/shapeless-coder",
-          "reasoning": true
+          "input": [
+            "image",
+            "text"
+          ],
+          "maxTokens": 256000,
+          "reasoning": true,
+          "samplingParams": {
+            "temperature": 1.0,
+            "top_p": 1.0
+          }
         }
       ]
     }
