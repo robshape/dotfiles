@@ -125,7 +125,7 @@ gclone() {
 }
 
 gcompare() {
-  git diff main.."$(git branch --show-current)"
+  git diff "${1:-main}..$(git branch --show-current)"
 }
 
 gcontinue() {
@@ -157,7 +157,7 @@ gpickbranch() {
 }
 
 gpickfile() {
-  git checkout "$1" -- "$2"
+  git checkout "${2:-main}" -- "$1"
 }
 
 gpr() {
@@ -167,12 +167,7 @@ gpr() {
 
 grebase() {
   git fetch
-
-  if [[ -n "$1" ]]; then
-    git merge --no-edit origin/"$1"
-  else
-    git merge --no-edit origin/main
-  fi
+  git merge --no-edit "origin/${1:-main}"
 }
 
 gsquash() {
