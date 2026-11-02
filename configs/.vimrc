@@ -303,6 +303,9 @@ let &t_8b="\<esc>[48;2;%lu;%lu;%lum"
 let &t_8f="\<esc>[38;2;%lu;%lu;%lum"
 colorscheme one
 function CustomizeTheme()
+  if !empty($TMUX)
+    highlight Normal ctermbg=none guibg=none
+  endif
   highlight CocInfoSign ctermfg=blue
   highlight CocMenuSel ctermbg=black ctermfg=white
   highlight ColorColumn guibg=darkseagreen
@@ -335,7 +338,7 @@ nnoremap <silent> <f1> :UndotreeToggle<cr>
 "" Enable mouse debugging
 set mouse=a
 "" Set base directory
-let g:vimspector_base_dir=expand('~/.vim/plugged/vimspector/')
+let g:vimspector_base_dir=expand('~/.vim/plugged/vimspector')
 "" Map keyboard
 let g:vimspector_enable_mappings='HUMAN'
 "" <leader>di to inspect symbol under cursor

@@ -5,5 +5,5 @@
 - ALWAYS use Context7 MCP when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask
 - When asking questions, ALWAYS provide recommendations
 - ALWAYS ask before staging ("git add") or committing ("git commit") files, NEVER do it on my behalf
-- NEVER use Superpowers skills ("using-superpowers"), unless I explicitly asked
+- NEVER use Superpowers skills, unless I explicitly ask
 - ALWAYS be mindful of token usage; use strategies and methods that lead to consuming less tokens
