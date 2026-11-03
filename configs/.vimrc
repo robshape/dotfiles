@@ -304,7 +304,7 @@ let &t_8f="\<esc>[38;2;%lu;%lu;%lum"
 colorscheme one
 function CustomizeTheme()
   if !empty($TMUX)
-    highlight Normal ctermbg=none guibg=none
+    highlight Normal ctermbg=NONE guibg=NONE
   endif
   highlight CocInfoSign ctermfg=blue
   highlight CocMenuSel ctermbg=black ctermfg=white

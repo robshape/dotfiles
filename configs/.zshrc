@@ -10,7 +10,6 @@ preexec() { clear }
 export BROWSER="none"
 export CYPRESS_CACHE_FOLDER="$HOME/.cache/cypress/"
 export CYPRESS_CRASH_REPORTS=0
-export DISABLE_TELEMETRY=1
 export PATH="/opt/homebrew/bin:$PATH"
 export GOPATH="$HOME/.go"
 export GOROOT="$(brew --prefix go)/libexec"

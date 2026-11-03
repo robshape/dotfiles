@@ -2,7 +2,7 @@
   "$schema": "https://pi.dev/schemas/settings.schema.json",
   "defaultModel": "@preset/shapeless-coder",
   "defaultProvider": "openrouter",
-  "defaultThinkingLevel": "medium",
+  "defaultThinkingLevel": "high",
   "defaultTools": [
     "+codemode",
     "+tool_search"
