@@ -108,6 +108,8 @@ let g:coc_global_extensions=[
   \'coc-markdownlint',
   \'coc-pairs',
   \'coc-prettier',
+  \'coc-pyright',
+  \'@yaegassy/coc-ruff',
   \'coc-sh',
   \'coc-snippets',
   \'coc-spell-checker',
@@ -125,8 +127,6 @@ let g:coc_global_extensions=[
 "\'coc-html',
 "\'coc-java',
 "\'coc-jest',
-"\'coc-pyright',
-"\'@yaegassy/coc-ruff',
 "\'coc-rust-analyzer',
 "\'coc-svelte',
 ""

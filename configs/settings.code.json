@@ -89,6 +89,8 @@
   "gutterpreview.showUnderline": false,
   "inlineChat.affordance": "editor",
   "inlineChat.defaultModel": "Claude Haiku 4.5 (copilot)",
+  "intellij.dataSharing": "none",
+  "intellij.region": "europe",
   "jest.runMode": "on-demand",
   "js/ts.updateImportsOnFileMove.enabled": "always",
   "json.schemaDownload.trustedDomains": {

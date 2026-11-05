@@ -1,6 +1,18 @@
 {
   "$schema": "https://pi.dev/schemas/models.schema.json",
   "providers": {
+    "local": {
+      "api": "openai-completions",
+      "apiKey": "local",
+      "baseUrl": "https://localhost:9931/v1/",
+      "models": [
+        {
+          "contextWindow": 131072,
+          "id": "local-qwen",
+          "reasoning": true
+        }
+      ]
+    },
     "openrouter": {
       "apiKey": "$OPENROUTER_API_KEY",
       "baseUrl": "https://openrouter.ai/api/v1/",

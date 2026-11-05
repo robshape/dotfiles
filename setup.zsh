@@ -50,6 +50,10 @@ if ! [[ -L "$HOME/.zshrc" ]]; then
   fi
 
   ## Terminal
+  GHOSTTY_DIRECTORY="$HOME/Library/Application Support/com.mitchellh.ghostty/"
+  if [[ -d "$GHOSTTY_DIRECTORY" ]]; then
+    ln -fs "$PWD/configs/config.ghostty" "$GHOSTTY_DIRECTORY"
+  fi
   ln -fs "$PWD/configs/.zshrc" "$HOME"
   source "$HOME/.zshrc"
 fi
@@ -71,6 +75,7 @@ brew install --cask claude-code
 brew install fzf
 brew install git
 brew install go
+brew install lazygit
 brew install llama.cpp
 brew install node
 brew install pi-coding-agent
@@ -80,7 +85,6 @@ brew install ripgrep
 brew install tmux
 brew install uv
 brew install vim
-brew install yarn
 
 ## Vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

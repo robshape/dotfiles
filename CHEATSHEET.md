@@ -171,6 +171,7 @@ Shortcuts and commands are prefixed with `CTRL+q` \[CUSTOM\].
 * GitHub.vscode-pull-request-github
 * github.vscode-github-actions
 * golang.go
+* JetBrains.kotlin-server
 * kisstkondoros.vscode-gutter-preview
 * ms-python.python
 * orta.vscode-jest
