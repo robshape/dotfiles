@@ -65,8 +65,8 @@ nnoremap <silent> ß :w<cr>
 nnoremap <silent> ∑ <c-w>q
 "" CTRL+c to escape
 inoremap <silent> <c-c> <esc>
-"" CTRL+h to cycle panes horizontally
-nnoremap <silent> <c-h> <c-w>w
+"" CTRL+j to cycle panes horizontally
+nnoremap <silent> <c-j> <c-w>w
 "" ENTER to clear highlighted search results
 nnoremap <silent> <cr> :noh<cr><cr>
 "" <leader>cc to close quickfix
@@ -200,7 +200,7 @@ nmap <silent> gr <plug>(coc-references)
 nmap <silent> ≥ <plug>(coc-codeaction)
 "" ALT+m to show problems
 nnoremap <silent> µ :CocList diagnostics<cr>
-"" CTRL+d OR u to scroll popup window, downward or upward
+"" CTRL+d OR u to scroll popup window, down or up
 nnoremap <silent><expr> <c-d> coc#float#has_scroll() ? coc#float#scroll(1) : '<c-d>'
 nnoremap <silent><expr> <c-u> coc#float#has_scroll() ? coc#float#scroll(0) : '<c-u>'
 inoremap <silent><expr> <c-d> coc#float#has_scroll() ? '<c-r>=coc#float#scroll(1)<cr>' : '<right>'

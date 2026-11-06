@@ -8,3 +8,4 @@
 - ALWAYS ask before staging ("git add") or committing ("git commit") files, NEVER do it on my behalf
 - NEVER use Superpowers skills, unless I explicitly ask
 - ALWAYS be mindful of token usage; use strategies and methods that lead to consuming less tokens
+- You are running inside a tmux pane, ALWAYS inspect sibling tmux panes in the current tmux window for additional context

@@ -17,7 +17,12 @@
       "source": "git:github.com/obra/superpowers"
     },
     "npm:@upstash/context7-pi",
+    "npm:pi-subagents",
     "npm:pi-web-access"
   ],
+  "subagents": {
+    "defaultModel": "@preset/shapeless-coder",
+    "defaultProvider": "openrouter"
+  },
   "theme": "pi"
 }
