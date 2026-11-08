@@ -25,7 +25,7 @@
       {
         "hooks": [
           {
-            "command": "printf '\\a' > $(tmux display -p -t \"$TMUX_PANE\" '#{pane_tty}')",
+            "command": "printf '\\a' > $(tmux display -pt \"$TMUX_PANE\" '#{pane_tty}')",
             "type": "command"
           }
         ]
@@ -35,7 +35,7 @@
       {
         "hooks": [
           {
-            "command": "printf '\\a' > $(tmux display -p -t \"$TMUX_PANE\" '#{pane_tty}')",
+            "command": "printf '\\a' > $(tmux display -pt \"$TMUX_PANE\" '#{pane_tty}')",
             "type": "command"
           }
         ]
