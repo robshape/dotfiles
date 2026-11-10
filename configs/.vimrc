@@ -63,10 +63,10 @@ nnoremap <silent> œ :qa!<cr>
 nnoremap <silent> ß :w<cr>
 "" ALT+w to close current pane
 nnoremap <silent> ∑ <c-w>q
+"" CTRL+\ to cycle panes horizontally
+nnoremap <silent> <c-\> <c-w>w
 "" CTRL+c to escape
 inoremap <silent> <c-c> <esc>
-"" CTRL+h to cycle panes horizontally
-nnoremap <silent> <c-h> <c-w>w
 "" ENTER to clear highlighted search results
 nnoremap <silent> <cr> :noh<cr><cr>
 "" <leader>cc to close quickfix

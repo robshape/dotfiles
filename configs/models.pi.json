@@ -4,7 +4,7 @@
     "local": {
       "api": "openai-completions",
       "apiKey": "local",
-      "baseUrl": "https://localhost:9931/v1/",
+      "baseUrl": "http://localhost:9931/v1/",
       "models": [
         {
           "contextWindow": 131072,
