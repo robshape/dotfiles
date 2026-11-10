@@ -24,8 +24,8 @@ by Visual Studio Code and VSCodeVim.
 |            | ALT+q                    | Quit without prompt \[CUSTOM\]                                                                                   |
 |            | ALT+w                    | Close current pane \[CUSTOM\]                                                                                    |
 |            | CTRL+d OR u              | Scroll, down or up                                                                                               |
+|            | CTRL+h                   | Cycle panes horizontally \[CUSTOM\]                                                                              |
 |            | CTRL+i OR o              | Move position, next or previous                                                                                  |
-|            | CTRL+j                   | Cycle panes horizontally \[CUSTOM\]                                                                              |
 |            | ENTER                    | Clear highlight                                                                                                  |
 | Edit       |                          |                                                                                                                  |
 |            | .                        | Repeat last shortcut that edited text                                                                            |
@@ -131,8 +131,8 @@ Shortcuts and commands are prefixed with `CTRL+q` \[CUSTOM\].
 | Category  | Input              | Description                                                |
 | --------- | ------------------ | ---------------------------------------------------------- |
 | Move      |                    |                                                            |
-|           | CTRL+h OR l        | Cycle windows, backward or forward \[CUSTOM\]              |
-|           | CTRL+k             | Cycle panes \[CUSTOM\]                                     |
+|           | CTRL+\             | Cycle panes \[CUSTOM\]                                     |
+|           | CTRL+l             | Cycle windows \[CUSTOM\]                                   |
 |           | CTRL+z             | Zoom current pane \[CUSTOM\]                               |
 | Shortcut  |                    |                                                            |
 |           | "                  | Split pane horizontally                                    |
