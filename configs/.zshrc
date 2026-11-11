@@ -66,7 +66,6 @@ alias gv="git mv"
 alias gclean="git reset --hard && git stash clear && git clean -dfx && git gc"
 alias gdiff="git add -N . && git difftool"
 alias gpick="git cherry-pick"
-alias gundo="git reset --soft HEAD~1"
 
 alias v="vim"
 alias vr="vim -R"
@@ -179,6 +178,10 @@ gsquash() {
     git commit -m "$1"
     git branch -D "$branch"
   fi
+}
+
+gundo() {
+  git reset --soft HEAD~${1:-1}
 }
 
 gupdate() {
