@@ -15,6 +15,10 @@ if ! [[ -L "$HOME/.zshrc" ]]; then
   ln -fs "$PWD/prompts/agents.instructions.md" "$CLAUDE_CODE_DIRECTORY/CLAUDE.md"
 
   ## Git
+  LAZYGIT_DIRECTORY="$HOME/Library/Application Support/lazygit/"
+  if [[ -d "$LAZYGIT_DIRECTORY" ]]; then
+    ln -fs "$PWD/configs/config.lazygit.yml" "$LAZYGIT_DIRECTORY/config.yml"
+  fi
   ln -fs "$PWD/configs/.gitconfig" "$HOME"
   ln -fs "$PWD/configs/.gitignore" "$HOME"
 

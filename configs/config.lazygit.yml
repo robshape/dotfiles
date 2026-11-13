@@ -1,0 +1,5 @@
+git:
+  autoDetectExternalChanges: false
+  autoFetch: false
+  autoForwardBranches: none
+  autoRefresh: false
