@@ -9,6 +9,7 @@
         {
           "contextWindow": 131072,
           "id": "local-qwen",
+          "maxTokens": 65536
           "reasoning": true
         }
       ]
