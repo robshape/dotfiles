@@ -104,6 +104,7 @@ let g:coc_global_extensions=[
   \'coc-git',
   \'coc-go',
   \'coc-highlight',
+  \'coc-jest',
   \'coc-json',
   \'coc-markdownlint',
   \'coc-pairs',
@@ -126,7 +127,6 @@ let g:coc_global_extensions=[
 "\'coc-docker',
 "\'coc-html',
 "\'coc-java',
-"\'coc-jest',
 "\'coc-rust-analyzer',
 "\'coc-svelte',
 ""

@@ -12,7 +12,7 @@ export default function (pi: ExtensionAPI) {
 		/\brm\s+(-rf?|--recursive)/i,
 		/\bsudo\b/i,
 		/\b(chmod|chown)\b.*777/i,
-		// Running scripts
+		// Downloading scripts
 		/\b(curl|wget)\b.*\|\s*(sudo\s+)?((ba|z)?sh|python3?|perl|ruby|node)\b/i,
 		/\b((ba|z)?sh|python3?|perl|ruby|node)\b.*(\$\(|<\(|`)\s*(curl|wget)\b/i,
 		// Installing packages

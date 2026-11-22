@@ -9,3 +9,4 @@
 - NEVER use Superpowers skills, unless I explicitly ask
 - ALWAYS be mindful of token usage; use strategies and methods that lead to consuming less tokens
 - You are running inside a tmux pane, ALWAYS inspect sibling tmux panes in the current tmux window for additional context
+- ALWAYS avoid redundant comments and ONLY add comments when they provide meaningful context, explain non-obvious logic, clarify intent, or document important constraints

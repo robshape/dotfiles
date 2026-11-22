@@ -83,6 +83,7 @@ brew install lazygit
 brew install llama.cpp
 brew install node
 brew install pi-coding-agent
+brew install playwright-cli && playwright-cli install --skills -g && playwright-cli install --skills=agents -g
 brew install pnpm
 brew install python@3.15
 brew install ripgrep
