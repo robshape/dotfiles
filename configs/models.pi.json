@@ -1,9 +1,9 @@
 {
   "$schema": "https://pi.dev/schemas/models.schema.json",
   "providers": {
-    "local": {
+    "localhost": {
       "api": "openai-completions",
-      "apiKey": "local",
+      "apiKey": "localhost",
       "baseUrl": "http://localhost:9931/v1/",
       "models": [
         {

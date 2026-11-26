@@ -29,15 +29,8 @@ alias d="lazygit"
 alias e="exit"
 alias k="kill -9"
 alias l="ls -a"
-alias m="mkdir"
 alias p="lsof -i"
-alias t="touch"
-alias y="cp"
-alias yr="cp -R"
 alias awake="caffeinate -imsut 14400"
-alias checksum="shasum -a 256"
-alias download="curl -LOC -"
-alias permission="stat -f %A"
 alias qwen="llama-server -m ~/Developer/oss/Qwen3.6-35B-A3B-MTP-UD-Q5_K_XL.gguf -a local-qwen -c 131072 -fa on -ngl all -np 1 --min-p 0.00 --presence-penalty 0.0 --repeat-penalty 1.0 --spec-draft-n-max 2 --spec-type draft-mtp --temp 0.6 --top-k 20 --top-p 0.95"
 alias size="du -hs"
 
@@ -160,11 +153,6 @@ gpickfile() {
   git checkout "${2:-main}" -- "$1"
 }
 
-gpr() {
-  git fetch origin pull/"$1"/head:pr/"$1"
-  git checkout pr/"$1"
-}
-
 grebase() {
   git fetch
   git merge --no-edit "origin/${1:-main}"
@@ -194,8 +182,6 @@ gupdate() {
     pnpm i --frozen-lockfile
   elif [[ "$1" = "u" ]]; then
     uv sync
-  elif [[ "$1" = "y" ]]; then
-    yarn install --frozen-lockfile
   fi
 }
 

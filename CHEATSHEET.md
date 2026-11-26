@@ -152,7 +152,6 @@ Shortcuts and commands are prefixed with `CTRL+q` \[CUSTOM\].
 | CTRL+j | Append new line            |
 | CTRL+r | Search backward in history |
 | CTRL+u | Delete until start of line |
-| CTRL+w | Delete last word           |
 
 ## VSCode
 
@@ -184,15 +183,6 @@ Shortcuts and commands are prefixed with `CTRL+q` \[CUSTOM\].
 ### MCP servers
 
 * upstash/context
-
-### Prompts
-
-| Input                         | Description                                         |
-| ----------------------------- | --------------------------------------------------- |
-| /createMockup                 | Create SVG mockup                                   |
-| /createPrd \<product\>        | Create Product Requirement Document for \<product\> |
-| /grillMe                      | Review plan                                         |
-| /reviewCode                   | Review code                                         |
 
 ### Shortcuts
 

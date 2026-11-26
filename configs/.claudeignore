@@ -1,5 +1,4 @@
 .git/
-bin/
 dist/
 node_modules/
 

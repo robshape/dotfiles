@@ -13,12 +13,9 @@
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "@preset/shapeless-coder",
     "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "75",
     "CLAUDE_CODE_ATTRIBUTION_HEADER": "0",
-    "CLAUDE_CODE_DISABLE_1M_CONTEXT": "1",
-    "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
     "CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS": "1",
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "CLAUDE_CODE_SUBAGENT_MODEL": "@preset/shapeless-coder",
-    "MAX_THINKING_TOKENS": "10000"
   },
   "hooks": {
     "PermissionRequest": [
@@ -45,25 +42,13 @@
   "model": "sonnet",
   "permissions": {
     "allow": [
-      "Bash(find *)",
-      "Bash(git branch *)",
-      "Bash(git diff *)",
-      "Bash(git log *)",
-      "Bash(git stash *)",
-      "Bash(git status *)",
-      "Bash(go build *)",
-      "Bash(go test *)",
-      "Bash(go vet *)",
-      "Bash(gofmt *)",
-      "Bash(grep *)",
-      "Bash(ls *)",
-      "Bash(sed *)",
       "mcp__plugin_context7_context7__query-docs",
       "mcp__plugin_context7_context7__resolve-library-id"
     ],
     "deny": [
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   },
   "spinnerTipsEnabled": false,
